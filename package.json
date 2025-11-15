@@ -1,0 +1,33 @@
+{
+  "name": "ads-search-api-documents",
+  "version": "1.0.0",
+  "description": "Yahoo!広告 APIのドキュメント一覧です。",
+  "main": "generated/index.ts",
+  "types": "generated/index.ts",
+  "scripts": {
+    "generate": "tsx scripts/generate-zod-schemas.ts",
+    "test": "tsx scripts/test-schemas.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist generated"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yahoojp-marketing/ads-search-api-documents.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yahoojp-marketing/ads-search-api-documents/issues"
+  },
+  "homepage": "https://github.com/yahoojp-marketing/ads-search-api-documents#readme",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.10.1",
+    "js-yaml": "^4.1.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "zod": "^4.1.12"
+  }
+}
