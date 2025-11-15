@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AuditLogServiceEventTypes } from './AuditLogServiceEventTypes';
+import { auditLogServiceEventTypes } from './AuditLogServiceEventTypes';
 
-export const AuditLogServiceEventSelector = z.object({
+export const auditLogServiceEventSelector = z.object({
   entityType: z.string().nullable(),
-  eventTypes: z.array(AuditLogServiceEventTypes).nullable()
+  eventTypes: z.array(auditLogServiceEventTypes).nullable()
 }).nullable();
 
-export type AuditLogServiceEventSelector = z.infer<typeof AuditLogServiceEventSelector>;
+export type AuditLogServiceEventSelector = z.infer<typeof auditLogServiceEventSelector>;

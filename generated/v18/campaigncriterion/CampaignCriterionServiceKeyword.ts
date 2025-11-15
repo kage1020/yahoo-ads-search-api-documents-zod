@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignCriterionServiceKeywordMatchType } from './CampaignCriterionServiceKeywordMatchType';
+import { campaignCriterionServiceKeywordMatchType } from './CampaignCriterionServiceKeywordMatchType';
 
-export const CampaignCriterionServiceKeyword = z.object({
-  keywordMatchType: CampaignCriterionServiceKeywordMatchType,
+export const campaignCriterionServiceKeyword = z.object({
+  keywordMatchType: campaignCriterionServiceKeywordMatchType,
   text: z.string().nullable()
 }).nullable();
 
-export type CampaignCriterionServiceKeyword = z.infer<typeof CampaignCriterionServiceKeyword>;
+export type CampaignCriterionServiceKeyword = z.infer<typeof campaignCriterionServiceKeyword>;

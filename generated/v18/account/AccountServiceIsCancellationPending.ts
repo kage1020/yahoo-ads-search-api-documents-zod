@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AccountServiceIsCancellationPending = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const accountServiceIsCancellationPending = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type AccountServiceIsCancellationPending = z.infer<typeof AccountServiceIsCancellationPending>;
+export type AccountServiceIsCancellationPending = z.infer<typeof accountServiceIsCancellationPending>;

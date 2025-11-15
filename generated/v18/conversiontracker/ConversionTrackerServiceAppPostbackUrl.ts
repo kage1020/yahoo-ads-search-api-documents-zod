@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceIsRemoveUrl } from './ConversionTrackerServiceIsRemoveUrl';
+import { conversionTrackerServiceIsRemoveUrl } from './ConversionTrackerServiceIsRemoveUrl';
 
-export const ConversionTrackerServiceAppPostbackUrl = z.object({
-  isRemoveUrl: ConversionTrackerServiceIsRemoveUrl,
+export const conversionTrackerServiceAppPostbackUrl = z.object({
+  isRemoveUrl: conversionTrackerServiceIsRemoveUrl,
   url: z.string().nullable()
 }).nullable();
 
-export type ConversionTrackerServiceAppPostbackUrl = z.infer<typeof ConversionTrackerServiceAppPostbackUrl>;
+export type ConversionTrackerServiceAppPostbackUrl = z.infer<typeof conversionTrackerServiceAppPostbackUrl>;

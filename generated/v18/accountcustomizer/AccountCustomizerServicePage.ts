@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AccountCustomizerServiceValue } from './AccountCustomizerServiceValue';
+import { accountCustomizerServiceValue } from './AccountCustomizerServiceValue';
 
-export const AccountCustomizerServicePage = z.object({
+export const accountCustomizerServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(AccountCustomizerServiceValue).nullable()
+  values: z.array(accountCustomizerServiceValue).nullable()
 }).nullable();
 
-export type AccountCustomizerServicePage = z.infer<typeof AccountCustomizerServicePage>;
+export type AccountCustomizerServicePage = z.infer<typeof accountCustomizerServicePage>;

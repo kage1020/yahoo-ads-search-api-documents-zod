@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { RetargetingListServiceCustomKeyPage } from './RetargetingListServiceCustomKeyPage';
+import { error } from '../../common/Error';
+import { retargetingListServiceCustomKeyPage } from './RetargetingListServiceCustomKeyPage';
 
-export const RetargetingListServiceGetCustomKeyResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const retargetingListServiceGetCustomKeyResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: RetargetingListServiceCustomKeyPage
+  rval: retargetingListServiceCustomKeyPage
 }).nullable();
 
-export type RetargetingListServiceGetCustomKeyResponse = z.infer<typeof RetargetingListServiceGetCustomKeyResponse>;
+export type RetargetingListServiceGetCustomKeyResponse = z.infer<typeof retargetingListServiceGetCustomKeyResponse>;

@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupBidMultiplier } from './AdGroupBidMultiplier';
+import { adGroupBidMultiplier } from './AdGroupBidMultiplier';
 
-export const AdGroupBidMultiplierServiceOperation = z.object({
+export const adGroupBidMultiplierServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AdGroupBidMultiplier).nullable()
+  operand: z.array(adGroupBidMultiplier).nullable()
 }).nullable();
 
-export type AdGroupBidMultiplierServiceOperation = z.infer<typeof AdGroupBidMultiplierServiceOperation>;
+export type AdGroupBidMultiplierServiceOperation = z.infer<typeof adGroupBidMultiplierServiceOperation>;

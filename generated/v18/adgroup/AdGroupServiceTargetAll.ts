@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupServiceTargetAll = z.enum(["ACTIVE", "DEACTIVE", "UNKNOWN"]).nullable();
+export const adGroupServiceTargetAll = z.enum(["ACTIVE", "DEACTIVE", "UNKNOWN"]).nullable();
 
-export type AdGroupServiceTargetAll = z.infer<typeof AdGroupServiceTargetAll>;
+export type AdGroupServiceTargetAll = z.infer<typeof adGroupServiceTargetAll>;

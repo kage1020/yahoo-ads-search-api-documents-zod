@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceRuleItem } from './RetargetingListServiceRuleItem';
+import { retargetingListServiceRuleItem } from './RetargetingListServiceRuleItem';
 
-export const RetargetingListServiceRuleGroup = z.object({
-  ruleItems: z.array(RetargetingListServiceRuleItem).nullable()
+export const retargetingListServiceRuleGroup = z.object({
+  ruleItems: z.array(retargetingListServiceRuleItem).nullable()
 }).nullable();
 
-export type RetargetingListServiceRuleGroup = z.infer<typeof RetargetingListServiceRuleGroup>;
+export type RetargetingListServiceRuleGroup = z.infer<typeof retargetingListServiceRuleGroup>;

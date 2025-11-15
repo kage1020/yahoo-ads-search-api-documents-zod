@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { SharedCriterionServiceValue } from './SharedCriterionServiceValue';
+import { sharedCriterionServiceValue } from './SharedCriterionServiceValue';
 
-export const SharedCriterionServicePage = z.object({
+export const sharedCriterionServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(SharedCriterionServiceValue).nullable()
+  values: z.array(sharedCriterionServiceValue).nullable()
 }).nullable();
 
-export type SharedCriterionServicePage = z.infer<typeof SharedCriterionServicePage>;
+export type SharedCriterionServicePage = z.infer<typeof sharedCriterionServicePage>;

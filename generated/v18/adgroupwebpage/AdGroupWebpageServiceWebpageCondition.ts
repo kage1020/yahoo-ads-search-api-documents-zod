@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AdGroupWebpageServiceWebpageConditionType } from './AdGroupWebpageServiceWebpageConditionType';
-import { AdGroupWebpageServiceOperator } from './AdGroupWebpageServiceOperator';
+import { adGroupWebpageServiceWebpageConditionType } from './AdGroupWebpageServiceWebpageConditionType';
+import { adGroupWebpageServiceOperator } from './AdGroupWebpageServiceOperator';
 
-export const AdGroupWebpageServiceWebpageCondition = z.object({
+export const adGroupWebpageServiceWebpageCondition = z.object({
   argument: z.string().nullable(),
-  webpageConditionType: AdGroupWebpageServiceWebpageConditionType,
-  operator: AdGroupWebpageServiceOperator
+  webpageConditionType: adGroupWebpageServiceWebpageConditionType,
+  operator: adGroupWebpageServiceOperator
 }).nullable();
 
-export type AdGroupWebpageServiceWebpageCondition = z.infer<typeof AdGroupWebpageServiceWebpageCondition>;
+export type AdGroupWebpageServiceWebpageCondition = z.infer<typeof adGroupWebpageServiceWebpageCondition>;

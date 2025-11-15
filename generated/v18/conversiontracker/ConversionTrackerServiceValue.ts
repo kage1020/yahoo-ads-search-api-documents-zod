@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { ConversionTracker } from './ConversionTracker';
-import { Error } from './Error';
+import { conversionTracker } from './ConversionTracker';
+import { error } from '../../common/Error';
 
-export const ConversionTrackerServiceValue = z.object({
-  conversionTracker: ConversionTracker,
-  errors: z.array(Error).nullable(),
+export const conversionTrackerServiceValue = z.object({
+  conversionTracker: conversionTracker,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type ConversionTrackerServiceValue = z.infer<typeof ConversionTrackerServiceValue>;
+export type ConversionTrackerServiceValue = z.infer<typeof conversionTrackerServiceValue>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { ReportDefinitionServiceReturnValue } from './ReportDefinitionServiceReturnValue';
+import { error } from '../../common/Error';
+import { reportDefinitionServiceReturnValue } from './ReportDefinitionServiceReturnValue';
 
-export const ReportDefinitionServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const reportDefinitionServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: ReportDefinitionServiceReturnValue
+  rval: reportDefinitionServiceReturnValue
 }).nullable();
 
-export type ReportDefinitionServiceMutateResponse = z.infer<typeof ReportDefinitionServiceMutateResponse>;
+export type ReportDefinitionServiceMutateResponse = z.infer<typeof reportDefinitionServiceMutateResponse>;

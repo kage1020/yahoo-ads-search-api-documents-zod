@@ -1,25 +1,25 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionServiceBiddableAdGroupCriterion } from './AdGroupCriterionServiceBiddableAdGroupCriterion';
-import { AdGroupCriterionServiceCriterion } from './AdGroupCriterionServiceCriterion';
-import { AdGroupCriterionServiceLabel } from './AdGroupCriterionServiceLabel';
-import { AdGroupCriterionServiceUse } from './AdGroupCriterionServiceUse';
-import { AdGroupCriterionServiceTrademarkStatus } from './AdGroupCriterionServiceTrademarkStatus';
+import { adGroupCriterionServiceBiddableAdGroupCriterion } from './AdGroupCriterionServiceBiddableAdGroupCriterion';
+import { adGroupCriterionServiceCriterion } from './AdGroupCriterionServiceCriterion';
+import { adGroupCriterionServiceLabel } from './AdGroupCriterionServiceLabel';
+import { adGroupCriterionServiceUse } from './AdGroupCriterionServiceUse';
+import { adGroupCriterionServiceTrademarkStatus } from './AdGroupCriterionServiceTrademarkStatus';
 
-export const AdGroupCriterion = z.object({
+export const adGroupCriterion = z.object({
   accountId: z.number().int().nullable(),
   adGroupId: z.number().int().nullable(),
   adGroupName: z.string().nullable(),
   adGroupTrackId: z.number().int().nullable(),
-  biddableAdGroupCriterion: AdGroupCriterionServiceBiddableAdGroupCriterion,
+  biddableAdGroupCriterion: adGroupCriterionServiceBiddableAdGroupCriterion,
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
   campaignTrackId: z.number().int().nullable(),
-  criterion: AdGroupCriterionServiceCriterion,
-  labels: z.array(AdGroupCriterionServiceLabel).nullable(),
-  use: AdGroupCriterionServiceUse,
-  trademarkStatus: AdGroupCriterionServiceTrademarkStatus,
+  criterion: adGroupCriterionServiceCriterion,
+  labels: z.array(adGroupCriterionServiceLabel).nullable(),
+  use: adGroupCriterionServiceUse,
+  trademarkStatus: adGroupCriterionServiceTrademarkStatus,
   invalidedTrademarks: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AdGroupCriterion = z.infer<typeof AdGroupCriterion>;
+export type AdGroupCriterion = z.infer<typeof adGroupCriterion>;

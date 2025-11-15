@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { CampaignExportServiceFieldAttribute } from './CampaignExportServiceFieldAttribute';
+import { error } from '../../common/Error';
+import { campaignExportServiceFieldAttribute } from './CampaignExportServiceFieldAttribute';
 
-export const CampaignExportServiceFieldValue = z.object({
-  errors: z.array(Error).nullable(),
-  fieldAttributes: z.array(CampaignExportServiceFieldAttribute).nullable(),
+export const campaignExportServiceFieldValue = z.object({
+  errors: z.array(error).nullable(),
+  fieldAttributes: z.array(campaignExportServiceFieldAttribute).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type CampaignExportServiceFieldValue = z.infer<typeof CampaignExportServiceFieldValue>;
+export type CampaignExportServiceFieldValue = z.infer<typeof campaignExportServiceFieldValue>;

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceExtendedTextAd = z.object({
+export const adGroupAdServiceExtendedTextAd = z.object({
   headline: z.string().nullable(),
   headline2: z.string().nullable(),
   headline3: z.string().nullable(),
@@ -10,4 +10,4 @@ export const AdGroupAdServiceExtendedTextAd = z.object({
   path2: z.string().nullable()
 }).nullable();
 
-export type AdGroupAdServiceExtendedTextAd = z.infer<typeof AdGroupAdServiceExtendedTextAd>;
+export type AdGroupAdServiceExtendedTextAd = z.infer<typeof adGroupAdServiceExtendedTextAd>;

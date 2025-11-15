@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AssetServiceIsRemove } from './AssetServiceIsRemove';
-import { AssetServiceCustomParameter } from './AssetServiceCustomParameter';
+import { assetServiceIsRemove } from './AssetServiceIsRemove';
+import { assetServiceCustomParameter } from './AssetServiceCustomParameter';
 
-export const AssetServiceCustomParameters = z.object({
-  isRemove: AssetServiceIsRemove,
-  parameters: z.array(AssetServiceCustomParameter).nullable()
+export const assetServiceCustomParameters = z.object({
+  isRemove: assetServiceIsRemove,
+  parameters: z.array(assetServiceCustomParameter).nullable()
 }).nullable();
 
-export type AssetServiceCustomParameters = z.infer<typeof AssetServiceCustomParameters>;
+export type AssetServiceCustomParameters = z.infer<typeof assetServiceCustomParameters>;

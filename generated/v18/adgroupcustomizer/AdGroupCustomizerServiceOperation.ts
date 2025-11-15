@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupCustomizer } from './AdGroupCustomizer';
+import { adGroupCustomizer } from './AdGroupCustomizer';
 
-export const AdGroupCustomizerServiceOperation = z.object({
+export const adGroupCustomizerServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AdGroupCustomizer).nullable()
+  operand: z.array(adGroupCustomizer).nullable()
 }).nullable();
 
-export type AdGroupCustomizerServiceOperation = z.infer<typeof AdGroupCustomizerServiceOperation>;
+export type AdGroupCustomizerServiceOperation = z.infer<typeof adGroupCustomizerServiceOperation>;

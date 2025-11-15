@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { SsaReportDefinitionServiceReportType } from './SsaReportDefinitionServiceReportType';
+import { ssaReportDefinitionServiceReportType } from './SsaReportDefinitionServiceReportType';
 
-export const SsaReportDefinitionServiceGetReportFields = z.object({
-  reportType: SsaReportDefinitionServiceReportType
+export const ssaReportDefinitionServiceGetReportFields = z.object({
+  reportType: ssaReportDefinitionServiceReportType
 }).nullable();
 
-export type SsaReportDefinitionServiceGetReportFields = z.infer<typeof SsaReportDefinitionServiceGetReportFields>;
+export type SsaReportDefinitionServiceGetReportFields = z.infer<typeof ssaReportDefinitionServiceGetReportFields>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { ConversionGroupServicePage } from './ConversionGroupServicePage';
+import { error } from '../../common/Error';
+import { conversionGroupServicePage } from './ConversionGroupServicePage';
 
-export const ConversionGroupServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const conversionGroupServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: ConversionGroupServicePage
+  rval: conversionGroupServicePage
 }).nullable();
 
-export type ConversionGroupServiceGetResponse = z.infer<typeof ConversionGroupServiceGetResponse>;
+export type ConversionGroupServiceGetResponse = z.infer<typeof conversionGroupServiceGetResponse>;

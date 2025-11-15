@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { BiddingStrategyServiceReturnValue } from './BiddingStrategyServiceReturnValue';
+import { error } from '../../common/Error';
+import { biddingStrategyServiceReturnValue } from './BiddingStrategyServiceReturnValue';
 
-export const BiddingStrategyServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const biddingStrategyServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: BiddingStrategyServiceReturnValue
+  rval: biddingStrategyServiceReturnValue
 }).nullable();
 
-export type BiddingStrategyServiceMutateResponse = z.infer<typeof BiddingStrategyServiceMutateResponse>;
+export type BiddingStrategyServiceMutateResponse = z.infer<typeof biddingStrategyServiceMutateResponse>;

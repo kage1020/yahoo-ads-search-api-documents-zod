@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { ReportDefinitionServiceFieldValue } from './ReportDefinitionServiceFieldValue';
+import { error } from '../../common/Error';
+import { reportDefinitionServiceFieldValue } from './ReportDefinitionServiceFieldValue';
 
-export const ReportDefinitionServiceGetReportFieldsResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const reportDefinitionServiceGetReportFieldsResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: ReportDefinitionServiceFieldValue
+  rval: reportDefinitionServiceFieldValue
 }).nullable();
 
-export type ReportDefinitionServiceGetReportFieldsResponse = z.infer<typeof ReportDefinitionServiceGetReportFieldsResponse>;
+export type ReportDefinitionServiceGetReportFieldsResponse = z.infer<typeof reportDefinitionServiceGetReportFieldsResponse>;

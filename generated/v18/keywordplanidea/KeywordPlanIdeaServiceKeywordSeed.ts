@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const KeywordPlanIdeaServiceKeywordSeed = z.object({
+export const keywordPlanIdeaServiceKeywordSeed = z.object({
   keywords: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type KeywordPlanIdeaServiceKeywordSeed = z.infer<typeof KeywordPlanIdeaServiceKeywordSeed>;
+export type KeywordPlanIdeaServiceKeywordSeed = z.infer<typeof keywordPlanIdeaServiceKeywordSeed>;

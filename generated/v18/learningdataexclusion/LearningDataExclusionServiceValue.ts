@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { LearningDataExclusion } from './LearningDataExclusion';
-import { Error } from './Error';
+import { learningDataExclusion } from './LearningDataExclusion';
+import { error } from '../../common/Error';
 
-export const LearningDataExclusionServiceValue = z.object({
-  learningDataExclusion: LearningDataExclusion,
-  errors: z.array(Error).nullable(),
+export const learningDataExclusionServiceValue = z.object({
+  learningDataExclusion: learningDataExclusion,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type LearningDataExclusionServiceValue = z.infer<typeof LearningDataExclusionServiceValue>;
+export type LearningDataExclusionServiceValue = z.infer<typeof learningDataExclusionServiceValue>;

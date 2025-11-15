@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { CampaignServiceReviewUrl } from './CampaignServiceReviewUrl';
-import { CampaignServiceUrlApprovalStatus } from './CampaignServiceUrlApprovalStatus';
+import { campaignServiceReviewUrl } from './CampaignServiceReviewUrl';
+import { campaignServiceUrlApprovalStatus } from './CampaignServiceUrlApprovalStatus';
 
-export const CampaignServiceUrlReviewData = z.object({
+export const campaignServiceUrlReviewData = z.object({
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable(),
-  disapprovalReviewUrl: CampaignServiceReviewUrl,
-  inReviewUrl: CampaignServiceReviewUrl,
-  urlApprovalStatus: CampaignServiceUrlApprovalStatus
+  disapprovalReviewUrl: campaignServiceReviewUrl,
+  inReviewUrl: campaignServiceReviewUrl,
+  urlApprovalStatus: campaignServiceUrlApprovalStatus
 }).nullable();
 
-export type CampaignServiceUrlReviewData = z.infer<typeof CampaignServiceUrlReviewData>;
+export type CampaignServiceUrlReviewData = z.infer<typeof campaignServiceUrlReviewData>;

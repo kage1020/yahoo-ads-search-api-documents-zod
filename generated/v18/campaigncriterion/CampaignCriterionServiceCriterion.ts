@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { CampaignCriterionServiceCriterionType } from './CampaignCriterionServiceCriterionType';
-import { CampaignCriterionServiceKeyword } from './CampaignCriterionServiceKeyword';
+import { campaignCriterionServiceCriterionType } from './CampaignCriterionServiceCriterionType';
+import { campaignCriterionServiceKeyword } from './CampaignCriterionServiceKeyword';
 
-export const CampaignCriterionServiceCriterion = z.object({
+export const campaignCriterionServiceCriterion = z.object({
   criterionId: z.number().int().nullable(),
   criterionTrackId: z.number().int().nullable(),
-  criterionType: CampaignCriterionServiceCriterionType,
-  keyword: CampaignCriterionServiceKeyword
+  criterionType: campaignCriterionServiceCriterionType,
+  keyword: campaignCriterionServiceKeyword
 }).nullable();
 
-export type CampaignCriterionServiceCriterion = z.infer<typeof CampaignCriterionServiceCriterion>;
+export type CampaignCriterionServiceCriterion = z.infer<typeof campaignCriterionServiceCriterion>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { PageFeedAssetServiceAddDownloadJobValue } from './PageFeedAssetServiceAddDownloadJobValue';
+import { pageFeedAssetServiceAddDownloadJobValue } from './PageFeedAssetServiceAddDownloadJobValue';
 
-export const PageFeedAssetServiceAddDownloadJobReturnValue = z.object({
-  values: z.array(PageFeedAssetServiceAddDownloadJobValue).nullable()
+export const pageFeedAssetServiceAddDownloadJobReturnValue = z.object({
+  values: z.array(pageFeedAssetServiceAddDownloadJobValue).nullable()
 }).nullable();
 
-export type PageFeedAssetServiceAddDownloadJobReturnValue = z.infer<typeof PageFeedAssetServiceAddDownloadJobReturnValue>;
+export type PageFeedAssetServiceAddDownloadJobReturnValue = z.infer<typeof pageFeedAssetServiceAddDownloadJobReturnValue>;

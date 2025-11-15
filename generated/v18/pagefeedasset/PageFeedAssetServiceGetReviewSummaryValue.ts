@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { PageFeedAssetServiceReviewSummary } from './PageFeedAssetServiceReviewSummary';
+import { error } from '../../common/Error';
+import { pageFeedAssetServiceReviewSummary } from './PageFeedAssetServiceReviewSummary';
 
-export const PageFeedAssetServiceGetReviewSummaryValue = z.object({
-  errors: z.array(Error).nullable(),
+export const pageFeedAssetServiceGetReviewSummaryValue = z.object({
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  reviewSummary: PageFeedAssetServiceReviewSummary
+  reviewSummary: pageFeedAssetServiceReviewSummary
 }).nullable();
 
-export type PageFeedAssetServiceGetReviewSummaryValue = z.infer<typeof PageFeedAssetServiceGetReviewSummaryValue>;
+export type PageFeedAssetServiceGetReviewSummaryValue = z.infer<typeof pageFeedAssetServiceGetReviewSummaryValue>;

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const CampaignWebpageServiceSelector = z.object({
+export const campaignWebpageServiceSelector = z.object({
   accountId: z.number().int(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
   numberResults: z.number().int().min(1).max(2000).nullable(),
@@ -8,4 +8,4 @@ export const CampaignWebpageServiceSelector = z.object({
   targetIds: z.array(z.number().int().nullable()).nullable()
 }).nullable();
 
-export type CampaignWebpageServiceSelector = z.infer<typeof CampaignWebpageServiceSelector>;
+export type CampaignWebpageServiceSelector = z.infer<typeof campaignWebpageServiceSelector>;

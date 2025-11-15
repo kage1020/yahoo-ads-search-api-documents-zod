@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupServiceValue } from './AdGroupServiceValue';
+import { adGroupServiceValue } from './AdGroupServiceValue';
 
-export const AdGroupServiceReturnValue = z.object({
-  values: z.array(AdGroupServiceValue).nullable()
+export const adGroupServiceReturnValue = z.object({
+  values: z.array(adGroupServiceValue).nullable()
 }).nullable();
 
-export type AdGroupServiceReturnValue = z.infer<typeof AdGroupServiceReturnValue>;
+export type AdGroupServiceReturnValue = z.infer<typeof adGroupServiceReturnValue>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AccountLinkServiceAccountStatus } from './AccountLinkServiceAccountStatus';
+import { accountLinkServiceAccountStatus } from './AccountLinkServiceAccountStatus';
 
-export const AccountLinkServiceSelector = z.object({
+export const accountLinkServiceSelector = z.object({
   mccAccountId: z.number().int(),
-  accountStatuses: z.array(AccountLinkServiceAccountStatus).nullable(),
+  accountStatuses: z.array(accountLinkServiceAccountStatus).nullable(),
   numberResults: z.number().int().min(1).max(500).nullable(),
   startIndex: z.number().int().min(1).nullable()
 }).nullable();
 
-export type AccountLinkServiceSelector = z.infer<typeof AccountLinkServiceSelector>;
+export type AccountLinkServiceSelector = z.infer<typeof accountLinkServiceSelector>;

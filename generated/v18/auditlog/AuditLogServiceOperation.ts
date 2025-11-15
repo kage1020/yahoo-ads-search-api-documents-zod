@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AuditLogServiceJob } from './AuditLogServiceJob';
+import { auditLogServiceJob } from './AuditLogServiceJob';
 
-export const AuditLogServiceOperation = z.object({
+export const auditLogServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AuditLogServiceJob).nullable()
+  operand: z.array(auditLogServiceJob).nullable()
 }).nullable();
 
-export type AuditLogServiceOperation = z.infer<typeof AuditLogServiceOperation>;
+export type AuditLogServiceOperation = z.infer<typeof auditLogServiceOperation>;

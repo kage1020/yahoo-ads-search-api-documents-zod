@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const CustomizerAttributeServiceType = z.enum(["TEXT", "NUMBER", "PRICE", "PERCENT", "UNKNOWN"]).nullable();
+export const customizerAttributeServiceType = z.enum(["TEXT", "NUMBER", "PRICE", "PERCENT", "UNKNOWN"]).nullable();
 
-export type CustomizerAttributeServiceType = z.infer<typeof CustomizerAttributeServiceType>;
+export type CustomizerAttributeServiceType = z.infer<typeof customizerAttributeServiceType>;

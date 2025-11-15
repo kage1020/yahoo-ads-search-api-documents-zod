@@ -1,25 +1,25 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceAdType } from './AdGroupAdServiceAdType';
-import { AdGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
-import { AdGroupAdServiceUserStatus } from './AdGroupAdServiceUserStatus';
-import { AdGroupAdServiceCreatedDateRange } from './AdGroupAdServiceCreatedDateRange';
-import { AdGroupAdServiceUpdatedDateRange } from './AdGroupAdServiceUpdatedDateRange';
+import { adGroupAdServiceAdType } from './AdGroupAdServiceAdType';
+import { adGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
+import { adGroupAdServiceUserStatus } from './AdGroupAdServiceUserStatus';
+import { adGroupAdServiceCreatedDateRange } from './AdGroupAdServiceCreatedDateRange';
+import { adGroupAdServiceUpdatedDateRange } from './AdGroupAdServiceUpdatedDateRange';
 
-export const AdGroupAdServiceSelector = z.object({
+export const adGroupAdServiceSelector = z.object({
   accountId: z.number().int(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
   adGroupIds: z.array(z.number().int().nullable()).nullable(),
   adIds: z.array(z.number().int().nullable()).nullable(),
-  adTypes: z.array(AdGroupAdServiceAdType).nullable(),
-  approvalStatuses: z.array(AdGroupAdServiceApprovalStatus).nullable(),
-  userStatuses: z.array(AdGroupAdServiceUserStatus).nullable(),
+  adTypes: z.array(adGroupAdServiceAdType).nullable(),
+  approvalStatuses: z.array(adGroupAdServiceApprovalStatus).nullable(),
+  userStatuses: z.array(adGroupAdServiceUserStatus).nullable(),
   containsLabel: z.boolean().nullable(),
   labelIds: z.array(z.number().int().nullable()).nullable(),
-  createdDateRange: AdGroupAdServiceCreatedDateRange,
-  updatedDateRange: AdGroupAdServiceUpdatedDateRange,
+  createdDateRange: adGroupAdServiceCreatedDateRange,
+  updatedDateRange: adGroupAdServiceUpdatedDateRange,
   numberResults: z.number().int().min(1).max(10000).nullable(),
   startIndex: z.number().int().min(1).nullable()
 }).nullable();
 
-export type AdGroupAdServiceSelector = z.infer<typeof AdGroupAdServiceSelector>;
+export type AdGroupAdServiceSelector = z.infer<typeof adGroupAdServiceSelector>;

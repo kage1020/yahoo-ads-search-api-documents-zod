@@ -1,34 +1,34 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceAppConversion } from './ConversionTrackerServiceAppConversion';
-import { ConversionTrackerServiceAppLinkConversion } from './ConversionTrackerServiceAppLinkConversion';
-import { ConversionTrackerServiceCategory } from './ConversionTrackerServiceCategory';
-import { ConversionTrackerServiceConversionCountingType } from './ConversionTrackerServiceConversionCountingType';
-import { ConversionTrackerServiceConversionTrackerType } from './ConversionTrackerServiceConversionTrackerType';
-import { ConversionTrackerServiceExcludeFromBidding } from './ConversionTrackerServiceExcludeFromBidding';
-import { ConversionTrackerServiceStatus } from './ConversionTrackerServiceStatus';
-import { ConversionTrackerServiceWebConversion } from './ConversionTrackerServiceWebConversion';
+import { conversionTrackerServiceAppConversion } from './ConversionTrackerServiceAppConversion';
+import { conversionTrackerServiceAppLinkConversion } from './ConversionTrackerServiceAppLinkConversion';
+import { conversionTrackerServiceCategory } from './ConversionTrackerServiceCategory';
+import { conversionTrackerServiceConversionCountingType } from './ConversionTrackerServiceConversionCountingType';
+import { conversionTrackerServiceConversionTrackerType } from './ConversionTrackerServiceConversionTrackerType';
+import { conversionTrackerServiceExcludeFromBidding } from './ConversionTrackerServiceExcludeFromBidding';
+import { conversionTrackerServiceStatus } from './ConversionTrackerServiceStatus';
+import { conversionTrackerServiceWebConversion } from './ConversionTrackerServiceWebConversion';
 
-export const ConversionTracker = z.object({
+export const conversionTracker = z.object({
   accountId: z.number().int().nullable(),
   allConversionValue: z.string().nullable(),
   allConversions: z.number().int().nullable(),
-  appConversion: ConversionTrackerServiceAppConversion,
-  appLinkConversion: ConversionTrackerServiceAppLinkConversion,
-  category: ConversionTrackerServiceCategory,
-  conversionCountingType: ConversionTrackerServiceConversionCountingType,
+  appConversion: conversionTrackerServiceAppConversion,
+  appLinkConversion: conversionTrackerServiceAppLinkConversion,
+  category: conversionTrackerServiceCategory,
+  conversionCountingType: conversionTrackerServiceConversionCountingType,
   conversionTrackerId: z.number().int().nullable(),
   conversionTrackerTrackId: z.number().int().nullable(),
   conversionTrackerName: z.string().nullable(),
-  conversionTrackerType: ConversionTrackerServiceConversionTrackerType,
+  conversionTrackerType: conversionTrackerServiceConversionTrackerType,
   conversionValue: z.string().nullable(),
   conversions: z.number().int().nullable(),
-  excludeFromBidding: ConversionTrackerServiceExcludeFromBidding,
+  excludeFromBidding: conversionTrackerServiceExcludeFromBidding,
   measurementPeriod: z.number().int().nullable(),
   mostRecentConversionDate: z.string().nullable(),
-  status: ConversionTrackerServiceStatus,
+  status: conversionTrackerServiceStatus,
   userRevenueValue: z.string().nullable(),
-  webConversion: ConversionTrackerServiceWebConversion
+  webConversion: conversionTrackerServiceWebConversion
 }).nullable();
 
-export type ConversionTracker = z.infer<typeof ConversionTracker>;
+export type ConversionTracker = z.infer<typeof conversionTracker>;

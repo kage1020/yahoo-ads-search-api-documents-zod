@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceLogicalCondition } from './RetargetingListServiceLogicalCondition';
-import { RetargetingListServiceLogicalRuleOperand } from './RetargetingListServiceLogicalRuleOperand';
+import { retargetingListServiceLogicalCondition } from './RetargetingListServiceLogicalCondition';
+import { retargetingListServiceLogicalRuleOperand } from './RetargetingListServiceLogicalRuleOperand';
 
-export const RetargetingListServiceLogicalGroup = z.object({
-  logicalCondition: RetargetingListServiceLogicalCondition,
-  logicalOperand: z.array(RetargetingListServiceLogicalRuleOperand).nullable()
+export const retargetingListServiceLogicalGroup = z.object({
+  logicalCondition: retargetingListServiceLogicalCondition,
+  logicalOperand: z.array(retargetingListServiceLogicalRuleOperand).nullable()
 }).nullable();
 
-export type RetargetingListServiceLogicalGroup = z.infer<typeof RetargetingListServiceLogicalGroup>;
+export type RetargetingListServiceLogicalGroup = z.infer<typeof retargetingListServiceLogicalGroup>;

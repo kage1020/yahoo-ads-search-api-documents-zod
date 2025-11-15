@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AbTestServiceValue } from './AbTestServiceValue';
+import { abTestServiceValue } from './AbTestServiceValue';
 
-export const AbTestServicePage = z.object({
+export const abTestServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(AbTestServiceValue).nullable()
+  values: z.array(abTestServiceValue).nullable()
 }).nullable();
 
-export type AbTestServicePage = z.infer<typeof AbTestServicePage>;
+export type AbTestServicePage = z.infer<typeof abTestServicePage>;

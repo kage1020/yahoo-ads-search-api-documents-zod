@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { DictionaryServiceDisapprovalReasonValue } from './DictionaryServiceDisapprovalReasonValue';
+import { dictionaryServiceDisapprovalReasonValue } from './DictionaryServiceDisapprovalReasonValue';
 
-export const DictionaryServiceDisapprovalReasonPage = z.object({
+export const dictionaryServiceDisapprovalReasonPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(DictionaryServiceDisapprovalReasonValue).nullable()
+  values: z.array(dictionaryServiceDisapprovalReasonValue).nullable()
 }).nullable();
 
-export type DictionaryServiceDisapprovalReasonPage = z.infer<typeof DictionaryServiceDisapprovalReasonPage>;
+export type DictionaryServiceDisapprovalReasonPage = z.infer<typeof dictionaryServiceDisapprovalReasonPage>;

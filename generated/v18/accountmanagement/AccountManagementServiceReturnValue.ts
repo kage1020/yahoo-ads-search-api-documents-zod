@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AccountManagementServiceValue } from './AccountManagementServiceValue';
+import { accountManagementServiceValue } from './AccountManagementServiceValue';
 
-export const AccountManagementServiceReturnValue = z.object({
-  values: z.array(AccountManagementServiceValue).nullable()
+export const accountManagementServiceReturnValue = z.object({
+  values: z.array(accountManagementServiceValue).nullable()
 }).nullable();
 
-export type AccountManagementServiceReturnValue = z.infer<typeof AccountManagementServiceReturnValue>;
+export type AccountManagementServiceReturnValue = z.infer<typeof accountManagementServiceReturnValue>;

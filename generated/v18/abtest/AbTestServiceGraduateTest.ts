@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AbTestServiceBudget } from './AbTestServiceBudget';
+import { abTestServiceBudget } from './AbTestServiceBudget';
 
-export const AbTestServiceGraduateTest = z.object({
+export const abTestServiceGraduateTest = z.object({
   abTestId: z.number().int().nullable(),
-  budget: AbTestServiceBudget
+  budget: abTestServiceBudget
 }).nullable();
 
-export type AbTestServiceGraduateTest = z.infer<typeof AbTestServiceGraduateTest>;
+export type AbTestServiceGraduateTest = z.infer<typeof abTestServiceGraduateTest>;

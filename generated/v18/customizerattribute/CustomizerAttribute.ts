@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { CustomizerAttributeServiceType } from './CustomizerAttributeServiceType';
+import { customizerAttributeServiceType } from './CustomizerAttributeServiceType';
 
-export const CustomizerAttribute = z.object({
+export const customizerAttribute = z.object({
   accountId: z.number().int().nullable(),
   customizerAttributeId: z.number().int().nullable(),
   name: z.string().nullable(),
-  type: CustomizerAttributeServiceType
+  type: customizerAttributeServiceType
 }).nullable();
 
-export type CustomizerAttribute = z.infer<typeof CustomizerAttribute>;
+export type CustomizerAttribute = z.infer<typeof customizerAttribute>;

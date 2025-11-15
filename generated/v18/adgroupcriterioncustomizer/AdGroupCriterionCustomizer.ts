@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionCustomizerServiceApprovalStatus } from './AdGroupCriterionCustomizerServiceApprovalStatus';
+import { adGroupCriterionCustomizerServiceApprovalStatus } from './AdGroupCriterionCustomizerServiceApprovalStatus';
 
-export const AdGroupCriterionCustomizer = z.object({
+export const adGroupCriterionCustomizer = z.object({
   accountId: z.number().int().nullable(),
   criterionId: z.number().int().nullable(),
   customizerAttributeId: z.number().int().nullable(),
   value: z.string().nullable(),
-  approvalStatus: AdGroupCriterionCustomizerServiceApprovalStatus,
+  approvalStatus: adGroupCriterionCustomizerServiceApprovalStatus,
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AdGroupCriterionCustomizer = z.infer<typeof AdGroupCriterionCustomizer>;
+export type AdGroupCriterionCustomizer = z.infer<typeof adGroupCriterionCustomizer>;

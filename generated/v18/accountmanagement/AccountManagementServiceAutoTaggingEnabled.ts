@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AccountManagementServiceAutoTaggingEnabled = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
+export const accountManagementServiceAutoTaggingEnabled = z.enum(["FALSE", "TRUE", "UNKNOWN"]).nullable();
 
-export type AccountManagementServiceAutoTaggingEnabled = z.infer<typeof AccountManagementServiceAutoTaggingEnabled>;
+export type AccountManagementServiceAutoTaggingEnabled = z.infer<typeof accountManagementServiceAutoTaggingEnabled>;

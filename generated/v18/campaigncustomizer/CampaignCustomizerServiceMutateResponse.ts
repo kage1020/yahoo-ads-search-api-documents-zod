@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { CampaignCustomizerServiceReturnValue } from './CampaignCustomizerServiceReturnValue';
+import { error } from '../../common/Error';
+import { campaignCustomizerServiceReturnValue } from './CampaignCustomizerServiceReturnValue';
 
-export const CampaignCustomizerServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const campaignCustomizerServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: CampaignCustomizerServiceReturnValue
+  rval: campaignCustomizerServiceReturnValue
 }).nullable();
 
-export type CampaignCustomizerServiceMutateResponse = z.infer<typeof CampaignCustomizerServiceMutateResponse>;
+export type CampaignCustomizerServiceMutateResponse = z.infer<typeof campaignCustomizerServiceMutateResponse>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const PageFeedAssetServiceBulkEncoding = z.enum(["SJIS", "UTF8", "UTF16LE", "UNKNOWN"]).nullable();
+export const pageFeedAssetServiceBulkEncoding = z.enum(["SJIS", "UTF8", "UTF16LE", "UNKNOWN"]).nullable();
 
-export type PageFeedAssetServiceBulkEncoding = z.infer<typeof PageFeedAssetServiceBulkEncoding>;
+export type PageFeedAssetServiceBulkEncoding = z.infer<typeof pageFeedAssetServiceBulkEncoding>;

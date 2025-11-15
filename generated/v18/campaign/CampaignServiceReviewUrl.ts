@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignServiceCustomParameter } from './CampaignServiceCustomParameter';
+import { campaignServiceCustomParameter } from './CampaignServiceCustomParameter';
 
-export const CampaignServiceReviewUrl = z.object({
-  parameters: z.array(CampaignServiceCustomParameter).nullable(),
+export const campaignServiceReviewUrl = z.object({
+  parameters: z.array(campaignServiceCustomParameter).nullable(),
   trackingUrl: z.string().nullable()
 }).nullable();
 
-export type CampaignServiceReviewUrl = z.infer<typeof CampaignServiceReviewUrl>;
+export type CampaignServiceReviewUrl = z.infer<typeof campaignServiceReviewUrl>;

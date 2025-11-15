@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { BiddingSeasonalityAdjustment } from './BiddingSeasonalityAdjustment';
-import { Error } from './Error';
+import { biddingSeasonalityAdjustment } from './BiddingSeasonalityAdjustment';
+import { error } from '../../common/Error';
 
-export const BiddingSeasonalityAdjustmentServiceValue = z.object({
-  biddingSeasonalityAdjustment: BiddingSeasonalityAdjustment,
-  errors: z.array(Error).nullable(),
+export const biddingSeasonalityAdjustmentServiceValue = z.object({
+  biddingSeasonalityAdjustment: biddingSeasonalityAdjustment,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type BiddingSeasonalityAdjustmentServiceValue = z.infer<typeof BiddingSeasonalityAdjustmentServiceValue>;
+export type BiddingSeasonalityAdjustmentServiceValue = z.infer<typeof biddingSeasonalityAdjustmentServiceValue>;

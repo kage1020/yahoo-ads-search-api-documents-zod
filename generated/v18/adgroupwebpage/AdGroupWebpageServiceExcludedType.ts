@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupWebpageServiceExcludedType = z.enum(["INCLUDED", "EXCLUDED", "UNKNOWN"]).nullable();
+export const adGroupWebpageServiceExcludedType = z.enum(["INCLUDED", "EXCLUDED", "UNKNOWN"]).nullable();
 
-export type AdGroupWebpageServiceExcludedType = z.infer<typeof AdGroupWebpageServiceExcludedType>;
+export type AdGroupWebpageServiceExcludedType = z.infer<typeof adGroupWebpageServiceExcludedType>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { DictionaryServiceGeographicLocationPage } from './DictionaryServiceGeographicLocationPage';
+import { error } from '../../common/Error';
+import { dictionaryServiceGeographicLocationPage } from './DictionaryServiceGeographicLocationPage';
 
-export const DictionaryServiceGetGeographicLocationResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const dictionaryServiceGetGeographicLocationResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: DictionaryServiceGeographicLocationPage
+  rval: dictionaryServiceGeographicLocationPage
 }).nullable();
 
-export type DictionaryServiceGetGeographicLocationResponse = z.infer<typeof DictionaryServiceGetGeographicLocationResponse>;
+export type DictionaryServiceGetGeographicLocationResponse = z.infer<typeof dictionaryServiceGetGeographicLocationResponse>;

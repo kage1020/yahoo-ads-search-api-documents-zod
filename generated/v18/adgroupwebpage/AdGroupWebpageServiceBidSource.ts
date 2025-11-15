@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupWebpageServiceBidSource = z.enum(["ADGROUP", "CRITERION", "UNKNOWN"]).nullable();
+export const adGroupWebpageServiceBidSource = z.enum(["ADGROUP", "CRITERION", "UNKNOWN"]).nullable();
 
-export type AdGroupWebpageServiceBidSource = z.infer<typeof AdGroupWebpageServiceBidSource>;
+export type AdGroupWebpageServiceBidSource = z.infer<typeof adGroupWebpageServiceBidSource>;

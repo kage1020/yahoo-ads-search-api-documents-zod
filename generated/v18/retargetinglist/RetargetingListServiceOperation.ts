@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceTargetingList } from './RetargetingListServiceTargetingList';
-import { RetargetingListServiceTargetListOwner } from './RetargetingListServiceTargetListOwner';
+import { retargetingListServiceTargetingList } from './RetargetingListServiceTargetingList';
+import { retargetingListServiceTargetListOwner } from './RetargetingListServiceTargetListOwner';
 
-export const RetargetingListServiceOperation = z.object({
+export const retargetingListServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(RetargetingListServiceTargetingList).nullable(),
-  targetListOwner: RetargetingListServiceTargetListOwner
+  operand: z.array(retargetingListServiceTargetingList).nullable(),
+  targetListOwner: retargetingListServiceTargetListOwner
 }).nullable();
 
-export type RetargetingListServiceOperation = z.infer<typeof RetargetingListServiceOperation>;
+export type RetargetingListServiceOperation = z.infer<typeof retargetingListServiceOperation>;

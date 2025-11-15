@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-export const CampaignServiceBudgetAmountRange = z.object({
+export const campaignServiceBudgetAmountRange = z.object({
   min: z.number().int().nullable(),
   max: z.number().int().nullable()
 }).nullable();
 
-export type CampaignServiceBudgetAmountRange = z.infer<typeof CampaignServiceBudgetAmountRange>;
+export type CampaignServiceBudgetAmountRange = z.infer<typeof campaignServiceBudgetAmountRange>;

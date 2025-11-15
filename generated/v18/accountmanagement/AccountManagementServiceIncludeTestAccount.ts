@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AccountManagementServiceIncludeTestAccount = z.enum(["ONLY_TEST", "EXCLUDE_TEST", "ALL", "UNKNOWN"]).nullable();
+export const accountManagementServiceIncludeTestAccount = z.enum(["ONLY_TEST", "EXCLUDE_TEST", "ALL", "UNKNOWN"]).nullable();
 
-export type AccountManagementServiceIncludeTestAccount = z.infer<typeof AccountManagementServiceIncludeTestAccount>;
+export type AccountManagementServiceIncludeTestAccount = z.infer<typeof accountManagementServiceIncludeTestAccount>;

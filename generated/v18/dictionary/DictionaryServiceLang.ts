@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const DictionaryServiceLang = z.enum(["JA", "EN", "UNKNOWN"]).nullable();
+export const dictionaryServiceLang = z.enum(["JA", "EN", "UNKNOWN"]).nullable();
 
-export type DictionaryServiceLang = z.infer<typeof DictionaryServiceLang>;
+export type DictionaryServiceLang = z.infer<typeof dictionaryServiceLang>;

@@ -1,22 +1,22 @@
 import { z } from 'zod';
 
-import { SsaAccountServiceStatus } from './SsaAccountServiceStatus';
-import { SsaAccountServiceType } from './SsaAccountServiceType';
-import { SsaAccountServiceAutoTaggingEnabled } from './SsaAccountServiceAutoTaggingEnabled';
-import { SsaAccountServiceDeliveryStatus } from './SsaAccountServiceDeliveryStatus';
-import { SsaAccountServiceIsCancellationPending } from './SsaAccountServiceIsCancellationPending';
+import { ssaAccountServiceStatus } from './SsaAccountServiceStatus';
+import { ssaAccountServiceType } from './SsaAccountServiceType';
+import { ssaAccountServiceAutoTaggingEnabled } from './SsaAccountServiceAutoTaggingEnabled';
+import { ssaAccountServiceDeliveryStatus } from './SsaAccountServiceDeliveryStatus';
+import { ssaAccountServiceIsCancellationPending } from './SsaAccountServiceIsCancellationPending';
 
-export const SsaAccount = z.object({
+export const ssaAccount = z.object({
   accountId: z.number().int().nullable(),
   accountName: z.string().nullable(),
-  accountStatus: SsaAccountServiceStatus,
-  accountType: SsaAccountServiceType,
-  autoTaggingEnabled: SsaAccountServiceAutoTaggingEnabled,
-  deliveryStatus: SsaAccountServiceDeliveryStatus,
-  isCancellationPending: SsaAccountServiceIsCancellationPending,
+  accountStatus: ssaAccountServiceStatus,
+  accountType: ssaAccountServiceType,
+  autoTaggingEnabled: ssaAccountServiceAutoTaggingEnabled,
+  deliveryStatus: ssaAccountServiceDeliveryStatus,
+  isCancellationPending: ssaAccountServiceIsCancellationPending,
   startDate: z.string().nullable(),
   endDate: z.string().nullable(),
   contactBizId: z.string().nullable()
 }).nullable();
 
-export type SsaAccount = z.infer<typeof SsaAccount>;
+export type SsaAccount = z.infer<typeof ssaAccount>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { CampaignWebpageServiceReturnValue } from './CampaignWebpageServiceReturnValue';
+import { error } from '../../common/Error';
+import { campaignWebpageServiceReturnValue } from './CampaignWebpageServiceReturnValue';
 
-export const CampaignWebpageServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const campaignWebpageServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: CampaignWebpageServiceReturnValue
+  rval: campaignWebpageServiceReturnValue
 }).nullable();
 
-export type CampaignWebpageServiceMutateResponse = z.infer<typeof CampaignWebpageServiceMutateResponse>;
+export type CampaignWebpageServiceMutateResponse = z.infer<typeof campaignWebpageServiceMutateResponse>;

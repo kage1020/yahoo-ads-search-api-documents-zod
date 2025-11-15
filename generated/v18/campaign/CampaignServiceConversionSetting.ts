@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { CampaignServiceGoalConfigLevel } from './CampaignServiceGoalConfigLevel';
-import { CampaignServiceCampaignConversionGoals } from './CampaignServiceCampaignConversionGoals';
+import { campaignServiceGoalConfigLevel } from './CampaignServiceGoalConfigLevel';
+import { campaignServiceCampaignConversionGoals } from './CampaignServiceCampaignConversionGoals';
 
-export const CampaignServiceConversionSetting = z.object({
+export const campaignServiceConversionSetting = z.object({
   conversionGroupId: z.number().int().nullable(),
-  goalConfigLevel: CampaignServiceGoalConfigLevel,
-  campaignConversionGoals: z.array(CampaignServiceCampaignConversionGoals).nullable()
+  goalConfigLevel: campaignServiceGoalConfigLevel,
+  campaignConversionGoals: z.array(campaignServiceCampaignConversionGoals).nullable()
 }).nullable();
 
-export type CampaignServiceConversionSetting = z.infer<typeof CampaignServiceConversionSetting>;
+export type CampaignServiceConversionSetting = z.infer<typeof campaignServiceConversionSetting>;

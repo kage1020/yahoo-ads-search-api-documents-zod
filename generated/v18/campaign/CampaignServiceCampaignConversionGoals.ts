@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { CampaignServiceConversionSource } from './CampaignServiceConversionSource';
-import { CampaignServiceConversionActionCategory } from './CampaignServiceConversionActionCategory';
+import { campaignServiceConversionSource } from './CampaignServiceConversionSource';
+import { campaignServiceConversionActionCategory } from './CampaignServiceConversionActionCategory';
 
-export const CampaignServiceCampaignConversionGoals = z.object({
-  source: CampaignServiceConversionSource,
-  category: CampaignServiceConversionActionCategory
+export const campaignServiceCampaignConversionGoals = z.object({
+  source: campaignServiceConversionSource,
+  category: campaignServiceConversionActionCategory
 }).nullable();
 
-export type CampaignServiceCampaignConversionGoals = z.infer<typeof CampaignServiceCampaignConversionGoals>;
+export type CampaignServiceCampaignConversionGoals = z.infer<typeof campaignServiceCampaignConversionGoals>;

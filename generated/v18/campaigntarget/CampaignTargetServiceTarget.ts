@@ -1,20 +1,20 @@
 import { z } from 'zod';
 
-import { CampaignTargetServiceLocationTarget } from './CampaignTargetServiceLocationTarget';
-import { CampaignTargetServiceNetworkTarget } from './CampaignTargetServiceNetworkTarget';
-import { CampaignTargetServicePlatformTarget } from './CampaignTargetServicePlatformTarget';
-import { CampaignTargetServiceRadiusTarget } from './CampaignTargetServiceRadiusTarget';
-import { CampaignTargetServiceScheduleTarget } from './CampaignTargetServiceScheduleTarget';
-import { CampaignTargetServiceTargetType } from './CampaignTargetServiceTargetType';
+import { campaignTargetServiceLocationTarget } from './CampaignTargetServiceLocationTarget';
+import { campaignTargetServiceNetworkTarget } from './CampaignTargetServiceNetworkTarget';
+import { campaignTargetServicePlatformTarget } from './CampaignTargetServicePlatformTarget';
+import { campaignTargetServiceRadiusTarget } from './CampaignTargetServiceRadiusTarget';
+import { campaignTargetServiceScheduleTarget } from './CampaignTargetServiceScheduleTarget';
+import { campaignTargetServiceTargetType } from './CampaignTargetServiceTargetType';
 
-export const CampaignTargetServiceTarget = z.object({
-  locationTarget: CampaignTargetServiceLocationTarget,
-  networkTarget: CampaignTargetServiceNetworkTarget,
-  platformTarget: CampaignTargetServicePlatformTarget,
-  radiusTarget: CampaignTargetServiceRadiusTarget,
-  scheduleTarget: CampaignTargetServiceScheduleTarget,
+export const campaignTargetServiceTarget = z.object({
+  locationTarget: campaignTargetServiceLocationTarget,
+  networkTarget: campaignTargetServiceNetworkTarget,
+  platformTarget: campaignTargetServicePlatformTarget,
+  radiusTarget: campaignTargetServiceRadiusTarget,
+  scheduleTarget: campaignTargetServiceScheduleTarget,
   targetId: z.string().nullable(),
-  targetType: CampaignTargetServiceTargetType
+  targetType: campaignTargetServiceTargetType
 }).nullable();
 
-export type CampaignTargetServiceTarget = z.infer<typeof CampaignTargetServiceTarget>;
+export type CampaignTargetServiceTarget = z.infer<typeof campaignTargetServiceTarget>;

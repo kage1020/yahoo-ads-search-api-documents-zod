@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { PageFeedAssetServiceGetJobStatusValue } from './PageFeedAssetServiceGetJobStatusValue';
+import { pageFeedAssetServiceGetJobStatusValue } from './PageFeedAssetServiceGetJobStatusValue';
 
-export const PageFeedAssetServiceGetJobStatusPage = z.object({
+export const pageFeedAssetServiceGetJobStatusPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(PageFeedAssetServiceGetJobStatusValue).nullable()
+  values: z.array(pageFeedAssetServiceGetJobStatusValue).nullable()
 }).nullable();
 
-export type PageFeedAssetServiceGetJobStatusPage = z.infer<typeof PageFeedAssetServiceGetJobStatusPage>;
+export type PageFeedAssetServiceGetJobStatusPage = z.infer<typeof pageFeedAssetServiceGetJobStatusPage>;

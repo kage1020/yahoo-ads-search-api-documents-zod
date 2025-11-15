@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { BudgetOrderServiceValue } from './BudgetOrderServiceValue';
+import { budgetOrderServiceValue } from './BudgetOrderServiceValue';
 
-export const BudgetOrderServicePage = z.object({
+export const budgetOrderServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(BudgetOrderServiceValue).nullable()
+  values: z.array(budgetOrderServiceValue).nullable()
 }).nullable();
 
-export type BudgetOrderServicePage = z.infer<typeof BudgetOrderServicePage>;
+export type BudgetOrderServicePage = z.infer<typeof budgetOrderServicePage>;

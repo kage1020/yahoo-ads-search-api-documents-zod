@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { BudgetOrderServiceValue } from './BudgetOrderServiceValue';
+import { budgetOrderServiceValue } from './BudgetOrderServiceValue';
 
-export const BudgetOrderServiceReturnValue = z.object({
-  values: z.array(BudgetOrderServiceValue).nullable()
+export const budgetOrderServiceReturnValue = z.object({
+  values: z.array(budgetOrderServiceValue).nullable()
 }).nullable();
 
-export type BudgetOrderServiceReturnValue = z.infer<typeof BudgetOrderServiceReturnValue>;
+export type BudgetOrderServiceReturnValue = z.infer<typeof budgetOrderServiceReturnValue>;

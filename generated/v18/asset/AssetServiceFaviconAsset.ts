@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AssetServiceFileType } from './AssetServiceFileType';
+import { assetServiceFileType } from './AssetServiceFileType';
 
-export const AssetServiceFaviconAsset = z.object({
+export const assetServiceFaviconAsset = z.object({
   faviconName: z.string().nullable(),
   data: z.string().nullable(),
   aspectRatio: z.string().nullable(),
   fileSize: z.number().int().nullable(),
   height: z.number().int().nullable(),
   width: z.number().int().nullable(),
-  fileType: AssetServiceFileType
+  fileType: assetServiceFileType
 }).nullable();
 
-export type AssetServiceFaviconAsset = z.infer<typeof AssetServiceFaviconAsset>;
+export type AssetServiceFaviconAsset = z.infer<typeof assetServiceFaviconAsset>;

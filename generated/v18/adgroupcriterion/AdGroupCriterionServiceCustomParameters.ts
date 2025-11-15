@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionServiceIsRemove } from './AdGroupCriterionServiceIsRemove';
-import { AdGroupCriterionServiceCustomParameter } from './AdGroupCriterionServiceCustomParameter';
+import { adGroupCriterionServiceIsRemove } from './AdGroupCriterionServiceIsRemove';
+import { adGroupCriterionServiceCustomParameter } from './AdGroupCriterionServiceCustomParameter';
 
-export const AdGroupCriterionServiceCustomParameters = z.object({
-  isRemove: AdGroupCriterionServiceIsRemove,
-  parameters: z.array(AdGroupCriterionServiceCustomParameter).nullable()
+export const adGroupCriterionServiceCustomParameters = z.object({
+  isRemove: adGroupCriterionServiceIsRemove,
+  parameters: z.array(adGroupCriterionServiceCustomParameter).nullable()
 }).nullable();
 
-export type AdGroupCriterionServiceCustomParameters = z.infer<typeof AdGroupCriterionServiceCustomParameters>;
+export type AdGroupCriterionServiceCustomParameters = z.infer<typeof adGroupCriterionServiceCustomParameters>;

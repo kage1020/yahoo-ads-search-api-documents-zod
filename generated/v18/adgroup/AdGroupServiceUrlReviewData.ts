@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AdGroupServiceReviewUrl } from './AdGroupServiceReviewUrl';
-import { AdGroupServiceUrlApprovalStatus } from './AdGroupServiceUrlApprovalStatus';
+import { adGroupServiceReviewUrl } from './AdGroupServiceReviewUrl';
+import { adGroupServiceUrlApprovalStatus } from './AdGroupServiceUrlApprovalStatus';
 
-export const AdGroupServiceUrlReviewData = z.object({
+export const adGroupServiceUrlReviewData = z.object({
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable(),
-  disapprovalReviewUrl: AdGroupServiceReviewUrl,
-  inReviewUrl: AdGroupServiceReviewUrl,
-  urlApprovalStatus: AdGroupServiceUrlApprovalStatus
+  disapprovalReviewUrl: adGroupServiceReviewUrl,
+  inReviewUrl: adGroupServiceReviewUrl,
+  urlApprovalStatus: adGroupServiceUrlApprovalStatus
 }).nullable();
 
-export type AdGroupServiceUrlReviewData = z.infer<typeof AdGroupServiceUrlReviewData>;
+export type AdGroupServiceUrlReviewData = z.infer<typeof adGroupServiceUrlReviewData>;

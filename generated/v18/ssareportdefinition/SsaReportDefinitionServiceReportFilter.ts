@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { SsaReportDefinitionServiceFilterOperator } from './SsaReportDefinitionServiceFilterOperator';
+import { ssaReportDefinitionServiceFilterOperator } from './SsaReportDefinitionServiceFilterOperator';
 
-export const SsaReportDefinitionServiceReportFilter = z.object({
+export const ssaReportDefinitionServiceReportFilter = z.object({
   field: z.string().nullable(),
-  filterOperator: SsaReportDefinitionServiceFilterOperator,
+  filterOperator: ssaReportDefinitionServiceFilterOperator,
   values: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type SsaReportDefinitionServiceReportFilter = z.infer<typeof SsaReportDefinitionServiceReportFilter>;
+export type SsaReportDefinitionServiceReportFilter = z.infer<typeof ssaReportDefinitionServiceReportFilter>;

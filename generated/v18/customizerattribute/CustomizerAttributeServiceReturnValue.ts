@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { CustomizerAttributeServiceValue } from './CustomizerAttributeServiceValue';
+import { customizerAttributeServiceValue } from './CustomizerAttributeServiceValue';
 
-export const CustomizerAttributeServiceReturnValue = z.object({
-  values: z.array(CustomizerAttributeServiceValue).nullable()
+export const customizerAttributeServiceReturnValue = z.object({
+  values: z.array(customizerAttributeServiceValue).nullable()
 }).nullable();
 
-export type CustomizerAttributeServiceReturnValue = z.infer<typeof CustomizerAttributeServiceReturnValue>;
+export type CustomizerAttributeServiceReturnValue = z.infer<typeof customizerAttributeServiceReturnValue>;

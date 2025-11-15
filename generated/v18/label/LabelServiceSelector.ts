@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { LabelServiceCountLabeledEntity } from './LabelServiceCountLabeledEntity';
+import { labelServiceCountLabeledEntity } from './LabelServiceCountLabeledEntity';
 
-export const LabelServiceSelector = z.object({
+export const labelServiceSelector = z.object({
   accountId: z.number().int(),
-  countLabeledEntity: LabelServiceCountLabeledEntity,
+  countLabeledEntity: labelServiceCountLabeledEntity,
   labelIds: z.array(z.number().int().nullable()).nullable(),
   numberResults: z.number().int().min(1).max(2000).nullable(),
   startIndex: z.number().int().min(1).nullable()
 }).nullable();
 
-export type LabelServiceSelector = z.infer<typeof LabelServiceSelector>;
+export type LabelServiceSelector = z.infer<typeof labelServiceSelector>;

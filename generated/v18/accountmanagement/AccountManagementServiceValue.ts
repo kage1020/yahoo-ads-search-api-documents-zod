@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AccountManagement } from './AccountManagement';
-import { Error } from './Error';
+import { accountManagement } from './AccountManagement';
+import { error } from '../../common/Error';
 
-export const AccountManagementServiceValue = z.object({
-  accountManagement: AccountManagement,
-  errors: z.array(Error).nullable(),
+export const accountManagementServiceValue = z.object({
+  accountManagement: accountManagement,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AccountManagementServiceValue = z.infer<typeof AccountManagementServiceValue>;
+export type AccountManagementServiceValue = z.infer<typeof accountManagementServiceValue>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AccountManagementServicePrefectureCode = z.enum(["HOKKAIDO", "AOMORI", "IWATE", "MIYAGI", "AKITA", "YAMAGATA", "FUKUSHIMA", "IBARAKI", "TOCHIGI", "GUNMA", "SAITAMA", "CHIBA", "TOKYO", "KANAGAWA", "NIIGATA", "TOYAMA", "ISHIKAWA", "FUKUI", "YAMANASHI", "NAGANO", "GIFU", "SHIZUOKA", "AICHI", "MIE", "SIGA", "KYOTO", "OSAKA", "HYOGO", "NARA", "WAKAYAMA", "TOTTORI", "SHIMANE", "OKAYAMA", "HIROSHIMA", "YAMAGUCHI", "TOKUSHIMA", "KAGAWA", "EHIME", "KOCHI", "FUKUOKA", "SAGA", "NAGASAKI", "KUMAMOTO", "OITA", "MIYAZAKI", "KAGOSHIMA", "OKINAWA", "NONE", "UNKNOWN"]).nullable();
+export const accountManagementServicePrefectureCode = z.enum(["HOKKAIDO", "AOMORI", "IWATE", "MIYAGI", "AKITA", "YAMAGATA", "FUKUSHIMA", "IBARAKI", "TOCHIGI", "GUNMA", "SAITAMA", "CHIBA", "TOKYO", "KANAGAWA", "NIIGATA", "TOYAMA", "ISHIKAWA", "FUKUI", "YAMANASHI", "NAGANO", "GIFU", "SHIZUOKA", "AICHI", "MIE", "SIGA", "KYOTO", "OSAKA", "HYOGO", "NARA", "WAKAYAMA", "TOTTORI", "SHIMANE", "OKAYAMA", "HIROSHIMA", "YAMAGUCHI", "TOKUSHIMA", "KAGAWA", "EHIME", "KOCHI", "FUKUOKA", "SAGA", "NAGASAKI", "KUMAMOTO", "OITA", "MIYAZAKI", "KAGOSHIMA", "OKINAWA", "NONE", "UNKNOWN"]).nullable();
 
-export type AccountManagementServicePrefectureCode = z.infer<typeof AccountManagementServicePrefectureCode>;
+export type AccountManagementServicePrefectureCode = z.infer<typeof accountManagementServicePrefectureCode>;

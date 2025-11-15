@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { CampaignServiceTargetImpressionShareLocation } from './CampaignServiceTargetImpressionShareLocation';
+import { campaignServiceTargetImpressionShareLocation } from './CampaignServiceTargetImpressionShareLocation';
 
-export const CampaignServiceTargetImpressionShareScheme = z.object({
-  location: CampaignServiceTargetImpressionShareLocation,
+export const campaignServiceTargetImpressionShareScheme = z.object({
+  location: campaignServiceTargetImpressionShareLocation,
   bidCeiling: z.number().int().nullable(),
   targetImpressionShare: z.number().int().nullable()
 }).nullable();
 
-export type CampaignServiceTargetImpressionShareScheme = z.infer<typeof CampaignServiceTargetImpressionShareScheme>;
+export type CampaignServiceTargetImpressionShareScheme = z.infer<typeof campaignServiceTargetImpressionShareScheme>;

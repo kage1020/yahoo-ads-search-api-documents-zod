@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { PageFeedAssetSetServiceValue } from './PageFeedAssetSetServiceValue';
+import { pageFeedAssetSetServiceValue } from './PageFeedAssetSetServiceValue';
 
-export const PageFeedAssetSetServicePage = z.object({
+export const pageFeedAssetSetServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(PageFeedAssetSetServiceValue).nullable()
+  values: z.array(pageFeedAssetSetServiceValue).nullable()
 }).nullable();
 
-export type PageFeedAssetSetServicePage = z.infer<typeof PageFeedAssetSetServicePage>;
+export type PageFeedAssetSetServicePage = z.infer<typeof pageFeedAssetSetServicePage>;

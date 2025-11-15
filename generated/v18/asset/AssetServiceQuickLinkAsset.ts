@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-import { AssetServiceSchedule } from './AssetServiceSchedule';
+import { assetServiceSchedule } from './AssetServiceSchedule';
 
-export const AssetServiceQuickLinkAsset = z.object({
+export const assetServiceQuickLinkAsset = z.object({
   linkText: z.string().nullable(),
   reviewLinkText: z.string().nullable(),
   description1: z.string().nullable(),
@@ -11,7 +11,7 @@ export const AssetServiceQuickLinkAsset = z.object({
   reviewDescription2: z.string().nullable(),
   startDate: z.string().nullable(),
   endDate: z.string().nullable(),
-  schedules: z.array(AssetServiceSchedule).nullable()
+  schedules: z.array(assetServiceSchedule).nullable()
 }).nullable();
 
-export type AssetServiceQuickLinkAsset = z.infer<typeof AssetServiceQuickLinkAsset>;
+export type AssetServiceQuickLinkAsset = z.infer<typeof assetServiceQuickLinkAsset>;

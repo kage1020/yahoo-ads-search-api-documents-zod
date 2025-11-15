@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { BudgetOrderServiceReturnValue } from './BudgetOrderServiceReturnValue';
+import { error } from '../../common/Error';
+import { budgetOrderServiceReturnValue } from './BudgetOrderServiceReturnValue';
 
-export const BudgetOrderServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const budgetOrderServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: BudgetOrderServiceReturnValue
+  rval: budgetOrderServiceReturnValue
 }).nullable();
 
-export type BudgetOrderServiceMutateResponse = z.infer<typeof BudgetOrderServiceMutateResponse>;
+export type BudgetOrderServiceMutateResponse = z.infer<typeof budgetOrderServiceMutateResponse>;

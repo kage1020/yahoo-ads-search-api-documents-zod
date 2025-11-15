@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AppLinkServiceValue } from './AppLinkServiceValue';
+import { appLinkServiceValue } from './AppLinkServiceValue';
 
-export const AppLinkServiceReturnValue = z.object({
-  values: z.array(AppLinkServiceValue).nullable()
+export const appLinkServiceReturnValue = z.object({
+  values: z.array(appLinkServiceValue).nullable()
 }).nullable();
 
-export type AppLinkServiceReturnValue = z.infer<typeof AppLinkServiceReturnValue>;
+export type AppLinkServiceReturnValue = z.infer<typeof appLinkServiceReturnValue>;

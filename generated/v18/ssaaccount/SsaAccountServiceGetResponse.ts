@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { SsaAccountServicePage } from './SsaAccountServicePage';
+import { error } from '../../common/Error';
+import { ssaAccountServicePage } from './SsaAccountServicePage';
 
-export const SsaAccountServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const ssaAccountServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: SsaAccountServicePage
+  rval: ssaAccountServicePage
 }).nullable();
 
-export type SsaAccountServiceGetResponse = z.infer<typeof SsaAccountServiceGetResponse>;
+export type SsaAccountServiceGetResponse = z.infer<typeof ssaAccountServiceGetResponse>;

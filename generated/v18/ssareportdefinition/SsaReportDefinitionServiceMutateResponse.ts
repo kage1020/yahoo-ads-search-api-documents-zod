@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { SsaReportDefinitionServiceReturnValue } from './SsaReportDefinitionServiceReturnValue';
+import { error } from '../../common/Error';
+import { ssaReportDefinitionServiceReturnValue } from './SsaReportDefinitionServiceReturnValue';
 
-export const SsaReportDefinitionServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const ssaReportDefinitionServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: SsaReportDefinitionServiceReturnValue
+  rval: ssaReportDefinitionServiceReturnValue
 }).nullable();
 
-export type SsaReportDefinitionServiceMutateResponse = z.infer<typeof SsaReportDefinitionServiceMutateResponse>;
+export type SsaReportDefinitionServiceMutateResponse = z.infer<typeof ssaReportDefinitionServiceMutateResponse>;

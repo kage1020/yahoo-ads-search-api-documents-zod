@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const RetargetingListServiceRuleType = z.enum(["URL_RULE", "CUSTOM_KEY_RULE", "UNKNOWN"]).nullable();
+export const retargetingListServiceRuleType = z.enum(["URL_RULE", "CUSTOM_KEY_RULE", "UNKNOWN"]).nullable();
 
-export type RetargetingListServiceRuleType = z.infer<typeof RetargetingListServiceRuleType>;
+export type RetargetingListServiceRuleType = z.infer<typeof retargetingListServiceRuleType>;

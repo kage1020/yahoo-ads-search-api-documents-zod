@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { CampaignTargetServiceDayOfWeek } from './CampaignTargetServiceDayOfWeek';
-import { CampaignTargetServiceMinuteOfHour } from './CampaignTargetServiceMinuteOfHour';
+import { campaignTargetServiceDayOfWeek } from './CampaignTargetServiceDayOfWeek';
+import { campaignTargetServiceMinuteOfHour } from './CampaignTargetServiceMinuteOfHour';
 
-export const CampaignTargetServiceScheduleTarget = z.object({
-  dayOfWeek: CampaignTargetServiceDayOfWeek,
+export const campaignTargetServiceScheduleTarget = z.object({
+  dayOfWeek: campaignTargetServiceDayOfWeek,
   endHour: z.number().int().nullable(),
-  endMinute: CampaignTargetServiceMinuteOfHour,
+  endMinute: campaignTargetServiceMinuteOfHour,
   startHour: z.number().int().nullable(),
-  startMinute: CampaignTargetServiceMinuteOfHour
+  startMinute: campaignTargetServiceMinuteOfHour
 }).nullable();
 
-export type CampaignTargetServiceScheduleTarget = z.infer<typeof CampaignTargetServiceScheduleTarget>;
+export type CampaignTargetServiceScheduleTarget = z.infer<typeof campaignTargetServiceScheduleTarget>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceSetTrademarkStatus = z.object({
+export const adGroupAdServiceSetTrademarkStatus = z.object({
   adGroupId: z.number().int().nullable(),
   adId: z.number().int().nullable(),
   campaignId: z.number().int().nullable()
 }).nullable();
 
-export type AdGroupAdServiceSetTrademarkStatus = z.infer<typeof AdGroupAdServiceSetTrademarkStatus>;
+export type AdGroupAdServiceSetTrademarkStatus = z.infer<typeof adGroupAdServiceSetTrademarkStatus>;

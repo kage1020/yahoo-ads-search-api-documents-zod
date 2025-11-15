@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { CampaignTargetServicePage } from './CampaignTargetServicePage';
+import { error } from '../../common/Error';
+import { campaignTargetServicePage } from './CampaignTargetServicePage';
 
-export const CampaignTargetServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const campaignTargetServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: CampaignTargetServicePage
+  rval: campaignTargetServicePage
 }).nullable();
 
-export type CampaignTargetServiceGetResponse = z.infer<typeof CampaignTargetServiceGetResponse>;
+export type CampaignTargetServiceGetResponse = z.infer<typeof campaignTargetServiceGetResponse>;

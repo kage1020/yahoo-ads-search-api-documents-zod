@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupWebpageServiceUserStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
+export const adGroupWebpageServiceUserStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
 
-export type AdGroupWebpageServiceUserStatus = z.infer<typeof AdGroupWebpageServiceUserStatus>;
+export type AdGroupWebpageServiceUserStatus = z.infer<typeof adGroupWebpageServiceUserStatus>;

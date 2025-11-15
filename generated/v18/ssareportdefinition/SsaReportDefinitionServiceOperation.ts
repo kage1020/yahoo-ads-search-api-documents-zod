@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { SsaReportDefinition } from './SsaReportDefinition';
+import { ssaReportDefinition } from './SsaReportDefinition';
 
-export const SsaReportDefinitionServiceOperation = z.object({
+export const ssaReportDefinitionServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(SsaReportDefinition).nullable()
+  operand: z.array(ssaReportDefinition).nullable()
 }).nullable();
 
-export type SsaReportDefinitionServiceOperation = z.infer<typeof SsaReportDefinitionServiceOperation>;
+export type SsaReportDefinitionServiceOperation = z.infer<typeof ssaReportDefinitionServiceOperation>;

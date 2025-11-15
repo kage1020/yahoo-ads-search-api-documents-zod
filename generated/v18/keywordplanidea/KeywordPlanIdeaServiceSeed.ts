@@ -1,17 +1,17 @@
 import { z } from 'zod';
 
-import { KeywordPlanIdeaServiceKeywordAndUrlSeed } from './KeywordPlanIdeaServiceKeywordAndUrlSeed';
-import { KeywordPlanIdeaServiceKeywordSeed } from './KeywordPlanIdeaServiceKeywordSeed';
-import { KeywordPlanIdeaServiceUrlSeed } from './KeywordPlanIdeaServiceUrlSeed';
-import { KeywordPlanIdeaServiceSiteSeed } from './KeywordPlanIdeaServiceSiteSeed';
-import { KeywordPlanIdeaServiceSeedType } from './KeywordPlanIdeaServiceSeedType';
+import { keywordPlanIdeaServiceKeywordAndUrlSeed } from './KeywordPlanIdeaServiceKeywordAndUrlSeed';
+import { keywordPlanIdeaServiceKeywordSeed } from './KeywordPlanIdeaServiceKeywordSeed';
+import { keywordPlanIdeaServiceUrlSeed } from './KeywordPlanIdeaServiceUrlSeed';
+import { keywordPlanIdeaServiceSiteSeed } from './KeywordPlanIdeaServiceSiteSeed';
+import { keywordPlanIdeaServiceSeedType } from './KeywordPlanIdeaServiceSeedType';
 
-export const KeywordPlanIdeaServiceSeed = z.object({
-  keywordAndUrlSeed: KeywordPlanIdeaServiceKeywordAndUrlSeed,
-  keywordSeed: KeywordPlanIdeaServiceKeywordSeed,
-  urlSeed: KeywordPlanIdeaServiceUrlSeed,
-  siteSeed: KeywordPlanIdeaServiceSiteSeed,
-  seedType: KeywordPlanIdeaServiceSeedType
+export const keywordPlanIdeaServiceSeed = z.object({
+  keywordAndUrlSeed: keywordPlanIdeaServiceKeywordAndUrlSeed,
+  keywordSeed: keywordPlanIdeaServiceKeywordSeed,
+  urlSeed: keywordPlanIdeaServiceUrlSeed,
+  siteSeed: keywordPlanIdeaServiceSiteSeed,
+  seedType: keywordPlanIdeaServiceSeedType
 }).nullable();
 
-export type KeywordPlanIdeaServiceSeed = z.infer<typeof KeywordPlanIdeaServiceSeed>;
+export type KeywordPlanIdeaServiceSeed = z.infer<typeof keywordPlanIdeaServiceSeed>;

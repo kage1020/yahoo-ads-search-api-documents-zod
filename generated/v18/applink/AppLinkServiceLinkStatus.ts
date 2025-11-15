@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AppLinkServiceLinkStatus = z.enum(["ENABLED", "DISABLED", "UNKNOWN"]).nullable();
+export const appLinkServiceLinkStatus = z.enum(["ENABLED", "DISABLED", "UNKNOWN"]).nullable();
 
-export type AppLinkServiceLinkStatus = z.infer<typeof AppLinkServiceLinkStatus>;
+export type AppLinkServiceLinkStatus = z.infer<typeof appLinkServiceLinkStatus>;

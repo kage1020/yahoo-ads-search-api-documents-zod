@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionLabel } from './AdGroupCriterionLabel';
-import { Error } from './Error';
+import { adGroupCriterionLabel } from './AdGroupCriterionLabel';
+import { error } from '../../common/Error';
 
-export const AdGroupCriterionLabelServiceValue = z.object({
-  adGroupCriterionLabel: AdGroupCriterionLabel,
-  errors: z.array(Error).nullable(),
+export const adGroupCriterionLabelServiceValue = z.object({
+  adGroupCriterionLabel: adGroupCriterionLabel,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AdGroupCriterionLabelServiceValue = z.infer<typeof AdGroupCriterionLabelServiceValue>;
+export type AdGroupCriterionLabelServiceValue = z.infer<typeof adGroupCriterionLabelServiceValue>;

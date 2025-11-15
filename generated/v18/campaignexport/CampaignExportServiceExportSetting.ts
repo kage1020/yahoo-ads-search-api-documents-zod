@@ -1,31 +1,31 @@
 import { z } from 'zod';
 
-import { CampaignExportServiceApprovalStatus } from './CampaignExportServiceApprovalStatus';
-import { CampaignExportServiceUserStatus } from './CampaignExportServiceUserStatus';
-import { CampaignExportServiceEncoding } from './CampaignExportServiceEncoding';
-import { CampaignExportServiceEntityType } from './CampaignExportServiceEntityType';
-import { CampaignExportServiceLang } from './CampaignExportServiceLang';
-import { CampaignExportServiceOutput } from './CampaignExportServiceOutput';
+import { campaignExportServiceApprovalStatus } from './CampaignExportServiceApprovalStatus';
+import { campaignExportServiceUserStatus } from './CampaignExportServiceUserStatus';
+import { campaignExportServiceEncoding } from './CampaignExportServiceEncoding';
+import { campaignExportServiceEntityType } from './CampaignExportServiceEntityType';
+import { campaignExportServiceLang } from './CampaignExportServiceLang';
+import { campaignExportServiceOutput } from './CampaignExportServiceOutput';
 
-export const CampaignExportServiceExportSetting = z.object({
+export const campaignExportServiceExportSetting = z.object({
   accountId: z.number().int(),
-  adGroupAdApprovalStatuses: z.array(CampaignExportServiceApprovalStatus).nullable(),
-  adGroupAdUserStatuses: z.array(CampaignExportServiceUserStatus).nullable(),
-  adGroupCriterionApprovalStatuses: z.array(CampaignExportServiceApprovalStatus).nullable(),
+  adGroupAdApprovalStatuses: z.array(campaignExportServiceApprovalStatus).nullable(),
+  adGroupAdUserStatuses: z.array(campaignExportServiceUserStatus).nullable(),
+  adGroupCriterionApprovalStatuses: z.array(campaignExportServiceApprovalStatus).nullable(),
   adGroupCriterionIds: z.array(z.number().int().nullable()).nullable(),
-  adGroupCriterionUserStatuses: z.array(CampaignExportServiceUserStatus).nullable(),
+  adGroupCriterionUserStatuses: z.array(campaignExportServiceUserStatus).nullable(),
   adGroupIds: z.array(z.number().int().nullable()).nullable(),
-  adGroupUserStatuses: z.array(CampaignExportServiceUserStatus).nullable(),
+  adGroupUserStatuses: z.array(campaignExportServiceUserStatus).nullable(),
   adIds: z.array(z.number().int().nullable()).nullable(),
   campaignCriterionIds: z.array(z.number().int().nullable()).nullable(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
-  campaignUserStatuses: z.array(CampaignExportServiceUserStatus).nullable(),
-  encoding: CampaignExportServiceEncoding,
-  entityTypes: z.array(CampaignExportServiceEntityType).nullable(),
+  campaignUserStatuses: z.array(campaignExportServiceUserStatus).nullable(),
+  encoding: campaignExportServiceEncoding,
+  entityTypes: z.array(campaignExportServiceEntityType).nullable(),
   exportFields: z.array(z.string().nullable()).nullable(),
   jobName: z.string().nullable(),
-  lang: CampaignExportServiceLang,
-  output: CampaignExportServiceOutput
+  lang: campaignExportServiceLang,
+  output: campaignExportServiceOutput
 }).nullable();
 
-export type CampaignExportServiceExportSetting = z.infer<typeof CampaignExportServiceExportSetting>;
+export type CampaignExportServiceExportSetting = z.infer<typeof campaignExportServiceExportSetting>;

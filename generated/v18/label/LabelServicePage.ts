@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { LabelServiceValue } from './LabelServiceValue';
+import { labelServiceValue } from './LabelServiceValue';
 
-export const LabelServicePage = z.object({
+export const labelServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(LabelServiceValue).nullable()
+  values: z.array(labelServiceValue).nullable()
 }).nullable();
 
-export type LabelServicePage = z.infer<typeof LabelServicePage>;
+export type LabelServicePage = z.infer<typeof labelServicePage>;

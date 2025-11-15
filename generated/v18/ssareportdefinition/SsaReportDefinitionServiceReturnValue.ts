@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { SsaReportDefinitionServiceValue } from './SsaReportDefinitionServiceValue';
+import { ssaReportDefinitionServiceValue } from './SsaReportDefinitionServiceValue';
 
-export const SsaReportDefinitionServiceReturnValue = z.object({
-  values: z.array(SsaReportDefinitionServiceValue).nullable()
+export const ssaReportDefinitionServiceReturnValue = z.object({
+  values: z.array(ssaReportDefinitionServiceValue).nullable()
 }).nullable();
 
-export type SsaReportDefinitionServiceReturnValue = z.infer<typeof SsaReportDefinitionServiceReturnValue>;
+export type SsaReportDefinitionServiceReturnValue = z.infer<typeof ssaReportDefinitionServiceReturnValue>;

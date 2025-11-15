@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { CampaignRetargetingListServiceReturnValue } from './CampaignRetargetingListServiceReturnValue';
+import { error } from '../../common/Error';
+import { campaignRetargetingListServiceReturnValue } from './CampaignRetargetingListServiceReturnValue';
 
-export const CampaignRetargetingListServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const campaignRetargetingListServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: CampaignRetargetingListServiceReturnValue
+  rval: campaignRetargetingListServiceReturnValue
 }).nullable();
 
-export type CampaignRetargetingListServiceMutateResponse = z.infer<typeof CampaignRetargetingListServiceMutateResponse>;
+export type CampaignRetargetingListServiceMutateResponse = z.infer<typeof campaignRetargetingListServiceMutateResponse>;

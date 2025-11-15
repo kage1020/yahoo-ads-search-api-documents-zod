@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { ConversionTrackerServiceReturnValue } from './ConversionTrackerServiceReturnValue';
+import { error } from '../../common/Error';
+import { conversionTrackerServiceReturnValue } from './ConversionTrackerServiceReturnValue';
 
-export const ConversionTrackerServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const conversionTrackerServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: ConversionTrackerServiceReturnValue
+  rval: conversionTrackerServiceReturnValue
 }).nullable();
 
-export type ConversionTrackerServiceMutateResponse = z.infer<typeof ConversionTrackerServiceMutateResponse>;
+export type ConversionTrackerServiceMutateResponse = z.infer<typeof conversionTrackerServiceMutateResponse>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { LabelServiceValue } from './LabelServiceValue';
+import { labelServiceValue } from './LabelServiceValue';
 
-export const LabelServiceReturnValue = z.object({
-  values: z.array(LabelServiceValue).nullable()
+export const labelServiceReturnValue = z.object({
+  values: z.array(labelServiceValue).nullable()
 }).nullable();
 
-export type LabelServiceReturnValue = z.infer<typeof LabelServiceReturnValue>;
+export type LabelServiceReturnValue = z.infer<typeof labelServiceReturnValue>;

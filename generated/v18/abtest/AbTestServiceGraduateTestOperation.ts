@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AbTestServiceGraduateTest } from './AbTestServiceGraduateTest';
+import { abTestServiceGraduateTest } from './AbTestServiceGraduateTest';
 
-export const AbTestServiceGraduateTestOperation = z.object({
+export const abTestServiceGraduateTestOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AbTestServiceGraduateTest).nullable()
+  operand: z.array(abTestServiceGraduateTest).nullable()
 }).nullable();
 
-export type AbTestServiceGraduateTestOperation = z.infer<typeof AbTestServiceGraduateTestOperation>;
+export type AbTestServiceGraduateTestOperation = z.infer<typeof abTestServiceGraduateTestOperation>;

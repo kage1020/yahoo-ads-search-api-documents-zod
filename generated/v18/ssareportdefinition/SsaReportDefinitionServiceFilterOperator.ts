@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const SsaReportDefinitionServiceFilterOperator = z.enum(["EQUALS", "GREATER_THAN_EQUALS", "LESS_THAN_EQUALS", "CONTAINS", "IN", "UNKNOWN"]).nullable();
+export const ssaReportDefinitionServiceFilterOperator = z.enum(["EQUALS", "GREATER_THAN_EQUALS", "LESS_THAN_EQUALS", "CONTAINS", "IN", "UNKNOWN"]).nullable();
 
-export type SsaReportDefinitionServiceFilterOperator = z.infer<typeof SsaReportDefinitionServiceFilterOperator>;
+export type SsaReportDefinitionServiceFilterOperator = z.infer<typeof ssaReportDefinitionServiceFilterOperator>;

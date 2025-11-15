@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { OfflineConversionServiceValue } from './OfflineConversionServiceValue';
+import { offlineConversionServiceValue } from './OfflineConversionServiceValue';
 
-export const OfflineConversionServicePage = z.object({
+export const offlineConversionServicePage = z.object({
   totalNumEntries: z.number().int().nullable(),
-  values: z.array(OfflineConversionServiceValue).nullable()
+  values: z.array(offlineConversionServiceValue).nullable()
 }).nullable();
 
-export type OfflineConversionServicePage = z.infer<typeof OfflineConversionServicePage>;
+export type OfflineConversionServicePage = z.infer<typeof offlineConversionServicePage>;

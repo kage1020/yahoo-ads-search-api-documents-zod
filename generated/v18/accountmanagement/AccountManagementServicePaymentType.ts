@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AccountManagementServicePaymentType = z.enum(["PREPAY", "POSTPAY", "INVOICE", "UNKNOWN"]).nullable();
+export const accountManagementServicePaymentType = z.enum(["PREPAY", "POSTPAY", "INVOICE", "UNKNOWN"]).nullable();
 
-export type AccountManagementServicePaymentType = z.infer<typeof AccountManagementServicePaymentType>;
+export type AccountManagementServicePaymentType = z.infer<typeof accountManagementServicePaymentType>;

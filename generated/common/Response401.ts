@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const Response401 = z.unknown();
+export const response401 = z.unknown();
 
-export type Response401 = z.infer<typeof Response401>;
+export type Response401 = z.infer<typeof response401>;

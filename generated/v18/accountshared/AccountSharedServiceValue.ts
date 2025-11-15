@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AccountShared } from './AccountShared';
-import { Error } from './Error';
+import { accountShared } from './AccountShared';
+import { error } from '../../common/Error';
 
-export const AccountSharedServiceValue = z.object({
-  accountShared: AccountShared,
-  errors: z.array(Error).nullable(),
+export const accountSharedServiceValue = z.object({
+  accountShared: accountShared,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AccountSharedServiceValue = z.infer<typeof AccountSharedServiceValue>;
+export type AccountSharedServiceValue = z.infer<typeof accountSharedServiceValue>;

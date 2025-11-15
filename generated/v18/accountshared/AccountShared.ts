@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const AccountShared = z.object({
+export const accountShared = z.object({
   accountId: z.number().int().nullable(),
   memberCount: z.number().int().nullable(),
   name: z.string().nullable(),
@@ -8,4 +8,4 @@ export const AccountShared = z.object({
   sharedListId: z.number().int().nullable()
 }).nullable();
 
-export type AccountShared = z.infer<typeof AccountShared>;
+export type AccountShared = z.infer<typeof accountShared>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { RetargetingListServiceTargetingList } from './RetargetingListServiceTargetingList';
+import { error } from '../../common/Error';
+import { retargetingListServiceTargetingList } from './RetargetingListServiceTargetingList';
 
-export const RetargetingListServiceValue = z.object({
-  errors: z.array(Error).nullable(),
+export const retargetingListServiceValue = z.object({
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  targetList: RetargetingListServiceTargetingList
+  targetList: retargetingListServiceTargetingList
 }).nullable();
 
-export type RetargetingListServiceValue = z.infer<typeof RetargetingListServiceValue>;
+export type RetargetingListServiceValue = z.infer<typeof retargetingListServiceValue>;

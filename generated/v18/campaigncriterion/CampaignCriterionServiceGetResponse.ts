@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { CampaignCriterionServicePage } from './CampaignCriterionServicePage';
+import { error } from '../../common/Error';
+import { campaignCriterionServicePage } from './CampaignCriterionServicePage';
 
-export const CampaignCriterionServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const campaignCriterionServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: CampaignCriterionServicePage
+  rval: campaignCriterionServicePage
 }).nullable();
 
-export type CampaignCriterionServiceGetResponse = z.infer<typeof CampaignCriterionServiceGetResponse>;
+export type CampaignCriterionServiceGetResponse = z.infer<typeof campaignCriterionServiceGetResponse>;

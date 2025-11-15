@@ -1,26 +1,26 @@
 import { z } from 'zod';
 
-import { AccountServiceStatus } from './AccountServiceStatus';
-import { AccountServiceType } from './AccountServiceType';
-import { AccountServiceAutoTaggingEnabled } from './AccountServiceAutoTaggingEnabled';
-import { AccountServiceDeliveryStatus } from './AccountServiceDeliveryStatus';
-import { AccountServiceIsTestAccount } from './AccountServiceIsTestAccount';
-import { AccountServiceIsCancellationPending } from './AccountServiceIsCancellationPending';
-import { AccountServiceIsMccAccount } from './AccountServiceIsMccAccount';
+import { accountServiceStatus } from './AccountServiceStatus';
+import { accountServiceType } from './AccountServiceType';
+import { accountServiceAutoTaggingEnabled } from './AccountServiceAutoTaggingEnabled';
+import { accountServiceDeliveryStatus } from './AccountServiceDeliveryStatus';
+import { accountServiceIsTestAccount } from './AccountServiceIsTestAccount';
+import { accountServiceIsCancellationPending } from './AccountServiceIsCancellationPending';
+import { accountServiceIsMccAccount } from './AccountServiceIsMccAccount';
 
-export const Account = z.object({
+export const account = z.object({
   accountId: z.number().int().nullable(),
   accountName: z.string().nullable(),
-  accountStatus: AccountServiceStatus,
-  accountType: AccountServiceType,
-  autoTaggingEnabled: AccountServiceAutoTaggingEnabled,
-  deliveryStatus: AccountServiceDeliveryStatus,
-  isTestAccount: AccountServiceIsTestAccount,
-  isCancellationPending: AccountServiceIsCancellationPending,
+  accountStatus: accountServiceStatus,
+  accountType: accountServiceType,
+  autoTaggingEnabled: accountServiceAutoTaggingEnabled,
+  deliveryStatus: accountServiceDeliveryStatus,
+  isTestAccount: accountServiceIsTestAccount,
+  isCancellationPending: accountServiceIsCancellationPending,
   startDate: z.string().nullable(),
   endDate: z.string().nullable(),
-  isMccAccount: AccountServiceIsMccAccount,
+  isMccAccount: accountServiceIsMccAccount,
   contactBizId: z.string().nullable()
 }).nullable();
 
-export type Account = z.infer<typeof Account>;
+export type Account = z.infer<typeof account>;

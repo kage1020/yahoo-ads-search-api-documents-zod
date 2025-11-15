@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceReviewStatus } from './RetargetingListServiceReviewStatus';
+import { retargetingListServiceReviewStatus } from './RetargetingListServiceReviewStatus';
 
-export const RetargetingListServiceRetargetingAccountStatus = z.object({
+export const retargetingListServiceRetargetingAccountStatus = z.object({
   agreeDate: z.string().nullable(),
   reviewRequestDate: z.string().nullable(),
-  reviewStatus: RetargetingListServiceReviewStatus
+  reviewStatus: retargetingListServiceReviewStatus
 }).nullable();
 
-export type RetargetingListServiceRetargetingAccountStatus = z.infer<typeof RetargetingListServiceRetargetingAccountStatus>;
+export type RetargetingListServiceRetargetingAccountStatus = z.infer<typeof retargetingListServiceRetargetingAccountStatus>;

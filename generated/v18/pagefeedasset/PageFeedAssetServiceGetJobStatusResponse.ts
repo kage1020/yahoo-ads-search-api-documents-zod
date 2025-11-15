@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { PageFeedAssetServiceGetJobStatusPage } from './PageFeedAssetServiceGetJobStatusPage';
+import { error } from '../../common/Error';
+import { pageFeedAssetServiceGetJobStatusPage } from './PageFeedAssetServiceGetJobStatusPage';
 
-export const PageFeedAssetServiceGetJobStatusResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const pageFeedAssetServiceGetJobStatusResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: PageFeedAssetServiceGetJobStatusPage
+  rval: pageFeedAssetServiceGetJobStatusPage
 }).nullable();
 
-export type PageFeedAssetServiceGetJobStatusResponse = z.infer<typeof PageFeedAssetServiceGetJobStatusResponse>;
+export type PageFeedAssetServiceGetJobStatusResponse = z.infer<typeof pageFeedAssetServiceGetJobStatusResponse>;

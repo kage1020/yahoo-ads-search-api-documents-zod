@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AccountManagement } from './AccountManagement';
+import { accountManagement } from './AccountManagement';
 
-export const AccountManagementServiceOperation = z.object({
+export const accountManagementServiceOperation = z.object({
   accountId: z.number().int().nullable(),
-  operand: z.array(AccountManagement)
+  operand: z.array(accountManagement)
 }).nullable();
 
-export type AccountManagementServiceOperation = z.infer<typeof AccountManagementServiceOperation>;
+export type AccountManagementServiceOperation = z.infer<typeof accountManagementServiceOperation>;

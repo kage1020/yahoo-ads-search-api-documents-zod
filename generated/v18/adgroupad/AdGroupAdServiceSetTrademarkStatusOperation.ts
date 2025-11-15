@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceSetTrademarkStatus } from './AdGroupAdServiceSetTrademarkStatus';
+import { adGroupAdServiceSetTrademarkStatus } from './AdGroupAdServiceSetTrademarkStatus';
 
-export const AdGroupAdServiceSetTrademarkStatusOperation = z.object({
+export const adGroupAdServiceSetTrademarkStatusOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AdGroupAdServiceSetTrademarkStatus).nullable()
+  operand: z.array(adGroupAdServiceSetTrademarkStatus).nullable()
 }).nullable();
 
-export type AdGroupAdServiceSetTrademarkStatusOperation = z.infer<typeof AdGroupAdServiceSetTrademarkStatusOperation>;
+export type AdGroupAdServiceSetTrademarkStatusOperation = z.infer<typeof adGroupAdServiceSetTrademarkStatusOperation>;

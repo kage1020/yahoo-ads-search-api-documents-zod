@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { SharedCriterionServiceKeywordMatchType } from './SharedCriterionServiceKeywordMatchType';
-import { SharedCriterionServiceUse } from './SharedCriterionServiceUse';
+import { sharedCriterionServiceKeywordMatchType } from './SharedCriterionServiceKeywordMatchType';
+import { sharedCriterionServiceUse } from './SharedCriterionServiceUse';
 
-export const SharedCriterion = z.object({
+export const sharedCriterion = z.object({
   accountId: z.number().int().nullable(),
   criterionId: z.number().int().nullable(),
-  keywordMatchType: SharedCriterionServiceKeywordMatchType,
+  keywordMatchType: sharedCriterionServiceKeywordMatchType,
   sharedListId: z.number().int().nullable(),
   text: z.string().nullable(),
-  use: SharedCriterionServiceUse
+  use: sharedCriterionServiceUse
 }).nullable();
 
-export type SharedCriterion = z.infer<typeof SharedCriterion>;
+export type SharedCriterion = z.infer<typeof sharedCriterion>;

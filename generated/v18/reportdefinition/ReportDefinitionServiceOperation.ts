@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ReportDefinition } from './ReportDefinition';
+import { reportDefinition } from './ReportDefinition';
 
-export const ReportDefinitionServiceOperation = z.object({
+export const reportDefinitionServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(ReportDefinition).nullable()
+  operand: z.array(reportDefinition).nullable()
 }).nullable();
 
-export type ReportDefinitionServiceOperation = z.infer<typeof ReportDefinitionServiceOperation>;
+export type ReportDefinitionServiceOperation = z.infer<typeof reportDefinitionServiceOperation>;

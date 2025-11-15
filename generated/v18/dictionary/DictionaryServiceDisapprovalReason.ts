@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { DictionaryServiceLang } from './DictionaryServiceLang';
+import { dictionaryServiceLang } from './DictionaryServiceLang';
 
-export const DictionaryServiceDisapprovalReason = z.object({
+export const dictionaryServiceDisapprovalReason = z.object({
   description: z.string().nullable(),
   disapprovalReasonCode: z.string().nullable(),
-  lang: DictionaryServiceLang,
+  lang: dictionaryServiceLang,
   recommendation: z.string().nullable(),
   title: z.string().nullable()
 }).nullable();
 
-export type DictionaryServiceDisapprovalReason = z.infer<typeof DictionaryServiceDisapprovalReason>;
+export type DictionaryServiceDisapprovalReason = z.infer<typeof dictionaryServiceDisapprovalReason>;

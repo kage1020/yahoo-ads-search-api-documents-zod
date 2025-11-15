@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupServiceCriterionType } from './AdGroupServiceCriterionType';
-import { AdGroupServiceTargetingSetting } from './AdGroupServiceTargetingSetting';
+import { adGroupServiceCriterionType } from './AdGroupServiceCriterionType';
+import { adGroupServiceTargetingSetting } from './AdGroupServiceTargetingSetting';
 
-export const AdGroupServiceSettings = z.object({
-  criterionType: AdGroupServiceCriterionType,
-  targetingSetting: AdGroupServiceTargetingSetting
+export const adGroupServiceSettings = z.object({
+  criterionType: adGroupServiceCriterionType,
+  targetingSetting: adGroupServiceTargetingSetting
 }).nullable();
 
-export type AdGroupServiceSettings = z.infer<typeof AdGroupServiceSettings>;
+export type AdGroupServiceSettings = z.infer<typeof adGroupServiceSettings>;

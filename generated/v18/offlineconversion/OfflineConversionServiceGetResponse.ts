@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { OfflineConversionServicePage } from './OfflineConversionServicePage';
+import { error } from '../../common/Error';
+import { offlineConversionServicePage } from './OfflineConversionServicePage';
 
-export const OfflineConversionServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const offlineConversionServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string().nullable(),
-  rval: OfflineConversionServicePage
+  rval: offlineConversionServicePage
 }).nullable();
 
-export type OfflineConversionServiceGetResponse = z.infer<typeof OfflineConversionServiceGetResponse>;
+export type OfflineConversionServiceGetResponse = z.infer<typeof offlineConversionServiceGetResponse>;

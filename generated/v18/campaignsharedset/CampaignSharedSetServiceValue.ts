@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { CampaignSharedSet } from './CampaignSharedSet';
-import { Error } from './Error';
+import { campaignSharedSet } from './CampaignSharedSet';
+import { error } from '../../common/Error';
 
-export const CampaignSharedSetServiceValue = z.object({
-  campaignSharedSet: CampaignSharedSet,
-  errors: z.array(Error).nullable(),
+export const campaignSharedSetServiceValue = z.object({
+  campaignSharedSet: campaignSharedSet,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type CampaignSharedSetServiceValue = z.infer<typeof CampaignSharedSetServiceValue>;
+export type CampaignSharedSetServiceValue = z.infer<typeof campaignSharedSetServiceValue>;

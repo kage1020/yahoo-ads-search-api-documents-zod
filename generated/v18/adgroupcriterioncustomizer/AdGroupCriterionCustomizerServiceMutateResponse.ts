@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AdGroupCriterionCustomizerServiceReturnValue } from './AdGroupCriterionCustomizerServiceReturnValue';
+import { error } from '../../common/Error';
+import { adGroupCriterionCustomizerServiceReturnValue } from './AdGroupCriterionCustomizerServiceReturnValue';
 
-export const AdGroupCriterionCustomizerServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const adGroupCriterionCustomizerServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AdGroupCriterionCustomizerServiceReturnValue
+  rval: adGroupCriterionCustomizerServiceReturnValue
 }).nullable();
 
-export type AdGroupCriterionCustomizerServiceMutateResponse = z.infer<typeof AdGroupCriterionCustomizerServiceMutateResponse>;
+export type AdGroupCriterionCustomizerServiceMutateResponse = z.infer<typeof adGroupCriterionCustomizerServiceMutateResponse>;

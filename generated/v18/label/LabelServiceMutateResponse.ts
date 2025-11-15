@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { LabelServiceReturnValue } from './LabelServiceReturnValue';
+import { error } from '../../common/Error';
+import { labelServiceReturnValue } from './LabelServiceReturnValue';
 
-export const LabelServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const labelServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: LabelServiceReturnValue
+  rval: labelServiceReturnValue
 }).nullable();
 
-export type LabelServiceMutateResponse = z.infer<typeof LabelServiceMutateResponse>;
+export type LabelServiceMutateResponse = z.infer<typeof labelServiceMutateResponse>;

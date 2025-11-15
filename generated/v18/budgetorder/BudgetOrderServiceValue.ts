@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { BudgetOrder } from './BudgetOrder';
-import { Error } from './Error';
+import { budgetOrder } from './BudgetOrder';
+import { error } from '../../common/Error';
 
-export const BudgetOrderServiceValue = z.object({
-  budgetOrder: BudgetOrder,
-  errors: z.array(Error).nullable(),
+export const budgetOrderServiceValue = z.object({
+  budgetOrder: budgetOrder,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type BudgetOrderServiceValue = z.infer<typeof BudgetOrderServiceValue>;
+export type BudgetOrderServiceValue = z.infer<typeof budgetOrderServiceValue>;

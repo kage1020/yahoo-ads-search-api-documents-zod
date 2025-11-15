@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { CampaignSharedSetServiceReturnValue } from './CampaignSharedSetServiceReturnValue';
+import { error } from '../../common/Error';
+import { campaignSharedSetServiceReturnValue } from './CampaignSharedSetServiceReturnValue';
 
-export const CampaignSharedSetServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const campaignSharedSetServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: CampaignSharedSetServiceReturnValue
+  rval: campaignSharedSetServiceReturnValue
 }).nullable();
 
-export type CampaignSharedSetServiceMutateResponse = z.infer<typeof CampaignSharedSetServiceMutateResponse>;
+export type CampaignSharedSetServiceMutateResponse = z.infer<typeof campaignSharedSetServiceMutateResponse>;

@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AccountManagementServiceIsAdultAccount = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const accountManagementServiceIsAdultAccount = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type AccountManagementServiceIsAdultAccount = z.infer<typeof AccountManagementServiceIsAdultAccount>;
+export type AccountManagementServiceIsAdultAccount = z.infer<typeof accountManagementServiceIsAdultAccount>;

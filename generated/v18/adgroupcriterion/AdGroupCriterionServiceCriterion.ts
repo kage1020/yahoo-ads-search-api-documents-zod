@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionServiceCriterionType } from './AdGroupCriterionServiceCriterionType';
-import { AdGroupCriterionServiceKeyword } from './AdGroupCriterionServiceKeyword';
+import { adGroupCriterionServiceCriterionType } from './AdGroupCriterionServiceCriterionType';
+import { adGroupCriterionServiceKeyword } from './AdGroupCriterionServiceKeyword';
 
-export const AdGroupCriterionServiceCriterion = z.object({
+export const adGroupCriterionServiceCriterion = z.object({
   criterionId: z.number().int().nullable(),
   criterionTrackId: z.number().int().nullable(),
-  criterionType: AdGroupCriterionServiceCriterionType,
-  keyword: AdGroupCriterionServiceKeyword
+  criterionType: adGroupCriterionServiceCriterionType,
+  keyword: adGroupCriterionServiceKeyword
 }).nullable();
 
-export type AdGroupCriterionServiceCriterion = z.infer<typeof AdGroupCriterionServiceCriterion>;
+export type AdGroupCriterionServiceCriterion = z.infer<typeof adGroupCriterionServiceCriterion>;

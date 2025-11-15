@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { CampaignServiceDasUseUrlsType } from './CampaignServiceDasUseUrlsType';
+import { campaignServiceDasUseUrlsType } from './CampaignServiceDasUseUrlsType';
 
-export const CampaignServiceDynamicAdsForSearchSetting = z.object({
+export const campaignServiceDynamicAdsForSearchSetting = z.object({
   feedIds: z.array(z.number().int().nullable()).nullable(),
   pageFeedAssetSetIds: z.array(z.number().int().nullable()).nullable(),
   domain: z.string().nullable(),
-  dasUseUrlsType: CampaignServiceDasUseUrlsType
+  dasUseUrlsType: campaignServiceDasUseUrlsType
 }).nullable();
 
-export type CampaignServiceDynamicAdsForSearchSetting = z.infer<typeof CampaignServiceDynamicAdsForSearchSetting>;
+export type CampaignServiceDynamicAdsForSearchSetting = z.infer<typeof campaignServiceDynamicAdsForSearchSetting>;

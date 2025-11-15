@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceReportSortType } from './ReportDefinitionServiceReportSortType';
+import { reportDefinitionServiceReportSortType } from './ReportDefinitionServiceReportSortType';
 
-export const ReportDefinitionServiceReportSortField = z.object({
+export const reportDefinitionServiceReportSortField = z.object({
   field: z.string().nullable(),
-  reportSortType: ReportDefinitionServiceReportSortType
+  reportSortType: reportDefinitionServiceReportSortType
 }).nullable();
 
-export type ReportDefinitionServiceReportSortField = z.infer<typeof ReportDefinitionServiceReportSortField>;
+export type ReportDefinitionServiceReportSortField = z.infer<typeof reportDefinitionServiceReportSortField>;

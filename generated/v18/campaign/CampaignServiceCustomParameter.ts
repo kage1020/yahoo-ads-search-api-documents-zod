@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-export const CampaignServiceCustomParameter = z.object({
+export const campaignServiceCustomParameter = z.object({
   key: z.string().nullable(),
   value: z.string().nullable()
 }).nullable();
 
-export type CampaignServiceCustomParameter = z.infer<typeof CampaignServiceCustomParameter>;
+export type CampaignServiceCustomParameter = z.infer<typeof campaignServiceCustomParameter>;

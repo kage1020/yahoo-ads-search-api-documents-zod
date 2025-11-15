@@ -1,21 +1,21 @@
 import { z } from 'zod';
 
-import { CampaignServiceBiddingStrategyType } from './CampaignServiceBiddingStrategyType';
-import { CampaignServiceTargetCpaBiddingScheme } from './CampaignServiceTargetCpaBiddingScheme';
-import { CampaignServiceTargetRoasBiddingScheme } from './CampaignServiceTargetRoasBiddingScheme';
-import { CampaignServiceMaximizeClicksBiddingScheme } from './CampaignServiceMaximizeClicksBiddingScheme';
-import { CampaignServiceTargetImpressionShareScheme } from './CampaignServiceTargetImpressionShareScheme';
-import { CampaignServiceMaximizeConversionsBiddingScheme } from './CampaignServiceMaximizeConversionsBiddingScheme';
-import { CampaignServiceMaximizeConversionValueBiddingScheme } from './CampaignServiceMaximizeConversionValueBiddingScheme';
+import { campaignServiceBiddingStrategyType } from './CampaignServiceBiddingStrategyType';
+import { campaignServiceTargetCpaBiddingScheme } from './CampaignServiceTargetCpaBiddingScheme';
+import { campaignServiceTargetRoasBiddingScheme } from './CampaignServiceTargetRoasBiddingScheme';
+import { campaignServiceMaximizeClicksBiddingScheme } from './CampaignServiceMaximizeClicksBiddingScheme';
+import { campaignServiceTargetImpressionShareScheme } from './CampaignServiceTargetImpressionShareScheme';
+import { campaignServiceMaximizeConversionsBiddingScheme } from './CampaignServiceMaximizeConversionsBiddingScheme';
+import { campaignServiceMaximizeConversionValueBiddingScheme } from './CampaignServiceMaximizeConversionValueBiddingScheme';
 
-export const CampaignServiceBiddingScheme = z.object({
-  biddingStrategyType: CampaignServiceBiddingStrategyType,
-  targetCpaBiddingScheme: CampaignServiceTargetCpaBiddingScheme,
-  targetRoasBiddingScheme: CampaignServiceTargetRoasBiddingScheme,
-  maximizeClicksBiddingScheme: CampaignServiceMaximizeClicksBiddingScheme,
-  targetImpressionShareScheme: CampaignServiceTargetImpressionShareScheme,
-  maximizeConversionsBiddingScheme: CampaignServiceMaximizeConversionsBiddingScheme,
-  maximizeConversionValueBiddingScheme: CampaignServiceMaximizeConversionValueBiddingScheme
+export const campaignServiceBiddingScheme = z.object({
+  biddingStrategyType: campaignServiceBiddingStrategyType,
+  targetCpaBiddingScheme: campaignServiceTargetCpaBiddingScheme,
+  targetRoasBiddingScheme: campaignServiceTargetRoasBiddingScheme,
+  maximizeClicksBiddingScheme: campaignServiceMaximizeClicksBiddingScheme,
+  targetImpressionShareScheme: campaignServiceTargetImpressionShareScheme,
+  maximizeConversionsBiddingScheme: campaignServiceMaximizeConversionsBiddingScheme,
+  maximizeConversionValueBiddingScheme: campaignServiceMaximizeConversionValueBiddingScheme
 }).nullable();
 
-export type CampaignServiceBiddingScheme = z.infer<typeof CampaignServiceBiddingScheme>;
+export type CampaignServiceBiddingScheme = z.infer<typeof campaignServiceBiddingScheme>;

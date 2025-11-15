@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignServiceIsRemove } from './CampaignServiceIsRemove';
+import { campaignServiceIsRemove } from './CampaignServiceIsRemove';
 
-export const CampaignServiceMaximizeConversionsBiddingScheme = z.object({
+export const campaignServiceMaximizeConversionsBiddingScheme = z.object({
   targetCpa: z.number().int().nullable(),
-  isRemoveTargetCpa: CampaignServiceIsRemove
+  isRemoveTargetCpa: campaignServiceIsRemove
 }).nullable();
 
-export type CampaignServiceMaximizeConversionsBiddingScheme = z.infer<typeof CampaignServiceMaximizeConversionsBiddingScheme>;
+export type CampaignServiceMaximizeConversionsBiddingScheme = z.infer<typeof campaignServiceMaximizeConversionsBiddingScheme>;

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const BiddingSeasonalityAdjustmentServiceSelector = z.object({
+export const biddingSeasonalityAdjustmentServiceSelector = z.object({
   accountId: z.number().int(),
   biddingSeasonalityAdjustmentIds: z.array(z.number().int().nullable()).nullable(),
   campaignId: z.number().int().nullable(),
@@ -8,4 +8,4 @@ export const BiddingSeasonalityAdjustmentServiceSelector = z.object({
   startIndex: z.number().int().min(1).nullable()
 }).nullable();
 
-export type BiddingSeasonalityAdjustmentServiceSelector = z.infer<typeof BiddingSeasonalityAdjustmentServiceSelector>;
+export type BiddingSeasonalityAdjustmentServiceSelector = z.infer<typeof biddingSeasonalityAdjustmentServiceSelector>;

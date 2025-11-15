@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AssetServiceFileType } from './AssetServiceFileType';
+import { assetServiceFileType } from './AssetServiceFileType';
 
-export const AssetServiceImageAsset = z.object({
+export const assetServiceImageAsset = z.object({
   imageName: z.string().nullable(),
   data: z.string().nullable(),
   aspectRatio: z.string().nullable(),
   fileSize: z.number().int().nullable(),
   height: z.number().int().nullable(),
   width: z.number().int().nullable(),
-  fileType: AssetServiceFileType
+  fileType: assetServiceFileType
 }).nullable();
 
-export type AssetServiceImageAsset = z.infer<typeof AssetServiceImageAsset>;
+export type AssetServiceImageAsset = z.infer<typeof assetServiceImageAsset>;

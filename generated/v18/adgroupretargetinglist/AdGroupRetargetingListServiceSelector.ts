@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AdGroupRetargetingListServiceExcludedType } from './AdGroupRetargetingListServiceExcludedType';
+import { adGroupRetargetingListServiceExcludedType } from './AdGroupRetargetingListServiceExcludedType';
 
-export const AdGroupRetargetingListServiceSelector = z.object({
+export const adGroupRetargetingListServiceSelector = z.object({
   accountId: z.number().int(),
   adGroupIds: z.array(z.number().int().nullable()).nullable(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
-  excludedType: AdGroupRetargetingListServiceExcludedType,
+  excludedType: adGroupRetargetingListServiceExcludedType,
   numberResults: z.number().int().min(1).max(1000).nullable(),
   startIndex: z.number().int().min(1).nullable(),
   targetListIds: z.array(z.number().int().nullable()).nullable()
 }).nullable();
 
-export type AdGroupRetargetingListServiceSelector = z.infer<typeof AdGroupRetargetingListServiceSelector>;
+export type AdGroupRetargetingListServiceSelector = z.infer<typeof adGroupRetargetingListServiceSelector>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AuditLogServiceValue } from './AuditLogServiceValue';
+import { auditLogServiceValue } from './AuditLogServiceValue';
 
-export const AuditLogServiceReturnValue = z.object({
-  values: z.array(AuditLogServiceValue).nullable()
+export const auditLogServiceReturnValue = z.object({
+  values: z.array(auditLogServiceValue).nullable()
 }).nullable();
 
-export type AuditLogServiceReturnValue = z.infer<typeof AuditLogServiceReturnValue>;
+export type AuditLogServiceReturnValue = z.infer<typeof auditLogServiceReturnValue>;

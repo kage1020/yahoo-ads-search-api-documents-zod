@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AdGroupCustomizerServicePage } from './AdGroupCustomizerServicePage';
+import { error } from '../../common/Error';
+import { adGroupCustomizerServicePage } from './AdGroupCustomizerServicePage';
 
-export const AdGroupCustomizerServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const adGroupCustomizerServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AdGroupCustomizerServicePage
+  rval: adGroupCustomizerServicePage
 }).nullable();
 
-export type AdGroupCustomizerServiceGetResponse = z.infer<typeof AdGroupCustomizerServiceGetResponse>;
+export type AdGroupCustomizerServiceGetResponse = z.infer<typeof adGroupCustomizerServiceGetResponse>;

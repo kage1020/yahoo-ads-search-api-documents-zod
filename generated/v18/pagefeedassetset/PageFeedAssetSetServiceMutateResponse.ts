@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { PageFeedAssetSetServiceReturnValue } from './PageFeedAssetSetServiceReturnValue';
+import { error } from '../../common/Error';
+import { pageFeedAssetSetServiceReturnValue } from './PageFeedAssetSetServiceReturnValue';
 
-export const PageFeedAssetSetServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const pageFeedAssetSetServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: PageFeedAssetSetServiceReturnValue
+  rval: pageFeedAssetSetServiceReturnValue
 }).nullable();
 
-export type PageFeedAssetSetServiceMutateResponse = z.infer<typeof PageFeedAssetSetServiceMutateResponse>;
+export type PageFeedAssetSetServiceMutateResponse = z.infer<typeof pageFeedAssetSetServiceMutateResponse>;

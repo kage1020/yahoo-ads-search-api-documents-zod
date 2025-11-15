@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { DictionaryServiceGeographicLocationValue } from './DictionaryServiceGeographicLocationValue';
+import { dictionaryServiceGeographicLocationValue } from './DictionaryServiceGeographicLocationValue';
 
-export const DictionaryServiceGeographicLocationPage = z.object({
+export const dictionaryServiceGeographicLocationPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(DictionaryServiceGeographicLocationValue).nullable()
+  values: z.array(dictionaryServiceGeographicLocationValue).nullable()
 }).nullable();
 
-export type DictionaryServiceGeographicLocationPage = z.infer<typeof DictionaryServiceGeographicLocationPage>;
+export type DictionaryServiceGeographicLocationPage = z.infer<typeof dictionaryServiceGeographicLocationPage>;

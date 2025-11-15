@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const CampaignCriterionServiceUse = z.enum(["NEGATIVE", "UNKNOWN"]).nullable();
+export const campaignCriterionServiceUse = z.enum(["NEGATIVE", "UNKNOWN"]).nullable();
 
-export type CampaignCriterionServiceUse = z.infer<typeof CampaignCriterionServiceUse>;
+export type CampaignCriterionServiceUse = z.infer<typeof campaignCriterionServiceUse>;

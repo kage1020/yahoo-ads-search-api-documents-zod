@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceCustomKey } from './RetargetingListServiceCustomKey';
+import { retargetingListServiceCustomKey } from './RetargetingListServiceCustomKey';
 
-export const RetargetingListServiceCustomKeyPage = z.object({
-  customKeys: RetargetingListServiceCustomKey,
+export const retargetingListServiceCustomKeyPage = z.object({
+  customKeys: retargetingListServiceCustomKey,
   totalNumEntries: z.number().int()
 }).nullable();
 
-export type RetargetingListServiceCustomKeyPage = z.infer<typeof RetargetingListServiceCustomKeyPage>;
+export type RetargetingListServiceCustomKeyPage = z.infer<typeof retargetingListServiceCustomKeyPage>;

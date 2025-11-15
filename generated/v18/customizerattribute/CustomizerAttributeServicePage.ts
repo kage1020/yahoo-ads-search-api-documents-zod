@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CustomizerAttributeServiceValue } from './CustomizerAttributeServiceValue';
+import { customizerAttributeServiceValue } from './CustomizerAttributeServiceValue';
 
-export const CustomizerAttributeServicePage = z.object({
+export const customizerAttributeServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(CustomizerAttributeServiceValue).nullable()
+  values: z.array(customizerAttributeServiceValue).nullable()
 }).nullable();
 
-export type CustomizerAttributeServicePage = z.infer<typeof CustomizerAttributeServicePage>;
+export type CustomizerAttributeServicePage = z.infer<typeof customizerAttributeServicePage>;

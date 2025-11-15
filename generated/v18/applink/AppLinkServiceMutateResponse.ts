@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AppLinkServiceReturnValue } from './AppLinkServiceReturnValue';
+import { error } from '../../common/Error';
+import { appLinkServiceReturnValue } from './AppLinkServiceReturnValue';
 
-export const AppLinkServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const appLinkServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AppLinkServiceReturnValue
+  rval: appLinkServiceReturnValue
 }).nullable();
 
-export type AppLinkServiceMutateResponse = z.infer<typeof AppLinkServiceMutateResponse>;
+export type AppLinkServiceMutateResponse = z.infer<typeof appLinkServiceMutateResponse>;

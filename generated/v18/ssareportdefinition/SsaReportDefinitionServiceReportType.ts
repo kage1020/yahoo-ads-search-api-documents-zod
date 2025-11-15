@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const SsaReportDefinitionServiceReportType = z.enum(["ACCOUNT", "CAMPAIGN", "ADGROUP", "SEARCH_QUERY", "PRODUCT_GROUP", "PRODUCT", "UNKNOWN"]).nullable();
+export const ssaReportDefinitionServiceReportType = z.enum(["ACCOUNT", "CAMPAIGN", "ADGROUP", "SEARCH_QUERY", "PRODUCT_GROUP", "PRODUCT", "UNKNOWN"]).nullable();
 
-export type SsaReportDefinitionServiceReportType = z.infer<typeof SsaReportDefinitionServiceReportType>;
+export type SsaReportDefinitionServiceReportType = z.infer<typeof ssaReportDefinitionServiceReportType>;

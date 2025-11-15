@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AdGroupAdLabel } from './AdGroupAdLabel';
-import { Error } from './Error';
+import { adGroupAdLabel } from './AdGroupAdLabel';
+import { error } from '../../common/Error';
 
-export const AdGroupAdLabelServiceValue = z.object({
-  adGroupAdLabel: AdGroupAdLabel,
-  errors: z.array(Error).nullable(),
+export const adGroupAdLabelServiceValue = z.object({
+  adGroupAdLabel: adGroupAdLabel,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AdGroupAdLabelServiceValue = z.infer<typeof AdGroupAdLabelServiceValue>;
+export type AdGroupAdLabelServiceValue = z.infer<typeof adGroupAdLabelServiceValue>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupRetargetingListServiceValue } from './AdGroupRetargetingListServiceValue';
+import { adGroupRetargetingListServiceValue } from './AdGroupRetargetingListServiceValue';
 
-export const AdGroupRetargetingListServiceReturnValue = z.object({
-  values: z.array(AdGroupRetargetingListServiceValue).nullable()
+export const adGroupRetargetingListServiceReturnValue = z.object({
+  values: z.array(adGroupRetargetingListServiceValue).nullable()
 }).nullable();
 
-export type AdGroupRetargetingListServiceReturnValue = z.infer<typeof AdGroupRetargetingListServiceReturnValue>;
+export type AdGroupRetargetingListServiceReturnValue = z.infer<typeof adGroupRetargetingListServiceReturnValue>;

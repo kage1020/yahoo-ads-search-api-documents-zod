@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const CampaignServiceContainsLabel = z.boolean().nullable();
+export const campaignServiceContainsLabel = z.boolean().nullable();
 
-export type CampaignServiceContainsLabel = z.infer<typeof CampaignServiceContainsLabel>;
+export type CampaignServiceContainsLabel = z.infer<typeof campaignServiceContainsLabel>;

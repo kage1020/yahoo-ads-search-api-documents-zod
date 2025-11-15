@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AbTestServiceCampaignUserStatus } from './AbTestServiceCampaignUserStatus';
-import { AbTestServiceCampaignTestType } from './AbTestServiceCampaignTestType';
-import { AbTestServiceCampaignIsDeleteFlg } from './AbTestServiceCampaignIsDeleteFlg';
-import { AbTestServiceIsRemoveFlg } from './AbTestServiceIsRemoveFlg';
-import { AbTestServiceStatus } from './AbTestServiceStatus';
+import { abTestServiceCampaignUserStatus } from './AbTestServiceCampaignUserStatus';
+import { abTestServiceCampaignTestType } from './AbTestServiceCampaignTestType';
+import { abTestServiceCampaignIsDeleteFlg } from './AbTestServiceCampaignIsDeleteFlg';
+import { abTestServiceIsRemoveFlg } from './AbTestServiceIsRemoveFlg';
+import { abTestServiceStatus } from './AbTestServiceStatus';
 
-export const AbTest = z.object({
+export const abTest = z.object({
   accountId: z.number().int().nullable(),
   abTestId: z.number().int().nullable(),
   abTestName: z.string().nullable(),
@@ -14,19 +14,19 @@ export const AbTest = z.object({
   suffix: z.string().nullable(),
   aCampaignId: z.number().int().nullable(),
   aCampaignName: z.string().nullable(),
-  aCampaignUserStatus: AbTestServiceCampaignUserStatus,
-  aCampaignTestType: AbTestServiceCampaignTestType,
-  aCampaignIsDeleted: AbTestServiceCampaignIsDeleteFlg,
+  aCampaignUserStatus: abTestServiceCampaignUserStatus,
+  aCampaignTestType: abTestServiceCampaignTestType,
+  aCampaignIsDeleted: abTestServiceCampaignIsDeleteFlg,
   bCampaignId: z.number().int().nullable(),
   bCampaignName: z.string().nullable(),
-  bCampaignUserStatus: AbTestServiceCampaignUserStatus,
-  bCampaignTestType: AbTestServiceCampaignTestType,
-  bCampaignIsDeleted: AbTestServiceCampaignIsDeleteFlg,
-  isRemoveDescription: AbTestServiceIsRemoveFlg,
+  bCampaignUserStatus: abTestServiceCampaignUserStatus,
+  bCampaignTestType: abTestServiceCampaignTestType,
+  bCampaignIsDeleted: abTestServiceCampaignIsDeleteFlg,
+  isRemoveDescription: abTestServiceIsRemoveFlg,
   endDate: z.string().nullable(),
   startDate: z.string().nullable(),
-  status: AbTestServiceStatus,
+  status: abTestServiceStatus,
   errors: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AbTest = z.infer<typeof AbTest>;
+export type AbTest = z.infer<typeof abTest>;

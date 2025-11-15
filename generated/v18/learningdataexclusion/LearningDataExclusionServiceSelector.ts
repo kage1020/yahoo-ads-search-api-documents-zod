@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const LearningDataExclusionServiceSelector = z.object({
+export const learningDataExclusionServiceSelector = z.object({
   accountId: z.number().int(),
   learningDataExclusionIds: z.array(z.number().int().nullable()).nullable(),
   campaignId: z.number().int().nullable(),
@@ -8,4 +8,4 @@ export const LearningDataExclusionServiceSelector = z.object({
   startIndex: z.number().int().min(1).nullable()
 }).nullable();
 
-export type LearningDataExclusionServiceSelector = z.infer<typeof LearningDataExclusionServiceSelector>;
+export type LearningDataExclusionServiceSelector = z.infer<typeof learningDataExclusionServiceSelector>;

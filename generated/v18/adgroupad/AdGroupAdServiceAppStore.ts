@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceAppStore = z.enum(["IOS", "ANDROID", "UNKNOWN"]).nullable();
+export const adGroupAdServiceAppStore = z.enum(["IOS", "ANDROID", "UNKNOWN"]).nullable();
 
-export type AdGroupAdServiceAppStore = z.infer<typeof AdGroupAdServiceAppStore>;
+export type AdGroupAdServiceAppStore = z.infer<typeof adGroupAdServiceAppStore>;

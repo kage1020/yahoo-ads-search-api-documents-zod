@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const BaseAccountServiceHasAdminAuth = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const baseAccountServiceHasAdminAuth = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type BaseAccountServiceHasAdminAuth = z.infer<typeof BaseAccountServiceHasAdminAuth>;
+export type BaseAccountServiceHasAdminAuth = z.infer<typeof baseAccountServiceHasAdminAuth>;

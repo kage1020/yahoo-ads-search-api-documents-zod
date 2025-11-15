@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { ConversionGroupServiceConversionTrackers } from './ConversionGroupServiceConversionTrackers';
+import { conversionGroupServiceConversionTrackers } from './ConversionGroupServiceConversionTrackers';
 
-export const ConversionGroup = z.object({
+export const conversionGroup = z.object({
   accountId: z.number().int().nullable(),
   conversionGroupId: z.number().int().nullable(),
   conversionGroupName: z.string().nullable(),
-  conversionTrackers: z.array(ConversionGroupServiceConversionTrackers).nullable()
+  conversionTrackers: z.array(conversionGroupServiceConversionTrackers).nullable()
 }).nullable();
 
-export type ConversionGroup = z.infer<typeof ConversionGroup>;
+export type ConversionGroup = z.infer<typeof conversionGroup>;

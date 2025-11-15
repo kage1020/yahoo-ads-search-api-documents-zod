@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AdGroupWebpageServiceBidSource } from './AdGroupWebpageServiceBidSource';
+import { adGroupWebpageServiceBidSource } from './AdGroupWebpageServiceBidSource';
 
-export const AdGroupWebpageServiceBid = z.object({
+export const adGroupWebpageServiceBid = z.object({
   adGroupCpc: z.number().int().nullable(),
-  bidSource: AdGroupWebpageServiceBidSource,
+  bidSource: adGroupWebpageServiceBidSource,
   keywordCpc: z.number().int().nullable(),
   cpc: z.number().int().nullable()
 }).nullable();
 
-export type AdGroupWebpageServiceBid = z.infer<typeof AdGroupWebpageServiceBid>;
+export type AdGroupWebpageServiceBid = z.infer<typeof adGroupWebpageServiceBid>;

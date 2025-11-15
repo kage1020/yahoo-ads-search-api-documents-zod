@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const CampaignSharedSetServiceSelector = z.object({
+export const campaignSharedSetServiceSelector = z.object({
   accountId: z.number().int(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
   sharedListIds: z.array(z.number().int().nullable()).nullable(),
@@ -8,4 +8,4 @@ export const CampaignSharedSetServiceSelector = z.object({
   startIndex: z.number().int().min(1).nullable()
 }).nullable();
 
-export type CampaignSharedSetServiceSelector = z.infer<typeof CampaignSharedSetServiceSelector>;
+export type CampaignSharedSetServiceSelector = z.infer<typeof campaignSharedSetServiceSelector>;

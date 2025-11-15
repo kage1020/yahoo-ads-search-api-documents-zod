@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
+import { adGroupServiceIsRemoveFlg } from './AdGroupServiceIsRemoveFlg';
 
-export const AdGroupServiceMaximizeConversionsBiddingScheme = z.object({
+export const adGroupServiceMaximizeConversionsBiddingScheme = z.object({
   targetCpa: z.number().int().nullable(),
-  isRemoveTargetCpa: AdGroupServiceIsRemoveFlg
+  isRemoveTargetCpa: adGroupServiceIsRemoveFlg
 }).nullable();
 
-export type AdGroupServiceMaximizeConversionsBiddingScheme = z.infer<typeof AdGroupServiceMaximizeConversionsBiddingScheme>;
+export type AdGroupServiceMaximizeConversionsBiddingScheme = z.infer<typeof adGroupServiceMaximizeConversionsBiddingScheme>;

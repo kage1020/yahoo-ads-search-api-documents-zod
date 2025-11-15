@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { CampaignExportServiceExportSetting } from './CampaignExportServiceExportSetting';
+import { campaignExportServiceExportSetting } from './CampaignExportServiceExportSetting';
 
-export const CampaignExportServiceJobOperation = z.object({
-  setting: CampaignExportServiceExportSetting
+export const campaignExportServiceJobOperation = z.object({
+  setting: campaignExportServiceExportSetting
 }).nullable();
 
-export type CampaignExportServiceJobOperation = z.infer<typeof CampaignExportServiceJobOperation>;
+export type CampaignExportServiceJobOperation = z.infer<typeof campaignExportServiceJobOperation>;

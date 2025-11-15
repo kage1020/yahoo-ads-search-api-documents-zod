@@ -1,30 +1,30 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceClosingReason } from './RetargetingListServiceClosingReason';
-import { RetargetingListServiceDefaultTargetList } from './RetargetingListServiceDefaultTargetList';
-import { RetargetingListServiceLogicalTargetList } from './RetargetingListServiceLogicalTargetList';
-import { RetargetingListServiceReachStorageStatus } from './RetargetingListServiceReachStorageStatus';
-import { RetargetingListServiceRetargetingAccountStatus } from './RetargetingListServiceRetargetingAccountStatus';
-import { RetargetingListServiceRuleBaseTargetList } from './RetargetingListServiceRuleBaseTargetList';
-import { RetargetingListServiceTargetListOwner } from './RetargetingListServiceTargetListOwner';
-import { RetargetingListServiceTargetListType } from './RetargetingListServiceTargetListType';
+import { retargetingListServiceClosingReason } from './RetargetingListServiceClosingReason';
+import { retargetingListServiceDefaultTargetList } from './RetargetingListServiceDefaultTargetList';
+import { retargetingListServiceLogicalTargetList } from './RetargetingListServiceLogicalTargetList';
+import { retargetingListServiceReachStorageStatus } from './RetargetingListServiceReachStorageStatus';
+import { retargetingListServiceRetargetingAccountStatus } from './RetargetingListServiceRetargetingAccountStatus';
+import { retargetingListServiceRuleBaseTargetList } from './RetargetingListServiceRuleBaseTargetList';
+import { retargetingListServiceTargetListOwner } from './RetargetingListServiceTargetListOwner';
+import { retargetingListServiceTargetListType } from './RetargetingListServiceTargetListType';
 
-export const RetargetingListServiceTargetingList = z.object({
+export const retargetingListServiceTargetingList = z.object({
   accountId: z.number().int().nullable(),
-  closingReason: RetargetingListServiceClosingReason,
-  defaultTargetList: RetargetingListServiceDefaultTargetList,
-  logicalTargetList: RetargetingListServiceLogicalTargetList,
+  closingReason: retargetingListServiceClosingReason,
+  defaultTargetList: retargetingListServiceDefaultTargetList,
+  logicalTargetList: retargetingListServiceLogicalTargetList,
   reach: z.number().int().nullable(),
   reachStorageSpan: z.number().int().nullable(),
-  reachStorageStatus: RetargetingListServiceReachStorageStatus,
-  retargetingAccountStatus: RetargetingListServiceRetargetingAccountStatus,
-  ruleBaseTargetList: RetargetingListServiceRuleBaseTargetList,
+  reachStorageStatus: retargetingListServiceReachStorageStatus,
+  retargetingAccountStatus: retargetingListServiceRetargetingAccountStatus,
+  ruleBaseTargetList: retargetingListServiceRuleBaseTargetList,
   targetListDescription: z.string().nullable(),
   targetListId: z.number().int().nullable(),
   targetListName: z.string().nullable(),
-  targetListOwner: RetargetingListServiceTargetListOwner,
+  targetListOwner: retargetingListServiceTargetListOwner,
   targetListTrackId: z.number().int().nullable(),
-  targetListType: RetargetingListServiceTargetListType
+  targetListType: retargetingListServiceTargetListType
 }).nullable();
 
-export type RetargetingListServiceTargetingList = z.infer<typeof RetargetingListServiceTargetingList>;
+export type RetargetingListServiceTargetingList = z.infer<typeof retargetingListServiceTargetingList>;

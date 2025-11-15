@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const Label = z.object({
+export const label = z.object({
   accountId: z.number().int().nullable(),
   color: z.string().nullable(),
   description: z.string().nullable(),
@@ -12,4 +12,4 @@ export const Label = z.object({
   labeledCampaign: z.number().int().nullable()
 }).nullable();
 
-export type Label = z.infer<typeof Label>;
+export type Label = z.infer<typeof label>;

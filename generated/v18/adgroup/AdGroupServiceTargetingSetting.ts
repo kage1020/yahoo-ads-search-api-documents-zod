@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupServiceTargetAll } from './AdGroupServiceTargetAll';
+import { adGroupServiceTargetAll } from './AdGroupServiceTargetAll';
 
-export const AdGroupServiceTargetingSetting = z.object({
-  targetAll: AdGroupServiceTargetAll
+export const adGroupServiceTargetingSetting = z.object({
+  targetAll: adGroupServiceTargetAll
 }).nullable();
 
-export type AdGroupServiceTargetingSetting = z.infer<typeof AdGroupServiceTargetingSetting>;
+export type AdGroupServiceTargetingSetting = z.infer<typeof adGroupServiceTargetingSetting>;

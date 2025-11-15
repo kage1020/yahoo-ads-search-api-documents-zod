@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { BudgetOrderServiceAccountType } from './BudgetOrderServiceAccountType';
-import { BudgetOrderServiceLimitChargeType } from './BudgetOrderServiceLimitChargeType';
+import { budgetOrderServiceAccountType } from './BudgetOrderServiceAccountType';
+import { budgetOrderServiceLimitChargeType } from './BudgetOrderServiceLimitChargeType';
 
-export const BudgetOrder = z.object({
+export const budgetOrder = z.object({
   accountId: z.number().int().nullable(),
-  accountType: BudgetOrderServiceAccountType,
+  accountType: budgetOrderServiceAccountType,
   amount: z.number().int().nullable(),
-  limitChargeType: BudgetOrderServiceLimitChargeType
+  limitChargeType: budgetOrderServiceLimitChargeType
 }).nullable();
 
-export type BudgetOrder = z.infer<typeof BudgetOrder>;
+export type BudgetOrder = z.infer<typeof budgetOrder>;

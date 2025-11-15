@@ -1,20 +1,20 @@
 import { z } from 'zod';
 
-import { AdGroupWebpageServiceBid } from './AdGroupWebpageServiceBid';
-import { AdGroupWebpageServiceExcludedType } from './AdGroupWebpageServiceExcludedType';
-import { AdGroupWebpageServiceUserStatus } from './AdGroupWebpageServiceUserStatus';
-import { AdGroupWebpageServiceWebpage } from './AdGroupWebpageServiceWebpage';
+import { adGroupWebpageServiceBid } from './AdGroupWebpageServiceBid';
+import { adGroupWebpageServiceExcludedType } from './AdGroupWebpageServiceExcludedType';
+import { adGroupWebpageServiceUserStatus } from './AdGroupWebpageServiceUserStatus';
+import { adGroupWebpageServiceWebpage } from './AdGroupWebpageServiceWebpage';
 
-export const AdGroupWebpage = z.object({
+export const adGroupWebpage = z.object({
   accountId: z.number().int().nullable(),
   adGroupId: z.number().int().nullable(),
   adGroupTrackId: z.number().int().nullable(),
-  bid: AdGroupWebpageServiceBid,
+  bid: adGroupWebpageServiceBid,
   campaignId: z.number().int().nullable(),
   campaignTrackId: z.number().int().nullable(),
-  excludedType: AdGroupWebpageServiceExcludedType,
-  userStatus: AdGroupWebpageServiceUserStatus,
-  webpage: AdGroupWebpageServiceWebpage
+  excludedType: adGroupWebpageServiceExcludedType,
+  userStatus: adGroupWebpageServiceUserStatus,
+  webpage: adGroupWebpageServiceWebpage
 }).nullable();
 
-export type AdGroupWebpage = z.infer<typeof AdGroupWebpage>;
+export type AdGroupWebpage = z.infer<typeof adGroupWebpage>;

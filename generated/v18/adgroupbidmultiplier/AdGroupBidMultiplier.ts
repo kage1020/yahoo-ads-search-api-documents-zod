@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AdGroupBidMultiplierServicePlatformType } from './AdGroupBidMultiplierServicePlatformType';
+import { adGroupBidMultiplierServicePlatformType } from './AdGroupBidMultiplierServicePlatformType';
 
-export const AdGroupBidMultiplier = z.object({
+export const adGroupBidMultiplier = z.object({
   accountId: z.number().int().nullable(),
   adGroupId: z.number().int().nullable(),
   bidMultiplier: z.number().nullable(),
   campaignId: z.number().int().nullable(),
-  platformType: AdGroupBidMultiplierServicePlatformType
+  platformType: adGroupBidMultiplierServicePlatformType
 }).nullable();
 
-export type AdGroupBidMultiplier = z.infer<typeof AdGroupBidMultiplier>;
+export type AdGroupBidMultiplier = z.infer<typeof adGroupBidMultiplier>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ReportDefinitionServiceValue } from './ReportDefinitionServiceValue';
+import { reportDefinitionServiceValue } from './ReportDefinitionServiceValue';
 
-export const ReportDefinitionServiceReturnValue = z.object({
-  values: z.array(ReportDefinitionServiceValue).nullable()
+export const reportDefinitionServiceReturnValue = z.object({
+  values: z.array(reportDefinitionServiceValue).nullable()
 }).nullable();
 
-export type ReportDefinitionServiceReturnValue = z.infer<typeof ReportDefinitionServiceReturnValue>;
+export type ReportDefinitionServiceReturnValue = z.infer<typeof reportDefinitionServiceReturnValue>;

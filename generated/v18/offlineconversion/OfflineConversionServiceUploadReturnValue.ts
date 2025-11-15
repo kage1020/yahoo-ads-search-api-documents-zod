@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { OfflineConversionServiceValue } from './OfflineConversionServiceValue';
+import { offlineConversionServiceValue } from './OfflineConversionServiceValue';
 
-export const OfflineConversionServiceUploadReturnValue = z.object({
-  values: z.array(OfflineConversionServiceValue).nullable()
+export const offlineConversionServiceUploadReturnValue = z.object({
+  values: z.array(offlineConversionServiceValue).nullable()
 }).nullable();
 
-export type OfflineConversionServiceUploadReturnValue = z.infer<typeof OfflineConversionServiceUploadReturnValue>;
+export type OfflineConversionServiceUploadReturnValue = z.infer<typeof offlineConversionServiceUploadReturnValue>;

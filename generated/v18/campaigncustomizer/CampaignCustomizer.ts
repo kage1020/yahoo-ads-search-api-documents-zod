@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { CampaignCustomizerServiceApprovalStatus } from './CampaignCustomizerServiceApprovalStatus';
+import { campaignCustomizerServiceApprovalStatus } from './CampaignCustomizerServiceApprovalStatus';
 
-export const CampaignCustomizer = z.object({
+export const campaignCustomizer = z.object({
   accountId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   customizerAttributeId: z.number().int().nullable(),
   value: z.string().nullable(),
-  approvalStatus: CampaignCustomizerServiceApprovalStatus,
+  approvalStatus: campaignCustomizerServiceApprovalStatus,
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type CampaignCustomizer = z.infer<typeof CampaignCustomizer>;
+export type CampaignCustomizer = z.infer<typeof campaignCustomizer>;

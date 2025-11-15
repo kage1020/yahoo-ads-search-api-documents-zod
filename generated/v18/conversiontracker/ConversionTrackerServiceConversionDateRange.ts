@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-export const ConversionTrackerServiceConversionDateRange = z.object({
+export const conversionTrackerServiceConversionDateRange = z.object({
   endDate: z.string().nullable(),
   startDate: z.string().nullable()
 }).nullable();
 
-export type ConversionTrackerServiceConversionDateRange = z.infer<typeof ConversionTrackerServiceConversionDateRange>;
+export type ConversionTrackerServiceConversionDateRange = z.infer<typeof conversionTrackerServiceConversionDateRange>;

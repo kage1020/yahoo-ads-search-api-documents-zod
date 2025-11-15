@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AuditLogServiceValue } from './AuditLogServiceValue';
+import { auditLogServiceValue } from './AuditLogServiceValue';
 
-export const AuditLogServicePage = z.object({
+export const auditLogServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(AuditLogServiceValue).nullable()
+  values: z.array(auditLogServiceValue).nullable()
 }).nullable();
 
-export type AuditLogServicePage = z.infer<typeof AuditLogServicePage>;
+export type AuditLogServicePage = z.infer<typeof auditLogServicePage>;

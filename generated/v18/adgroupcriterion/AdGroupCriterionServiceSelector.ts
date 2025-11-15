@@ -1,27 +1,27 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionServiceApprovalStatus } from './AdGroupCriterionServiceApprovalStatus';
-import { AdGroupCriterionServiceContainsLabelId } from './AdGroupCriterionServiceContainsLabelId';
-import { AdGroupCriterionServiceUse } from './AdGroupCriterionServiceUse';
-import { AdGroupCriterionServiceUserStatus } from './AdGroupCriterionServiceUserStatus';
-import { AdGroupCriterionServiceKeyword } from './AdGroupCriterionServiceKeyword';
-import { AdGroupCriterionServiceBiddingKeywordCpcRange } from './AdGroupCriterionServiceBiddingKeywordCpcRange';
+import { adGroupCriterionServiceApprovalStatus } from './AdGroupCriterionServiceApprovalStatus';
+import { adGroupCriterionServiceContainsLabelId } from './AdGroupCriterionServiceContainsLabelId';
+import { adGroupCriterionServiceUse } from './AdGroupCriterionServiceUse';
+import { adGroupCriterionServiceUserStatus } from './AdGroupCriterionServiceUserStatus';
+import { adGroupCriterionServiceKeyword } from './AdGroupCriterionServiceKeyword';
+import { adGroupCriterionServiceBiddingKeywordCpcRange } from './AdGroupCriterionServiceBiddingKeywordCpcRange';
 
-export const AdGroupCriterionServiceSelector = z.object({
+export const adGroupCriterionServiceSelector = z.object({
   accountId: z.number().int(),
   adGroupIds: z.array(z.number().int().nullable()).nullable(),
-  approvalStatuses: z.array(AdGroupCriterionServiceApprovalStatus).nullable(),
+  approvalStatuses: z.array(adGroupCriterionServiceApprovalStatus).nullable(),
   portfolioBiddingIds: z.array(z.number().int().nullable()).nullable(),
   campaignIds: z.array(z.number().int().nullable()).nullable(),
-  containsLabelId: AdGroupCriterionServiceContainsLabelId,
+  containsLabelId: adGroupCriterionServiceContainsLabelId,
   criterionIds: z.array(z.number().int().nullable()).nullable(),
   labelIds: z.array(z.number().int().nullable()).nullable(),
   numberResults: z.number().int().min(1).max(10000).nullable(),
   startIndex: z.number().int().min(1).nullable(),
-  use: AdGroupCriterionServiceUse,
-  userStatuses: z.array(AdGroupCriterionServiceUserStatus).nullable(),
-  keyword: AdGroupCriterionServiceKeyword,
-  biddingKeywordCpcRange: AdGroupCriterionServiceBiddingKeywordCpcRange
+  use: adGroupCriterionServiceUse,
+  userStatuses: z.array(adGroupCriterionServiceUserStatus).nullable(),
+  keyword: adGroupCriterionServiceKeyword,
+  biddingKeywordCpcRange: adGroupCriterionServiceBiddingKeywordCpcRange
 }).nullable();
 
-export type AdGroupCriterionServiceSelector = z.infer<typeof AdGroupCriterionServiceSelector>;
+export type AdGroupCriterionServiceSelector = z.infer<typeof adGroupCriterionServiceSelector>;

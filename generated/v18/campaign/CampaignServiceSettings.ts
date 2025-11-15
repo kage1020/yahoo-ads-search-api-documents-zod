@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { CampaignServiceDynamicAdsForSearchSetting } from './CampaignServiceDynamicAdsForSearchSetting';
-import { CampaignServiceGeoTargetTypeSetting } from './CampaignServiceGeoTargetTypeSetting';
-import { CampaignServiceSettingType } from './CampaignServiceSettingType';
-import { CampaignServiceTargetingSetting } from './CampaignServiceTargetingSetting';
+import { campaignServiceDynamicAdsForSearchSetting } from './CampaignServiceDynamicAdsForSearchSetting';
+import { campaignServiceGeoTargetTypeSetting } from './CampaignServiceGeoTargetTypeSetting';
+import { campaignServiceSettingType } from './CampaignServiceSettingType';
+import { campaignServiceTargetingSetting } from './CampaignServiceTargetingSetting';
 
-export const CampaignServiceSettings = z.object({
-  dynamicAdsForSearchSetting: CampaignServiceDynamicAdsForSearchSetting,
-  geoTargetTypeSetting: CampaignServiceGeoTargetTypeSetting,
-  settingType: CampaignServiceSettingType,
-  targetingSetting: CampaignServiceTargetingSetting
+export const campaignServiceSettings = z.object({
+  dynamicAdsForSearchSetting: campaignServiceDynamicAdsForSearchSetting,
+  geoTargetTypeSetting: campaignServiceGeoTargetTypeSetting,
+  settingType: campaignServiceSettingType,
+  targetingSetting: campaignServiceTargetingSetting
 }).nullable();
 
-export type CampaignServiceSettings = z.infer<typeof CampaignServiceSettings>;
+export type CampaignServiceSettings = z.infer<typeof campaignServiceSettings>;

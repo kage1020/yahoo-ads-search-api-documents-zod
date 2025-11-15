@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const ReportDefinitionServiceReportSortType = z.enum(["ASC", "DESC", "UNKNOWN"]).nullable();
+export const reportDefinitionServiceReportSortType = z.enum(["ASC", "DESC", "UNKNOWN"]).nullable();
 
-export type ReportDefinitionServiceReportSortType = z.infer<typeof ReportDefinitionServiceReportSortType>;
+export type ReportDefinitionServiceReportSortType = z.infer<typeof reportDefinitionServiceReportSortType>;

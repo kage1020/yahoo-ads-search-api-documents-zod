@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceAssetType = z.enum(["HEADLINE", "DESCRIPTION", "UNKNOWN"]).nullable();
+export const adGroupAdServiceAssetType = z.enum(["HEADLINE", "DESCRIPTION", "UNKNOWN"]).nullable();
 
-export type AdGroupAdServiceAssetType = z.infer<typeof AdGroupAdServiceAssetType>;
+export type AdGroupAdServiceAssetType = z.infer<typeof adGroupAdServiceAssetType>;

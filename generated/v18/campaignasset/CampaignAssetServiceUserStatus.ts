@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const CampaignAssetServiceUserStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
+export const campaignAssetServiceUserStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
 
-export type CampaignAssetServiceUserStatus = z.infer<typeof CampaignAssetServiceUserStatus>;
+export type CampaignAssetServiceUserStatus = z.infer<typeof campaignAssetServiceUserStatus>;

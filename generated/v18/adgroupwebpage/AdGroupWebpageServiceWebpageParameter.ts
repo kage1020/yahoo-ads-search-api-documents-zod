@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AdGroupWebpageServiceWebpageCondition } from './AdGroupWebpageServiceWebpageCondition';
+import { adGroupWebpageServiceWebpageCondition } from './AdGroupWebpageServiceWebpageCondition';
 
-export const AdGroupWebpageServiceWebpageParameter = z.object({
-  conditions: z.array(AdGroupWebpageServiceWebpageCondition).nullable()
+export const adGroupWebpageServiceWebpageParameter = z.object({
+  conditions: z.array(adGroupWebpageServiceWebpageCondition).nullable()
 }).nullable();
 
-export type AdGroupWebpageServiceWebpageParameter = z.infer<typeof AdGroupWebpageServiceWebpageParameter>;
+export type AdGroupWebpageServiceWebpageParameter = z.infer<typeof adGroupWebpageServiceWebpageParameter>;

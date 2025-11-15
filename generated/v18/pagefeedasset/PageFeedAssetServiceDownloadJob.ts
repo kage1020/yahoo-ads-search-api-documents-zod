@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-import { PageFeedAssetServiceBulkEncoding } from './PageFeedAssetServiceBulkEncoding';
-import { PageFeedAssetServiceBulkLang } from './PageFeedAssetServiceBulkLang';
-import { PageFeedAssetServiceBulkOutput } from './PageFeedAssetServiceBulkOutput';
-import { PageFeedAssetServiceDownloadJobStatus } from './PageFeedAssetServiceDownloadJobStatus';
+import { pageFeedAssetServiceBulkEncoding } from './PageFeedAssetServiceBulkEncoding';
+import { pageFeedAssetServiceBulkLang } from './PageFeedAssetServiceBulkLang';
+import { pageFeedAssetServiceBulkOutput } from './PageFeedAssetServiceBulkOutput';
+import { pageFeedAssetServiceDownloadJobStatus } from './PageFeedAssetServiceDownloadJobStatus';
 
-export const PageFeedAssetServiceDownloadJob = z.object({
+export const pageFeedAssetServiceDownloadJob = z.object({
   accountId: z.number().int().nullable(),
-  bulkEncoding: PageFeedAssetServiceBulkEncoding,
-  bulkLang: PageFeedAssetServiceBulkLang,
-  bulkOutput: PageFeedAssetServiceBulkOutput,
-  downloadJobStatus: PageFeedAssetServiceDownloadJobStatus,
+  bulkEncoding: pageFeedAssetServiceBulkEncoding,
+  bulkLang: pageFeedAssetServiceBulkLang,
+  bulkOutput: pageFeedAssetServiceBulkOutput,
+  downloadJobStatus: pageFeedAssetServiceDownloadJobStatus,
   endDate: z.string().nullable(),
   pageFeedAssetSetId: z.number().int().nullable(),
   jobId: z.number().int().nullable(),
@@ -18,4 +18,4 @@ export const PageFeedAssetServiceDownloadJob = z.object({
   startDate: z.string().nullable()
 }).nullable();
 
-export type PageFeedAssetServiceDownloadJob = z.infer<typeof PageFeedAssetServiceDownloadJob>;
+export type PageFeedAssetServiceDownloadJob = z.infer<typeof pageFeedAssetServiceDownloadJob>;

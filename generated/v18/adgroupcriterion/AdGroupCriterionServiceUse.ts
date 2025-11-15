@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupCriterionServiceUse = z.enum(["BIDDABLE", "NEGATIVE", "UNKNOWN"]).nullable();
+export const adGroupCriterionServiceUse = z.enum(["BIDDABLE", "NEGATIVE", "UNKNOWN"]).nullable();
 
-export type AdGroupCriterionServiceUse = z.infer<typeof AdGroupCriterionServiceUse>;
+export type AdGroupCriterionServiceUse = z.infer<typeof adGroupCriterionServiceUse>;

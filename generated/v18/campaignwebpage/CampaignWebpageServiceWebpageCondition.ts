@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { CampaignWebpageServiceWebpageConditionType } from './CampaignWebpageServiceWebpageConditionType';
-import { CampaignWebpageServiceWebpageOperator } from './CampaignWebpageServiceWebpageOperator';
+import { campaignWebpageServiceWebpageConditionType } from './CampaignWebpageServiceWebpageConditionType';
+import { campaignWebpageServiceWebpageOperator } from './CampaignWebpageServiceWebpageOperator';
 
-export const CampaignWebpageServiceWebpageCondition = z.object({
+export const campaignWebpageServiceWebpageCondition = z.object({
   argument: z.string().nullable(),
-  type: CampaignWebpageServiceWebpageConditionType,
-  operator: CampaignWebpageServiceWebpageOperator
+  type: campaignWebpageServiceWebpageConditionType,
+  operator: campaignWebpageServiceWebpageOperator
 }).nullable();
 
-export type CampaignWebpageServiceWebpageCondition = z.infer<typeof CampaignWebpageServiceWebpageCondition>;
+export type CampaignWebpageServiceWebpageCondition = z.infer<typeof campaignWebpageServiceWebpageCondition>;

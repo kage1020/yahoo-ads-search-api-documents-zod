@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignLabel } from './CampaignLabel';
+import { campaignLabel } from './CampaignLabel';
 
-export const CampaignLabelServiceOperation = z.object({
+export const campaignLabelServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(CampaignLabel).nullable()
+  operand: z.array(campaignLabel).nullable()
 }).nullable();
 
-export type CampaignLabelServiceOperation = z.infer<typeof CampaignLabelServiceOperation>;
+export type CampaignLabelServiceOperation = z.infer<typeof campaignLabelServiceOperation>;

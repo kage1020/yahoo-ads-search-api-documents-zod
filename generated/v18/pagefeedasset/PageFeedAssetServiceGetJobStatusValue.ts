@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { PageFeedAssetServiceDownloadJob } from './PageFeedAssetServiceDownloadJob';
-import { Error } from './Error';
-import { PageFeedAssetServiceUploadJob } from './PageFeedAssetServiceUploadJob';
+import { pageFeedAssetServiceDownloadJob } from './PageFeedAssetServiceDownloadJob';
+import { error } from '../../common/Error';
+import { pageFeedAssetServiceUploadJob } from './PageFeedAssetServiceUploadJob';
 
-export const PageFeedAssetServiceGetJobStatusValue = z.object({
-  downloadJob: PageFeedAssetServiceDownloadJob,
-  errors: z.array(Error).nullable(),
+export const pageFeedAssetServiceGetJobStatusValue = z.object({
+  downloadJob: pageFeedAssetServiceDownloadJob,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  uploadJob: PageFeedAssetServiceUploadJob
+  uploadJob: pageFeedAssetServiceUploadJob
 }).nullable();
 
-export type PageFeedAssetServiceGetJobStatusValue = z.infer<typeof PageFeedAssetServiceGetJobStatusValue>;
+export type PageFeedAssetServiceGetJobStatusValue = z.infer<typeof pageFeedAssetServiceGetJobStatusValue>;

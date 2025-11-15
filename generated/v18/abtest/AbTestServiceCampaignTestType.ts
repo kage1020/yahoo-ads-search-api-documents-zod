@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AbTestServiceCampaignTestType = z.enum(["BASE", "TEST", "NONE", "UNKNOWN"]).nullable();
+export const abTestServiceCampaignTestType = z.enum(["BASE", "TEST", "NONE", "UNKNOWN"]).nullable();
 
-export type AbTestServiceCampaignTestType = z.infer<typeof AbTestServiceCampaignTestType>;
+export type AbTestServiceCampaignTestType = z.infer<typeof abTestServiceCampaignTestType>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { SsaReportDefinitionServiceReportFieldAttribute } from './SsaReportDefinitionServiceReportFieldAttribute';
+import { error } from '../../common/Error';
+import { ssaReportDefinitionServiceReportFieldAttribute } from './SsaReportDefinitionServiceReportFieldAttribute';
 
-export const SsaReportDefinitionServiceFieldValue = z.object({
-  errors: z.array(Error).nullable(),
-  fields: z.array(SsaReportDefinitionServiceReportFieldAttribute).nullable(),
+export const ssaReportDefinitionServiceFieldValue = z.object({
+  errors: z.array(error).nullable(),
+  fields: z.array(ssaReportDefinitionServiceReportFieldAttribute).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type SsaReportDefinitionServiceFieldValue = z.infer<typeof SsaReportDefinitionServiceFieldValue>;
+export type SsaReportDefinitionServiceFieldValue = z.infer<typeof ssaReportDefinitionServiceFieldValue>;

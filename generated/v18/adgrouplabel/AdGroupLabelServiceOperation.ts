@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupLabel } from './AdGroupLabel';
+import { adGroupLabel } from './AdGroupLabel';
 
-export const AdGroupLabelServiceOperation = z.object({
+export const adGroupLabelServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AdGroupLabel).nullable()
+  operand: z.array(adGroupLabel).nullable()
 }).nullable();
 
-export type AdGroupLabelServiceOperation = z.infer<typeof AdGroupLabelServiceOperation>;
+export type AdGroupLabelServiceOperation = z.infer<typeof adGroupLabelServiceOperation>;

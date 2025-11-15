@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { AssetServiceDayOfWeek } from './AssetServiceDayOfWeek';
-import { AssetServiceMinuteOfHour } from './AssetServiceMinuteOfHour';
+import { assetServiceDayOfWeek } from './AssetServiceDayOfWeek';
+import { assetServiceMinuteOfHour } from './AssetServiceMinuteOfHour';
 
-export const AssetServiceSchedule = z.object({
-  dayOfWeek: AssetServiceDayOfWeek,
+export const assetServiceSchedule = z.object({
+  dayOfWeek: assetServiceDayOfWeek,
   endHour: z.number().int().nullable(),
-  endMinute: AssetServiceMinuteOfHour,
+  endMinute: assetServiceMinuteOfHour,
   startHour: z.number().int().nullable(),
-  startMinute: AssetServiceMinuteOfHour
+  startMinute: assetServiceMinuteOfHour
 }).nullable();
 
-export type AssetServiceSchedule = z.infer<typeof AssetServiceSchedule>;
+export type AssetServiceSchedule = z.infer<typeof assetServiceSchedule>;

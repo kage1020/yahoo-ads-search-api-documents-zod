@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AssetServiceSetTrademarkStatus } from './AssetServiceSetTrademarkStatus';
+import { assetServiceSetTrademarkStatus } from './AssetServiceSetTrademarkStatus';
 
-export const AssetServiceSetTrademarkStatusOperation = z.object({
+export const assetServiceSetTrademarkStatusOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AssetServiceSetTrademarkStatus).nullable()
+  operand: z.array(assetServiceSetTrademarkStatus).nullable()
 }).nullable();
 
-export type AssetServiceSetTrademarkStatusOperation = z.infer<typeof AssetServiceSetTrademarkStatusOperation>;
+export type AssetServiceSetTrademarkStatusOperation = z.infer<typeof assetServiceSetTrademarkStatusOperation>;

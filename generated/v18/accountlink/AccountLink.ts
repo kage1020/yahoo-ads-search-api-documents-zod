@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { AccountLinkServiceAccountStatus } from './AccountLinkServiceAccountStatus';
-import { AccountLinkServiceOwnerShipType } from './AccountLinkServiceOwnerShipType';
+import { accountLinkServiceAccountStatus } from './AccountLinkServiceAccountStatus';
+import { accountLinkServiceOwnerShipType } from './AccountLinkServiceOwnerShipType';
 
-export const AccountLink = z.object({
+export const accountLink = z.object({
   mccAccountId: z.number().int(),
   accountId: z.number().int(),
-  accountStatus: AccountLinkServiceAccountStatus,
-  ownerShipType: AccountLinkServiceOwnerShipType
+  accountStatus: accountLinkServiceAccountStatus,
+  ownerShipType: accountLinkServiceOwnerShipType
 }).nullable();
 
-export type AccountLink = z.infer<typeof AccountLink>;
+export type AccountLink = z.infer<typeof accountLink>;

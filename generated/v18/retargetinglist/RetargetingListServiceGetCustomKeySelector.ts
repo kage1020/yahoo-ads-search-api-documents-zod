@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceTargetListOwner } from './RetargetingListServiceTargetListOwner';
+import { retargetingListServiceTargetListOwner } from './RetargetingListServiceTargetListOwner';
 
-export const RetargetingListServiceGetCustomKeySelector = z.object({
+export const retargetingListServiceGetCustomKeySelector = z.object({
   accountId: z.number().int(),
-  targetListOwner: RetargetingListServiceTargetListOwner
+  targetListOwner: retargetingListServiceTargetListOwner
 }).nullable();
 
-export type RetargetingListServiceGetCustomKeySelector = z.infer<typeof RetargetingListServiceGetCustomKeySelector>;
+export type RetargetingListServiceGetCustomKeySelector = z.infer<typeof retargetingListServiceGetCustomKeySelector>;

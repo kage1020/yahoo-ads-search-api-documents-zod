@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { CampaignTargetServiceTarget } from './CampaignTargetServiceTarget';
+import { campaignTargetServiceTarget } from './CampaignTargetServiceTarget';
 
-export const CampaignTarget = z.object({
+export const campaignTarget = z.object({
   accountId: z.number().int().nullable(),
   bidMultiplier: z.number().nullable(),
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
-  target: CampaignTargetServiceTarget
+  target: campaignTargetServiceTarget
 }).nullable();
 
-export type CampaignTarget = z.infer<typeof CampaignTarget>;
+export type CampaignTarget = z.infer<typeof campaignTarget>;

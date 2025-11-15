@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignSharedSetServiceValue } from './CampaignSharedSetServiceValue';
+import { campaignSharedSetServiceValue } from './CampaignSharedSetServiceValue';
 
-export const CampaignSharedSetServicePage = z.object({
+export const campaignSharedSetServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(CampaignSharedSetServiceValue).nullable()
+  values: z.array(campaignSharedSetServiceValue).nullable()
 }).nullable();
 
-export type CampaignSharedSetServicePage = z.infer<typeof CampaignSharedSetServicePage>;
+export type CampaignSharedSetServicePage = z.infer<typeof campaignSharedSetServicePage>;

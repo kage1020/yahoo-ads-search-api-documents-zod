@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceAppLinkPlatform } from './ConversionTrackerServiceAppLinkPlatform';
-import { ConversionTrackerServiceConversionSource } from './ConversionTrackerServiceConversionSource';
+import { conversionTrackerServiceAppLinkPlatform } from './ConversionTrackerServiceAppLinkPlatform';
+import { conversionTrackerServiceConversionSource } from './ConversionTrackerServiceConversionSource';
 
-export const ConversionTrackerServiceAppLinkConversion = z.object({
+export const conversionTrackerServiceAppLinkConversion = z.object({
   appVendorId: z.string().nullable(),
   appId: z.string().nullable(),
-  appLinkPlatform: ConversionTrackerServiceAppLinkPlatform,
+  appLinkPlatform: conversionTrackerServiceAppLinkPlatform,
   appEventType: z.string().nullable(),
   advancedSnippet: z.string().nullable(),
-  source: ConversionTrackerServiceConversionSource
+  source: conversionTrackerServiceConversionSource
 }).nullable();
 
-export type ConversionTrackerServiceAppLinkConversion = z.infer<typeof ConversionTrackerServiceAppLinkConversion>;
+export type ConversionTrackerServiceAppLinkConversion = z.infer<typeof conversionTrackerServiceAppLinkConversion>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { DictionaryServiceDisapprovalReason } from './DictionaryServiceDisapprovalReason';
-import { Error } from './Error';
+import { dictionaryServiceDisapprovalReason } from './DictionaryServiceDisapprovalReason';
+import { error } from '../../common/Error';
 
-export const DictionaryServiceDisapprovalReasonValue = z.object({
-  disapprovalReason: DictionaryServiceDisapprovalReason,
-  errors: z.array(Error).nullable(),
+export const dictionaryServiceDisapprovalReasonValue = z.object({
+  disapprovalReason: dictionaryServiceDisapprovalReason,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type DictionaryServiceDisapprovalReasonValue = z.infer<typeof DictionaryServiceDisapprovalReasonValue>;
+export type DictionaryServiceDisapprovalReasonValue = z.infer<typeof dictionaryServiceDisapprovalReasonValue>;

@@ -1,25 +1,25 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionServiceApprovalStatus } from './AdGroupCriterionServiceApprovalStatus';
-import { AdGroupCriterionServiceBid } from './AdGroupCriterionServiceBid';
-import { AdGroupCriterionServiceCustomParameters } from './AdGroupCriterionServiceCustomParameters';
-import { AdGroupCriterionServiceUserStatus } from './AdGroupCriterionServiceUserStatus';
+import { adGroupCriterionServiceApprovalStatus } from './AdGroupCriterionServiceApprovalStatus';
+import { adGroupCriterionServiceBid } from './AdGroupCriterionServiceBid';
+import { adGroupCriterionServiceCustomParameters } from './AdGroupCriterionServiceCustomParameters';
+import { adGroupCriterionServiceUserStatus } from './AdGroupCriterionServiceUserStatus';
 
-export const AdGroupCriterionServiceBiddableAdGroupCriterion = z.object({
+export const adGroupCriterionServiceBiddableAdGroupCriterion = z.object({
   smartphoneFinalUrl: z.string().nullable(),
   finalUrl: z.string().nullable(),
-  approvalStatus: AdGroupCriterionServiceApprovalStatus,
-  bid: AdGroupCriterionServiceBid,
-  customParameters: AdGroupCriterionServiceCustomParameters,
+  approvalStatus: adGroupCriterionServiceApprovalStatus,
+  bid: adGroupCriterionServiceBid,
+  customParameters: adGroupCriterionServiceCustomParameters,
   destinationUrl: z.string().nullable(),
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable(),
   reviewSmartphoneFinalUrl: z.string().nullable(),
   reviewFinalUrl: z.string().nullable(),
-  reviewCustomParameters: AdGroupCriterionServiceCustomParameters,
+  reviewCustomParameters: adGroupCriterionServiceCustomParameters,
   reviewDestinationUrl: z.string().nullable(),
   reviewTrackingUrl: z.string().nullable(),
   trackingUrl: z.string().nullable(),
-  userStatus: AdGroupCriterionServiceUserStatus
+  userStatus: adGroupCriterionServiceUserStatus
 }).nullable();
 
-export type AdGroupCriterionServiceBiddableAdGroupCriterion = z.infer<typeof AdGroupCriterionServiceBiddableAdGroupCriterion>;
+export type AdGroupCriterionServiceBiddableAdGroupCriterion = z.infer<typeof adGroupCriterionServiceBiddableAdGroupCriterion>;

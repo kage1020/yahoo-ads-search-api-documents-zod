@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AssetServiceType } from './AssetServiceType';
-import { AssetServiceApprovalStatus } from './AssetServiceApprovalStatus';
+import { assetServiceType } from './AssetServiceType';
+import { assetServiceApprovalStatus } from './AssetServiceApprovalStatus';
 
-export const AssetServiceSelector = z.object({
+export const assetServiceSelector = z.object({
   accountId: z.number().int(),
   assetIds: z.array(z.number().int().nullable()).nullable(),
-  types: z.array(AssetServiceType).nullable(),
-  approvalStatuses: z.array(AssetServiceApprovalStatus).nullable(),
+  types: z.array(assetServiceType).nullable(),
+  approvalStatuses: z.array(assetServiceApprovalStatus).nullable(),
   numberResults: z.number().int().min(1).max(2000).nullable(),
   startIndex: z.number().int().min(1).nullable()
 }).nullable();
 
-export type AssetServiceSelector = z.infer<typeof AssetServiceSelector>;
+export type AssetServiceSelector = z.infer<typeof assetServiceSelector>;

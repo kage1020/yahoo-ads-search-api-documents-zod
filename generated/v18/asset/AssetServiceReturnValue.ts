@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { AssetServiceValue } from './AssetServiceValue';
+import { assetServiceValue } from './AssetServiceValue';
 
-export const AssetServiceReturnValue = z.object({
-  values: z.array(AssetServiceValue).nullable()
+export const assetServiceReturnValue = z.object({
+  values: z.array(assetServiceValue).nullable()
 }).nullable();
 
-export type AssetServiceReturnValue = z.infer<typeof AssetServiceReturnValue>;
+export type AssetServiceReturnValue = z.infer<typeof assetServiceReturnValue>;

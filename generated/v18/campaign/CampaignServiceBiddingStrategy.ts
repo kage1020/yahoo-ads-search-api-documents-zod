@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
-import { CampaignServiceBiddingScheme } from './CampaignServiceBiddingScheme';
-import { CampaignServiceBiddingStrategySource } from './CampaignServiceBiddingStrategySource';
+import { campaignServiceBiddingScheme } from './CampaignServiceBiddingScheme';
+import { campaignServiceBiddingStrategySource } from './CampaignServiceBiddingStrategySource';
 
-export const CampaignServiceBiddingStrategy = z.object({
-  biddingScheme: CampaignServiceBiddingScheme,
+export const campaignServiceBiddingStrategy = z.object({
+  biddingScheme: campaignServiceBiddingScheme,
   portfolioBiddingId: z.number().int().nullable(),
   portfolioBiddingName: z.string().nullable(),
-  biddingStrategySource: CampaignServiceBiddingStrategySource
+  biddingStrategySource: campaignServiceBiddingStrategySource
 }).nullable();
 
-export type CampaignServiceBiddingStrategy = z.infer<typeof CampaignServiceBiddingStrategy>;
+export type CampaignServiceBiddingStrategy = z.infer<typeof campaignServiceBiddingStrategy>;

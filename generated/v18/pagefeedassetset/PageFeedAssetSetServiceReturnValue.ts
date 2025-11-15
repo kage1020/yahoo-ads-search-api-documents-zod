@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { PageFeedAssetSetServiceValue } from './PageFeedAssetSetServiceValue';
+import { pageFeedAssetSetServiceValue } from './PageFeedAssetSetServiceValue';
 
-export const PageFeedAssetSetServiceReturnValue = z.object({
-  values: z.array(PageFeedAssetSetServiceValue).nullable()
+export const pageFeedAssetSetServiceReturnValue = z.object({
+  values: z.array(pageFeedAssetSetServiceValue).nullable()
 }).nullable();
 
-export type PageFeedAssetSetServiceReturnValue = z.infer<typeof PageFeedAssetSetServiceReturnValue>;
+export type PageFeedAssetSetServiceReturnValue = z.infer<typeof pageFeedAssetSetServiceReturnValue>;

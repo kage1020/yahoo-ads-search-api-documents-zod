@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AdGroupAdServiceReturnValue } from './AdGroupAdServiceReturnValue';
+import { error } from '../../common/Error';
+import { adGroupAdServiceReturnValue } from './AdGroupAdServiceReturnValue';
 
-export const AdGroupAdServiceSetTrademarkStatusResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const adGroupAdServiceSetTrademarkStatusResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AdGroupAdServiceReturnValue
+  rval: adGroupAdServiceReturnValue
 }).nullable();
 
-export type AdGroupAdServiceSetTrademarkStatusResponse = z.infer<typeof AdGroupAdServiceSetTrademarkStatusResponse>;
+export type AdGroupAdServiceSetTrademarkStatusResponse = z.infer<typeof adGroupAdServiceSetTrademarkStatusResponse>;

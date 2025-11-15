@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { DictionaryServiceAppLinkVendorValue } from './DictionaryServiceAppLinkVendorValue';
+import { dictionaryServiceAppLinkVendorValue } from './DictionaryServiceAppLinkVendorValue';
 
-export const DictionaryServiceAppLinkVendorPage = z.object({
+export const dictionaryServiceAppLinkVendorPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(DictionaryServiceAppLinkVendorValue).nullable()
+  values: z.array(dictionaryServiceAppLinkVendorValue).nullable()
 }).nullable();
 
-export type DictionaryServiceAppLinkVendorPage = z.infer<typeof DictionaryServiceAppLinkVendorPage>;
+export type DictionaryServiceAppLinkVendorPage = z.infer<typeof dictionaryServiceAppLinkVendorPage>;

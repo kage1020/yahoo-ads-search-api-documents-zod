@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AdGroupCriterionServiceKeywordMatchType = z.enum(["EXACT", "PHRASE", "BROAD", "UNKNOWN"]).nullable();
+export const adGroupCriterionServiceKeywordMatchType = z.enum(["EXACT", "PHRASE", "BROAD", "UNKNOWN"]).nullable();
 
-export type AdGroupCriterionServiceKeywordMatchType = z.infer<typeof AdGroupCriterionServiceKeywordMatchType>;
+export type AdGroupCriterionServiceKeywordMatchType = z.infer<typeof adGroupCriterionServiceKeywordMatchType>;

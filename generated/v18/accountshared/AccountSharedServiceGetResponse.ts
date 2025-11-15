@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AccountSharedServicePage } from './AccountSharedServicePage';
+import { error } from '../../common/Error';
+import { accountSharedServicePage } from './AccountSharedServicePage';
 
-export const AccountSharedServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const accountSharedServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AccountSharedServicePage
+  rval: accountSharedServicePage
 }).nullable();
 
-export type AccountSharedServiceGetResponse = z.infer<typeof AccountSharedServiceGetResponse>;
+export type AccountSharedServiceGetResponse = z.infer<typeof accountSharedServiceGetResponse>;

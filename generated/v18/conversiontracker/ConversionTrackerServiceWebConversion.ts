@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceMarkupLanguage } from './ConversionTrackerServiceMarkupLanguage';
-import { ConversionTrackerServiceTrackingCodeType } from './ConversionTrackerServiceTrackingCodeType';
-import { ConversionTrackerServiceConversionSource } from './ConversionTrackerServiceConversionSource';
+import { conversionTrackerServiceMarkupLanguage } from './ConversionTrackerServiceMarkupLanguage';
+import { conversionTrackerServiceTrackingCodeType } from './ConversionTrackerServiceTrackingCodeType';
+import { conversionTrackerServiceConversionSource } from './ConversionTrackerServiceConversionSource';
 
-export const ConversionTrackerServiceWebConversion = z.object({
-  markupLanguage: ConversionTrackerServiceMarkupLanguage,
+export const conversionTrackerServiceWebConversion = z.object({
+  markupLanguage: conversionTrackerServiceMarkupLanguage,
   advancedSnippet: z.string().nullable(),
-  trackingCodeType: ConversionTrackerServiceTrackingCodeType,
-  source: ConversionTrackerServiceConversionSource
+  trackingCodeType: conversionTrackerServiceTrackingCodeType,
+  source: conversionTrackerServiceConversionSource
 }).nullable();
 
-export type ConversionTrackerServiceWebConversion = z.infer<typeof ConversionTrackerServiceWebConversion>;
+export type ConversionTrackerServiceWebConversion = z.infer<typeof conversionTrackerServiceWebConversion>;

@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { OfflineConversionServiceSortType } from './OfflineConversionServiceSortType';
-import { OfflineConversionServiceSortField } from './OfflineConversionServiceSortField';
+import { offlineConversionServiceSortType } from './OfflineConversionServiceSortType';
+import { offlineConversionServiceSortField } from './OfflineConversionServiceSortField';
 
-export const OfflineConversionServiceSort = z.object({
-  sortType: OfflineConversionServiceSortType,
-  sortField: OfflineConversionServiceSortField
+export const offlineConversionServiceSort = z.object({
+  sortType: offlineConversionServiceSortType,
+  sortField: offlineConversionServiceSortField
 }).nullable();
 
-export type OfflineConversionServiceSort = z.infer<typeof OfflineConversionServiceSort>;
+export type OfflineConversionServiceSort = z.infer<typeof offlineConversionServiceSort>;

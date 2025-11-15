@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { OfflineConversionFile } from './OfflineConversionFile';
+import { error } from '../../common/Error';
+import { offlineConversionFile } from './OfflineConversionFile';
 
-export const OfflineConversionServiceValue = z.object({
-  errors: z.array(Error).nullable(),
-  offlineConversion: OfflineConversionFile,
+export const offlineConversionServiceValue = z.object({
+  errors: z.array(error).nullable(),
+  offlineConversion: offlineConversionFile,
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type OfflineConversionServiceValue = z.infer<typeof OfflineConversionServiceValue>;
+export type OfflineConversionServiceValue = z.infer<typeof offlineConversionServiceValue>;

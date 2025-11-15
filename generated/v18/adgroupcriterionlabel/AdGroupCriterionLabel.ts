@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const AdGroupCriterionLabel = z.object({
+export const adGroupCriterionLabel = z.object({
   accountId: z.number().int().nullable(),
   adGroupId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
@@ -8,4 +8,4 @@ export const AdGroupCriterionLabel = z.object({
   labelId: z.number().int().nullable()
 }).nullable();
 
-export type AdGroupCriterionLabel = z.infer<typeof AdGroupCriterionLabel>;
+export type AdGroupCriterionLabel = z.infer<typeof adGroupCriterionLabel>;

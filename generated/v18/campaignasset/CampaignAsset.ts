@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { CampaignAssetServiceType } from './CampaignAssetServiceType';
-import { CampaignAssetServiceUserStatus } from './CampaignAssetServiceUserStatus';
+import { campaignAssetServiceType } from './CampaignAssetServiceType';
+import { campaignAssetServiceUserStatus } from './CampaignAssetServiceUserStatus';
 
-export const CampaignAsset = z.object({
+export const campaignAsset = z.object({
   accountId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   assetId: z.number().int().nullable(),
-  type: CampaignAssetServiceType,
-  userStatus: CampaignAssetServiceUserStatus
+  type: campaignAssetServiceType,
+  userStatus: campaignAssetServiceUserStatus
 }).nullable();
 
-export type CampaignAsset = z.infer<typeof CampaignAsset>;
+export type CampaignAsset = z.infer<typeof campaignAsset>;

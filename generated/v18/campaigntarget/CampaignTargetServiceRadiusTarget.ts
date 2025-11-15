@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-export const CampaignTargetServiceRadiusTarget = z.object({
+export const campaignTargetServiceRadiusTarget = z.object({
   latitudeInMicroDegrees: z.number().int().nullable(),
   longitudeInMicroDegrees: z.number().int().nullable(),
   radius: z.number().int().nullable(),
   description: z.string().nullable()
 }).nullable();
 
-export type CampaignTargetServiceRadiusTarget = z.infer<typeof CampaignTargetServiceRadiusTarget>;
+export type CampaignTargetServiceRadiusTarget = z.infer<typeof campaignTargetServiceRadiusTarget>;

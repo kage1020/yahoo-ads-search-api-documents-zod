@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignServiceGeoTargetType } from './CampaignServiceGeoTargetType';
+import { campaignServiceGeoTargetType } from './CampaignServiceGeoTargetType';
 
-export const CampaignServiceGeoTargetTypeSetting = z.object({
-  negativeGeoTargetType: CampaignServiceGeoTargetType,
-  positiveGeoTargetType: CampaignServiceGeoTargetType
+export const campaignServiceGeoTargetTypeSetting = z.object({
+  negativeGeoTargetType: campaignServiceGeoTargetType,
+  positiveGeoTargetType: campaignServiceGeoTargetType
 }).nullable();
 
-export type CampaignServiceGeoTargetTypeSetting = z.infer<typeof CampaignServiceGeoTargetTypeSetting>;
+export type CampaignServiceGeoTargetTypeSetting = z.infer<typeof campaignServiceGeoTargetTypeSetting>;

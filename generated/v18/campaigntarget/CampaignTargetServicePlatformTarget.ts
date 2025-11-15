@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { CampaignTargetServicePlatformType } from './CampaignTargetServicePlatformType';
+import { campaignTargetServicePlatformType } from './CampaignTargetServicePlatformType';
 
-export const CampaignTargetServicePlatformTarget = z.object({
-  platformType: CampaignTargetServicePlatformType
+export const campaignTargetServicePlatformTarget = z.object({
+  platformType: campaignTargetServicePlatformType
 }).nullable();
 
-export type CampaignTargetServicePlatformTarget = z.infer<typeof CampaignTargetServicePlatformTarget>;
+export type CampaignTargetServicePlatformTarget = z.infer<typeof campaignTargetServicePlatformTarget>;

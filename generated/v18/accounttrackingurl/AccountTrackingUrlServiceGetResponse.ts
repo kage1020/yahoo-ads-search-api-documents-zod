@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AccountTrackingUrlServicePage } from './AccountTrackingUrlServicePage';
+import { error } from '../../common/Error';
+import { accountTrackingUrlServicePage } from './AccountTrackingUrlServicePage';
 
-export const AccountTrackingUrlServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const accountTrackingUrlServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AccountTrackingUrlServicePage
+  rval: accountTrackingUrlServicePage
 }).nullable();
 
-export type AccountTrackingUrlServiceGetResponse = z.infer<typeof AccountTrackingUrlServiceGetResponse>;
+export type AccountTrackingUrlServiceGetResponse = z.infer<typeof accountTrackingUrlServiceGetResponse>;

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const AdGroupAdLabel = z.object({
+export const adGroupAdLabel = z.object({
   accountId: z.number().int().nullable(),
   adGroupId: z.number().int().nullable(),
   adId: z.number().int().nullable(),
@@ -8,4 +8,4 @@ export const AdGroupAdLabel = z.object({
   labelId: z.number().int().nullable()
 }).nullable();
 
-export type AdGroupAdLabel = z.infer<typeof AdGroupAdLabel>;
+export type AdGroupAdLabel = z.infer<typeof adGroupAdLabel>;

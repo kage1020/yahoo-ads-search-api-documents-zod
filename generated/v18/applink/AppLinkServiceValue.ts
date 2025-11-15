@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AppLink } from './AppLink';
-import { Error } from './Error';
+import { appLink } from './AppLink';
+import { error } from '../../common/Error';
 
-export const AppLinkServiceValue = z.object({
-  appLink: AppLink,
-  errors: z.array(Error).nullable(),
+export const appLinkServiceValue = z.object({
+  appLink: appLink,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AppLinkServiceValue = z.infer<typeof AppLinkServiceValue>;
+export type AppLinkServiceValue = z.infer<typeof appLinkServiceValue>;

@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { BalanceServiceValue } from './BalanceServiceValue';
+import { balanceServiceValue } from './BalanceServiceValue';
 
-export const BalanceServicePage = z.object({
+export const balanceServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(BalanceServiceValue).nullable()
+  values: z.array(balanceServiceValue).nullable()
 }).nullable();
 
-export type BalanceServicePage = z.infer<typeof BalanceServicePage>;
+export type BalanceServicePage = z.infer<typeof balanceServicePage>;

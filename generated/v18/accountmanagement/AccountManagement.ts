@@ -1,31 +1,31 @@
 import { z } from 'zod';
 
-import { AccountManagementServicePayment } from './AccountManagementServicePayment';
-import { AccountManagementServicePrefectureCode } from './AccountManagementServicePrefectureCode';
-import { AccountManagementServiceAutoTaggingEnabled } from './AccountManagementServiceAutoTaggingEnabled';
-import { AccountManagementServiceClient } from './AccountManagementServiceClient';
-import { AccountManagementServiceClientType } from './AccountManagementServiceClientType';
-import { AccountManagementServiceDeliveryStatus } from './AccountManagementServiceDeliveryStatus';
-import { AccountManagementServiceIsAdultAccount } from './AccountManagementServiceIsAdultAccount';
-import { AccountManagementServiceIsTestAccount } from './AccountManagementServiceIsTestAccount';
-import { AccountManagementServiceIsCancellationPending } from './AccountManagementServiceIsCancellationPending';
-import { AccountManagementServiceStatus } from './AccountManagementServiceStatus';
+import { accountManagementServicePayment } from './AccountManagementServicePayment';
+import { accountManagementServicePrefectureCode } from './AccountManagementServicePrefectureCode';
+import { accountManagementServiceAutoTaggingEnabled } from './AccountManagementServiceAutoTaggingEnabled';
+import { accountManagementServiceClient } from './AccountManagementServiceClient';
+import { accountManagementServiceClientType } from './AccountManagementServiceClientType';
+import { accountManagementServiceDeliveryStatus } from './AccountManagementServiceDeliveryStatus';
+import { accountManagementServiceIsAdultAccount } from './AccountManagementServiceIsAdultAccount';
+import { accountManagementServiceIsTestAccount } from './AccountManagementServiceIsTestAccount';
+import { accountManagementServiceIsCancellationPending } from './AccountManagementServiceIsCancellationPending';
+import { accountManagementServiceStatus } from './AccountManagementServiceStatus';
 
-export const AccountManagement = z.object({
+export const accountManagement = z.object({
   accountId: z.number().int().nullable(),
   accountName: z.string().nullable(),
-  accountPayment: AccountManagementServicePayment,
+  accountPayment: accountManagementServicePayment,
   agencyPersonName: z.string().nullable(),
-  agencyPrefectureCode: AccountManagementServicePrefectureCode,
-  autoTaggingEnabled: AccountManagementServiceAutoTaggingEnabled,
-  client: AccountManagementServiceClient,
-  clientType: AccountManagementServiceClientType,
+  agencyPrefectureCode: accountManagementServicePrefectureCode,
+  autoTaggingEnabled: accountManagementServiceAutoTaggingEnabled,
+  client: accountManagementServiceClient,
+  clientType: accountManagementServiceClientType,
   contactBizId: z.string().nullable(),
-  deliveryStatus: AccountManagementServiceDeliveryStatus,
-  isAdultAccount: AccountManagementServiceIsAdultAccount,
-  isTestAccount: AccountManagementServiceIsTestAccount,
-  isCancellationPending: AccountManagementServiceIsCancellationPending,
-  status: AccountManagementServiceStatus
+  deliveryStatus: accountManagementServiceDeliveryStatus,
+  isAdultAccount: accountManagementServiceIsAdultAccount,
+  isTestAccount: accountManagementServiceIsTestAccount,
+  isCancellationPending: accountManagementServiceIsCancellationPending,
+  status: accountManagementServiceStatus
 }).nullable();
 
-export type AccountManagement = z.infer<typeof AccountManagement>;
+export type AccountManagement = z.infer<typeof accountManagement>;

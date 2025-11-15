@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { ConversionTrackerServiceAppEventTypePage } from './ConversionTrackerServiceAppEventTypePage';
+import { error } from '../../common/Error';
+import { conversionTrackerServiceAppEventTypePage } from './ConversionTrackerServiceAppEventTypePage';
 
-export const ConversionTrackerServiceGetAppEventTypeResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const conversionTrackerServiceGetAppEventTypeResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: ConversionTrackerServiceAppEventTypePage
+  rval: conversionTrackerServiceAppEventTypePage
 }).nullable();
 
-export type ConversionTrackerServiceGetAppEventTypeResponse = z.infer<typeof ConversionTrackerServiceGetAppEventTypeResponse>;
+export type ConversionTrackerServiceGetAppEventTypeResponse = z.infer<typeof conversionTrackerServiceGetAppEventTypeResponse>;

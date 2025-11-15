@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const SsaReportDefinitionServiceReportCompressType = z.enum(["NONE", "UNKNOWN"]).nullable();
+export const ssaReportDefinitionServiceReportCompressType = z.enum(["NONE", "UNKNOWN"]).nullable();
 
-export type SsaReportDefinitionServiceReportCompressType = z.infer<typeof SsaReportDefinitionServiceReportCompressType>;
+export type SsaReportDefinitionServiceReportCompressType = z.infer<typeof ssaReportDefinitionServiceReportCompressType>;

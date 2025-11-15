@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { LabelServicePage } from './LabelServicePage';
+import { error } from '../../common/Error';
+import { labelServicePage } from './LabelServicePage';
 
-export const LabelServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const labelServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: LabelServicePage
+  rval: labelServicePage
 }).nullable();
 
-export type LabelServiceGetResponse = z.infer<typeof LabelServiceGetResponse>;
+export type LabelServiceGetResponse = z.infer<typeof labelServiceGetResponse>;

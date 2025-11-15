@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AssetServiceSchedule } from './AssetServiceSchedule';
+import { assetServiceSchedule } from './AssetServiceSchedule';
 
-export const AssetServiceCallAsset = z.object({
+export const assetServiceCallAsset = z.object({
   phoneNumber: z.string().nullable(),
   reviewPhoneNumber: z.string().nullable(),
-  schedules: z.array(AssetServiceSchedule).nullable()
+  schedules: z.array(assetServiceSchedule).nullable()
 }).nullable();
 
-export type AssetServiceCallAsset = z.infer<typeof AssetServiceCallAsset>;
+export type AssetServiceCallAsset = z.infer<typeof assetServiceCallAsset>;

@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-export const AdGroupAdServiceCreatedDateRange = z.object({
+export const adGroupAdServiceCreatedDateRange = z.object({
   startDate: z.string().nullable(),
   endDate: z.string().nullable()
 }).nullable();
 
-export type AdGroupAdServiceCreatedDateRange = z.infer<typeof AdGroupAdServiceCreatedDateRange>;
+export type AdGroupAdServiceCreatedDateRange = z.infer<typeof adGroupAdServiceCreatedDateRange>;

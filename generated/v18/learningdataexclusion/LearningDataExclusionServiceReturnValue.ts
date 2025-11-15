@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { LearningDataExclusionServiceValue } from './LearningDataExclusionServiceValue';
+import { learningDataExclusionServiceValue } from './LearningDataExclusionServiceValue';
 
-export const LearningDataExclusionServiceReturnValue = z.object({
-  values: z.array(LearningDataExclusionServiceValue).nullable()
+export const learningDataExclusionServiceReturnValue = z.object({
+  values: z.array(learningDataExclusionServiceValue).nullable()
 }).nullable();
 
-export type LearningDataExclusionServiceReturnValue = z.infer<typeof LearningDataExclusionServiceReturnValue>;
+export type LearningDataExclusionServiceReturnValue = z.infer<typeof learningDataExclusionServiceReturnValue>;

@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignWebpageServiceValue } from './CampaignWebpageServiceValue';
+import { campaignWebpageServiceValue } from './CampaignWebpageServiceValue';
 
-export const CampaignWebpageServicePage = z.object({
+export const campaignWebpageServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(CampaignWebpageServiceValue).nullable()
+  values: z.array(campaignWebpageServiceValue).nullable()
 }).nullable();
 
-export type CampaignWebpageServicePage = z.infer<typeof CampaignWebpageServicePage>;
+export type CampaignWebpageServicePage = z.infer<typeof campaignWebpageServicePage>;

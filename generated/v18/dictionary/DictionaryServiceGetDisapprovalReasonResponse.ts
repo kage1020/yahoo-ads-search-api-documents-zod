@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { DictionaryServiceDisapprovalReasonPage } from './DictionaryServiceDisapprovalReasonPage';
+import { error } from '../../common/Error';
+import { dictionaryServiceDisapprovalReasonPage } from './DictionaryServiceDisapprovalReasonPage';
 
-export const DictionaryServiceGetDisapprovalReasonResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const dictionaryServiceGetDisapprovalReasonResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: DictionaryServiceDisapprovalReasonPage
+  rval: dictionaryServiceDisapprovalReasonPage
 }).nullable();
 
-export type DictionaryServiceGetDisapprovalReasonResponse = z.infer<typeof DictionaryServiceGetDisapprovalReasonResponse>;
+export type DictionaryServiceGetDisapprovalReasonResponse = z.infer<typeof dictionaryServiceGetDisapprovalReasonResponse>;

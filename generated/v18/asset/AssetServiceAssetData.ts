@@ -1,21 +1,21 @@
 import { z } from 'zod';
 
-import { AssetServiceType } from './AssetServiceType';
-import { AssetServiceQuickLinkAsset } from './AssetServiceQuickLinkAsset';
-import { AssetServiceCallAsset } from './AssetServiceCallAsset';
-import { AssetServiceCalloutAsset } from './AssetServiceCalloutAsset';
-import { AssetServiceStructuredSnippetAsset } from './AssetServiceStructuredSnippetAsset';
-import { AssetServiceImageAsset } from './AssetServiceImageAsset';
-import { AssetServiceFaviconAsset } from './AssetServiceFaviconAsset';
+import { assetServiceType } from './AssetServiceType';
+import { assetServiceQuickLinkAsset } from './AssetServiceQuickLinkAsset';
+import { assetServiceCallAsset } from './AssetServiceCallAsset';
+import { assetServiceCalloutAsset } from './AssetServiceCalloutAsset';
+import { assetServiceStructuredSnippetAsset } from './AssetServiceStructuredSnippetAsset';
+import { assetServiceImageAsset } from './AssetServiceImageAsset';
+import { assetServiceFaviconAsset } from './AssetServiceFaviconAsset';
 
-export const AssetServiceAssetData = z.object({
-  type: AssetServiceType,
-  quickLinkAsset: AssetServiceQuickLinkAsset,
-  callAsset: AssetServiceCallAsset,
-  calloutAsset: AssetServiceCalloutAsset,
-  structuredSnippetAsset: AssetServiceStructuredSnippetAsset,
-  imageAsset: AssetServiceImageAsset,
-  faviconAsset: AssetServiceFaviconAsset
+export const assetServiceAssetData = z.object({
+  type: assetServiceType,
+  quickLinkAsset: assetServiceQuickLinkAsset,
+  callAsset: assetServiceCallAsset,
+  calloutAsset: assetServiceCalloutAsset,
+  structuredSnippetAsset: assetServiceStructuredSnippetAsset,
+  imageAsset: assetServiceImageAsset,
+  faviconAsset: assetServiceFaviconAsset
 }).nullable();
 
-export type AssetServiceAssetData = z.infer<typeof AssetServiceAssetData>;
+export type AssetServiceAssetData = z.infer<typeof assetServiceAssetData>;

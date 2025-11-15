@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const KeywordPlanIdeaServiceSiteSeed = z.object({
+export const keywordPlanIdeaServiceSiteSeed = z.object({
   site: z.string().nullable()
 }).nullable();
 
-export type KeywordPlanIdeaServiceSiteSeed = z.infer<typeof KeywordPlanIdeaServiceSiteSeed>;
+export type KeywordPlanIdeaServiceSiteSeed = z.infer<typeof keywordPlanIdeaServiceSiteSeed>;

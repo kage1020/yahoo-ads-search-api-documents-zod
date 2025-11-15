@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AdGroupWebpageServiceWebpageParameter } from './AdGroupWebpageServiceWebpageParameter';
+import { adGroupWebpageServiceWebpageParameter } from './AdGroupWebpageServiceWebpageParameter';
 
-export const AdGroupWebpageServiceWebpage = z.object({
-  parameter: AdGroupWebpageServiceWebpageParameter,
+export const adGroupWebpageServiceWebpage = z.object({
+  parameter: adGroupWebpageServiceWebpageParameter,
   targetId: z.number().int().nullable(),
   targetTrackId: z.number().int().nullable()
 }).nullable();
 
-export type AdGroupWebpageServiceWebpage = z.infer<typeof AdGroupWebpageServiceWebpage>;
+export type AdGroupWebpageServiceWebpage = z.infer<typeof adGroupWebpageServiceWebpage>;

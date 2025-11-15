@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupRetargetingList } from './AdGroupRetargetingList';
+import { adGroupRetargetingList } from './AdGroupRetargetingList';
 
-export const AdGroupRetargetingListServiceOperation = z.object({
+export const adGroupRetargetingListServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AdGroupRetargetingList).nullable()
+  operand: z.array(adGroupRetargetingList).nullable()
 }).nullable();
 
-export type AdGroupRetargetingListServiceOperation = z.infer<typeof AdGroupRetargetingListServiceOperation>;
+export type AdGroupRetargetingListServiceOperation = z.infer<typeof adGroupRetargetingListServiceOperation>;

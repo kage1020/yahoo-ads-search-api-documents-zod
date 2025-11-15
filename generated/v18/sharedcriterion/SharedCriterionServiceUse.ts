@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const SharedCriterionServiceUse = z.enum(["NEGATIVE", "UNKNOWN"]).nullable();
+export const sharedCriterionServiceUse = z.enum(["NEGATIVE", "UNKNOWN"]).nullable();
 
-export type SharedCriterionServiceUse = z.infer<typeof SharedCriterionServiceUse>;
+export type SharedCriterionServiceUse = z.infer<typeof sharedCriterionServiceUse>;

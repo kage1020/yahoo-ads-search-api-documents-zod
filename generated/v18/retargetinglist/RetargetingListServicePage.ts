@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceValue } from './RetargetingListServiceValue';
+import { retargetingListServiceValue } from './RetargetingListServiceValue';
 
-export const RetargetingListServicePage = z.object({
+export const retargetingListServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(RetargetingListServiceValue).nullable()
+  values: z.array(retargetingListServiceValue).nullable()
 }).nullable();
 
-export type RetargetingListServicePage = z.infer<typeof RetargetingListServicePage>;
+export type RetargetingListServicePage = z.infer<typeof retargetingListServicePage>;

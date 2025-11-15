@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-export const CampaignServiceUpdatedDateRange = z.object({
+export const campaignServiceUpdatedDateRange = z.object({
   startDate: z.string().nullable(),
   endDate: z.string().nullable()
 }).nullable();
 
-export type CampaignServiceUpdatedDateRange = z.infer<typeof CampaignServiceUpdatedDateRange>;
+export type CampaignServiceUpdatedDateRange = z.infer<typeof campaignServiceUpdatedDateRange>;

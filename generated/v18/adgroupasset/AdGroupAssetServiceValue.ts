@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AdGroupAsset } from './AdGroupAsset';
-import { Error } from './Error';
+import { adGroupAsset } from './AdGroupAsset';
+import { error } from '../../common/Error';
 
-export const AdGroupAssetServiceValue = z.object({
-  adGroupAsset: AdGroupAsset,
-  errors: z.array(Error).nullable(),
+export const adGroupAssetServiceValue = z.object({
+  adGroupAsset: adGroupAsset,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AdGroupAssetServiceValue = z.infer<typeof AdGroupAssetServiceValue>;
+export type AdGroupAssetServiceValue = z.infer<typeof adGroupAssetServiceValue>;

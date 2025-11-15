@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const SharedCriterionServiceKeywordMatchType = z.enum(["EXACT", "PHRASE", "BROAD", "UNKNOWN"]).nullable();
+export const sharedCriterionServiceKeywordMatchType = z.enum(["EXACT", "PHRASE", "BROAD", "UNKNOWN"]).nullable();
 
-export type SharedCriterionServiceKeywordMatchType = z.infer<typeof SharedCriterionServiceKeywordMatchType>;
+export type SharedCriterionServiceKeywordMatchType = z.infer<typeof sharedCriterionServiceKeywordMatchType>;

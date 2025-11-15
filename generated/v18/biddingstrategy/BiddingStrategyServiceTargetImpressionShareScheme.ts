@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { BiddingStrategyServiceTargetImpressionShareLocation } from './BiddingStrategyServiceTargetImpressionShareLocation';
+import { biddingStrategyServiceTargetImpressionShareLocation } from './BiddingStrategyServiceTargetImpressionShareLocation';
 
-export const BiddingStrategyServiceTargetImpressionShareScheme = z.object({
-  location: BiddingStrategyServiceTargetImpressionShareLocation,
+export const biddingStrategyServiceTargetImpressionShareScheme = z.object({
+  location: biddingStrategyServiceTargetImpressionShareLocation,
   bidCeiling: z.number().int().nullable(),
   targetImpressionShare: z.number().int().nullable()
 }).nullable();
 
-export type BiddingStrategyServiceTargetImpressionShareScheme = z.infer<typeof BiddingStrategyServiceTargetImpressionShareScheme>;
+export type BiddingStrategyServiceTargetImpressionShareScheme = z.infer<typeof biddingStrategyServiceTargetImpressionShareScheme>;

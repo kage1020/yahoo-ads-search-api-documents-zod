@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceDescriptionPinnedField } from './AdGroupAdServiceDescriptionPinnedField';
-import { AdGroupAdServiceTextAssetActiveStatus } from './AdGroupAdServiceTextAssetActiveStatus';
-import { AdGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
+import { adGroupAdServiceDescriptionPinnedField } from './AdGroupAdServiceDescriptionPinnedField';
+import { adGroupAdServiceTextAssetActiveStatus } from './AdGroupAdServiceTextAssetActiveStatus';
+import { adGroupAdServiceApprovalStatus } from './AdGroupAdServiceApprovalStatus';
 
-export const AdGroupAdServiceDescriptionTextAsset = z.object({
+export const adGroupAdServiceDescriptionTextAsset = z.object({
   text: z.string().nullable(),
-  pinnedField: AdGroupAdServiceDescriptionPinnedField,
-  activeStatus: AdGroupAdServiceTextAssetActiveStatus,
-  approvalStatus: AdGroupAdServiceApprovalStatus,
+  pinnedField: adGroupAdServiceDescriptionPinnedField,
+  activeStatus: adGroupAdServiceTextAssetActiveStatus,
+  approvalStatus: adGroupAdServiceApprovalStatus,
   disapprovalReasonCodes: z.array(z.string().nullable()).nullable()
 }).nullable();
 
-export type AdGroupAdServiceDescriptionTextAsset = z.infer<typeof AdGroupAdServiceDescriptionTextAsset>;
+export type AdGroupAdServiceDescriptionTextAsset = z.infer<typeof adGroupAdServiceDescriptionTextAsset>;

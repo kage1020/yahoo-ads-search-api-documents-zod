@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionServiceKeywordMatchType } from './AdGroupCriterionServiceKeywordMatchType';
+import { adGroupCriterionServiceKeywordMatchType } from './AdGroupCriterionServiceKeywordMatchType';
 
-export const AdGroupCriterionServiceKeyword = z.object({
-  keywordMatchType: AdGroupCriterionServiceKeywordMatchType,
+export const adGroupCriterionServiceKeyword = z.object({
+  keywordMatchType: adGroupCriterionServiceKeywordMatchType,
   text: z.string().nullable()
 }).nullable();
 
-export type AdGroupCriterionServiceKeyword = z.infer<typeof AdGroupCriterionServiceKeyword>;
+export type AdGroupCriterionServiceKeyword = z.infer<typeof adGroupCriterionServiceKeyword>;

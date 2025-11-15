@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { BudgetOrder } from './BudgetOrder';
+import { budgetOrder } from './BudgetOrder';
 
-export const BudgetOrderServiceOperation = z.object({
+export const budgetOrderServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(BudgetOrder)
+  operand: z.array(budgetOrder)
 }).nullable();
 
-export type BudgetOrderServiceOperation = z.infer<typeof BudgetOrderServiceOperation>;
+export type BudgetOrderServiceOperation = z.infer<typeof budgetOrderServiceOperation>;

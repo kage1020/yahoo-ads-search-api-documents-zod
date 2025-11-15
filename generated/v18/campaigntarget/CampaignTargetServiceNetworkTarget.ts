@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { CampaignTargetServiceNetworkCoverageType } from './CampaignTargetServiceNetworkCoverageType';
+import { campaignTargetServiceNetworkCoverageType } from './CampaignTargetServiceNetworkCoverageType';
 
-export const CampaignTargetServiceNetworkTarget = z.object({
-  networkCoverageType: CampaignTargetServiceNetworkCoverageType
+export const campaignTargetServiceNetworkTarget = z.object({
+  networkCoverageType: campaignTargetServiceNetworkCoverageType
 }).nullable();
 
-export type CampaignTargetServiceNetworkTarget = z.infer<typeof CampaignTargetServiceNetworkTarget>;
+export type CampaignTargetServiceNetworkTarget = z.infer<typeof campaignTargetServiceNetworkTarget>;

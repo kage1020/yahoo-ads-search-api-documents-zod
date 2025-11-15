@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { CampaignTargetServiceExcludedType } from './CampaignTargetServiceExcludedType';
-import { CampaignTargetServiceTargetingStatus } from './CampaignTargetServiceTargetingStatus';
+import { campaignTargetServiceExcludedType } from './CampaignTargetServiceExcludedType';
+import { campaignTargetServiceTargetingStatus } from './CampaignTargetServiceTargetingStatus';
 
-export const CampaignTargetServiceLocationTarget = z.object({
+export const campaignTargetServiceLocationTarget = z.object({
   cityNameEN: z.string().nullable(),
   cityNameJA: z.string().nullable(),
-  excludedType: CampaignTargetServiceExcludedType,
+  excludedType: campaignTargetServiceExcludedType,
   provinceNameEN: z.string().nullable(),
   provinceNameJA: z.string().nullable(),
-  targetingStatus: CampaignTargetServiceTargetingStatus
+  targetingStatus: campaignTargetServiceTargetingStatus
 }).nullable();
 
-export type CampaignTargetServiceLocationTarget = z.infer<typeof CampaignTargetServiceLocationTarget>;
+export type CampaignTargetServiceLocationTarget = z.infer<typeof campaignTargetServiceLocationTarget>;

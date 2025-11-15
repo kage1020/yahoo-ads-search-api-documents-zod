@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceAppEventTypeValue } from './ConversionTrackerServiceAppEventTypeValue';
+import { conversionTrackerServiceAppEventTypeValue } from './ConversionTrackerServiceAppEventTypeValue';
 
-export const ConversionTrackerServiceAppEventTypePage = z.object({
+export const conversionTrackerServiceAppEventTypePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(ConversionTrackerServiceAppEventTypeValue).nullable()
+  values: z.array(conversionTrackerServiceAppEventTypeValue).nullable()
 }).nullable();
 
-export type ConversionTrackerServiceAppEventTypePage = z.infer<typeof ConversionTrackerServiceAppEventTypePage>;
+export type ConversionTrackerServiceAppEventTypePage = z.infer<typeof conversionTrackerServiceAppEventTypePage>;

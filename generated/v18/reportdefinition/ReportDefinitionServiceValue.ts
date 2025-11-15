@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { ReportDefinition } from './ReportDefinition';
+import { error } from '../../common/Error';
+import { reportDefinition } from './ReportDefinition';
 
-export const ReportDefinitionServiceValue = z.object({
-  errors: z.array(Error).nullable(),
+export const reportDefinitionServiceValue = z.object({
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  reportDefinition: ReportDefinition
+  reportDefinition: reportDefinition
 }).nullable();
 
-export type ReportDefinitionServiceValue = z.infer<typeof ReportDefinitionServiceValue>;
+export type ReportDefinitionServiceValue = z.infer<typeof reportDefinitionServiceValue>;

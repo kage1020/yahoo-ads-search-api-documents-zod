@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { Asset } from './Asset';
+import { asset } from './Asset';
 
-export const AssetServiceOperation = z.object({
+export const assetServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(Asset).nullable()
+  operand: z.array(asset).nullable()
 }).nullable();
 
-export type AssetServiceOperation = z.infer<typeof AssetServiceOperation>;
+export type AssetServiceOperation = z.infer<typeof assetServiceOperation>;

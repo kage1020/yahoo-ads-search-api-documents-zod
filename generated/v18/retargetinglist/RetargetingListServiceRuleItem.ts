@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceCustomKeyRuleItem } from './RetargetingListServiceCustomKeyRuleItem';
-import { RetargetingListServiceRuleOperator } from './RetargetingListServiceRuleOperator';
-import { RetargetingListServiceRuleType } from './RetargetingListServiceRuleType';
-import { RetargetingListServiceUrlRuleItem } from './RetargetingListServiceUrlRuleItem';
+import { retargetingListServiceCustomKeyRuleItem } from './RetargetingListServiceCustomKeyRuleItem';
+import { retargetingListServiceRuleOperator } from './RetargetingListServiceRuleOperator';
+import { retargetingListServiceRuleType } from './RetargetingListServiceRuleType';
+import { retargetingListServiceUrlRuleItem } from './RetargetingListServiceUrlRuleItem';
 
-export const RetargetingListServiceRuleItem = z.object({
-  customKeyRuleItem: RetargetingListServiceCustomKeyRuleItem,
-  ruleOperator: RetargetingListServiceRuleOperator,
-  ruleType: RetargetingListServiceRuleType,
-  urlRuleItem: RetargetingListServiceUrlRuleItem,
+export const retargetingListServiceRuleItem = z.object({
+  customKeyRuleItem: retargetingListServiceCustomKeyRuleItem,
+  ruleOperator: retargetingListServiceRuleOperator,
+  ruleType: retargetingListServiceRuleType,
+  urlRuleItem: retargetingListServiceUrlRuleItem,
   value: z.string().nullable()
 }).nullable();
 
-export type RetargetingListServiceRuleItem = z.infer<typeof RetargetingListServiceRuleItem>;
+export type RetargetingListServiceRuleItem = z.infer<typeof retargetingListServiceRuleItem>;

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { DictionaryServiceLang } from './DictionaryServiceLang';
+import { dictionaryServiceLang } from './DictionaryServiceLang';
 
-export const DictionaryServiceGeographicLocationSelector = z.object({
-  lang: DictionaryServiceLang
+export const dictionaryServiceGeographicLocationSelector = z.object({
+  lang: dictionaryServiceLang
 }).nullable();
 
-export type DictionaryServiceGeographicLocationSelector = z.infer<typeof DictionaryServiceGeographicLocationSelector>;
+export type DictionaryServiceGeographicLocationSelector = z.infer<typeof dictionaryServiceGeographicLocationSelector>;

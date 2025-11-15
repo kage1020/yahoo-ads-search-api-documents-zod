@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { BiddingSeasonalityAdjustmentServiceReturnValue } from './BiddingSeasonalityAdjustmentServiceReturnValue';
+import { error } from '../../common/Error';
+import { biddingSeasonalityAdjustmentServiceReturnValue } from './BiddingSeasonalityAdjustmentServiceReturnValue';
 
-export const BiddingSeasonalityAdjustmentServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const biddingSeasonalityAdjustmentServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: BiddingSeasonalityAdjustmentServiceReturnValue
+  rval: biddingSeasonalityAdjustmentServiceReturnValue
 }).nullable();
 
-export type BiddingSeasonalityAdjustmentServiceMutateResponse = z.infer<typeof BiddingSeasonalityAdjustmentServiceMutateResponse>;
+export type BiddingSeasonalityAdjustmentServiceMutateResponse = z.infer<typeof biddingSeasonalityAdjustmentServiceMutateResponse>;

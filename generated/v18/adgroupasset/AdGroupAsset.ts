@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { AdGroupAssetServiceType } from './AdGroupAssetServiceType';
-import { AdGroupAssetServiceUserStatus } from './AdGroupAssetServiceUserStatus';
+import { adGroupAssetServiceType } from './AdGroupAssetServiceType';
+import { adGroupAssetServiceUserStatus } from './AdGroupAssetServiceUserStatus';
 
-export const AdGroupAsset = z.object({
+export const adGroupAsset = z.object({
   accountId: z.number().int().nullable(),
   adGroupId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   assetId: z.number().int().nullable(),
-  type: AdGroupAssetServiceType,
-  userStatus: AdGroupAssetServiceUserStatus
+  type: adGroupAssetServiceType,
+  userStatus: adGroupAssetServiceUserStatus
 }).nullable();
 
-export type AdGroupAsset = z.infer<typeof AdGroupAsset>;
+export type AdGroupAsset = z.infer<typeof adGroupAsset>;

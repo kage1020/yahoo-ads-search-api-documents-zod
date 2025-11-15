@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const CampaignSharedSet = z.object({
+export const campaignSharedSet = z.object({
   accountId: z.number().int().nullable(),
   campaignId: z.number().int().nullable(),
   campaignName: z.string().nullable(),
@@ -8,4 +8,4 @@ export const CampaignSharedSet = z.object({
   sharedListName: z.string().nullable()
 }).nullable();
 
-export type CampaignSharedSet = z.infer<typeof CampaignSharedSet>;
+export type CampaignSharedSet = z.infer<typeof campaignSharedSet>;

@@ -1,15 +1,15 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceIsAllVisitorRule } from './RetargetingListServiceIsAllVisitorRule';
-import { RetargetingListServiceIsDateSpecificRule } from './RetargetingListServiceIsDateSpecificRule';
-import { RetargetingListServiceRuleGroup } from './RetargetingListServiceRuleGroup';
+import { retargetingListServiceIsAllVisitorRule } from './RetargetingListServiceIsAllVisitorRule';
+import { retargetingListServiceIsDateSpecificRule } from './RetargetingListServiceIsDateSpecificRule';
+import { retargetingListServiceRuleGroup } from './RetargetingListServiceRuleGroup';
 
-export const RetargetingListServiceRuleBaseTargetList = z.object({
+export const retargetingListServiceRuleBaseTargetList = z.object({
   endDate: z.string().nullable(),
-  isAllVisitorRule: RetargetingListServiceIsAllVisitorRule,
-  isDateSpecificRule: RetargetingListServiceIsDateSpecificRule,
-  rules: z.array(RetargetingListServiceRuleGroup).nullable(),
+  isAllVisitorRule: retargetingListServiceIsAllVisitorRule,
+  isDateSpecificRule: retargetingListServiceIsDateSpecificRule,
+  rules: z.array(retargetingListServiceRuleGroup).nullable(),
   startDate: z.string().nullable()
 }).nullable();
 
-export type RetargetingListServiceRuleBaseTargetList = z.infer<typeof RetargetingListServiceRuleBaseTargetList>;
+export type RetargetingListServiceRuleBaseTargetList = z.infer<typeof retargetingListServiceRuleBaseTargetList>;

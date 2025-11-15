@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { ErrorDetail } from './ErrorDetail';
+import { errorDetail } from './ErrorDetail';
 
-export const Error = z.object({
+export const error = z.object({
   code: z.string().nullable(),
   message: z.string().nullable(),
-  details: z.array(ErrorDetail).nullable()
+  details: z.array(errorDetail).nullable()
 }).nullable();
 
-export type Error = z.infer<typeof Error>;
+export type Error = z.infer<typeof error>;

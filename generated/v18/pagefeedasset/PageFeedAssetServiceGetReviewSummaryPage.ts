@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { PageFeedAssetServiceGetReviewSummaryValue } from './PageFeedAssetServiceGetReviewSummaryValue';
+import { pageFeedAssetServiceGetReviewSummaryValue } from './PageFeedAssetServiceGetReviewSummaryValue';
 
-export const PageFeedAssetServiceGetReviewSummaryPage = z.object({
+export const pageFeedAssetServiceGetReviewSummaryPage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(PageFeedAssetServiceGetReviewSummaryValue).nullable()
+  values: z.array(pageFeedAssetServiceGetReviewSummaryValue).nullable()
 }).nullable();
 
-export type PageFeedAssetServiceGetReviewSummaryPage = z.infer<typeof PageFeedAssetServiceGetReviewSummaryPage>;
+export type PageFeedAssetServiceGetReviewSummaryPage = z.infer<typeof pageFeedAssetServiceGetReviewSummaryPage>;

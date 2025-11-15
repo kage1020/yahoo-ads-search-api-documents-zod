@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const SsaAccountServiceDeliveryStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
+export const ssaAccountServiceDeliveryStatus = z.enum(["ACTIVE", "PAUSED", "UNKNOWN"]).nullable();
 
-export type SsaAccountServiceDeliveryStatus = z.infer<typeof SsaAccountServiceDeliveryStatus>;
+export type SsaAccountServiceDeliveryStatus = z.infer<typeof ssaAccountServiceDeliveryStatus>;

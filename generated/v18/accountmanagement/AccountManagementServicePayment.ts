@@ -1,11 +1,11 @@
 import { z } from 'zod';
 
-import { AccountManagementServiceInvoice } from './AccountManagementServiceInvoice';
-import { AccountManagementServicePaymentType } from './AccountManagementServicePaymentType';
+import { accountManagementServiceInvoice } from './AccountManagementServiceInvoice';
+import { accountManagementServicePaymentType } from './AccountManagementServicePaymentType';
 
-export const AccountManagementServicePayment = z.object({
-  invoice: AccountManagementServiceInvoice,
-  paymentType: AccountManagementServicePaymentType
+export const accountManagementServicePayment = z.object({
+  invoice: accountManagementServiceInvoice,
+  paymentType: accountManagementServicePaymentType
 }).nullable();
 
-export type AccountManagementServicePayment = z.infer<typeof AccountManagementServicePayment>;
+export type AccountManagementServicePayment = z.infer<typeof accountManagementServicePayment>;

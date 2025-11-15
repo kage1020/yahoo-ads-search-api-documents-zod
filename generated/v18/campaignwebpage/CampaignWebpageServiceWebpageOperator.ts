@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const CampaignWebpageServiceWebpageOperator = z.enum(["CONTAINS", "EQUALS", "UNKNOWN"]).nullable();
+export const campaignWebpageServiceWebpageOperator = z.enum(["CONTAINS", "EQUALS", "UNKNOWN"]).nullable();
 
-export type CampaignWebpageServiceWebpageOperator = z.infer<typeof CampaignWebpageServiceWebpageOperator>;
+export type CampaignWebpageServiceWebpageOperator = z.infer<typeof campaignWebpageServiceWebpageOperator>;

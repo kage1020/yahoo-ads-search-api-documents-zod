@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { ConversionGroupServiceValue } from './ConversionGroupServiceValue';
+import { conversionGroupServiceValue } from './ConversionGroupServiceValue';
 
-export const ConversionGroupServicePage = z.object({
+export const conversionGroupServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(ConversionGroupServiceValue).nullable()
+  values: z.array(conversionGroupServiceValue).nullable()
 }).nullable();
 
-export type ConversionGroupServicePage = z.infer<typeof ConversionGroupServicePage>;
+export type ConversionGroupServicePage = z.infer<typeof conversionGroupServicePage>;

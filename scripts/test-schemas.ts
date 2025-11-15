@@ -1,6 +1,6 @@
-import { Account } from '../generated/v18/account/Account';
-import { AccountServiceStatus } from '../generated/v18/account/AccountServiceStatus';
-import { Error } from '../generated/common/Error';
+import { account } from '../generated/v18/account/Account';
+import { accountServiceStatus } from '../generated/v18/account/AccountServiceStatus';
+import { error } from '../generated/common/Error';
 
 // Test Account schema
 console.log('Testing Account schema...');
@@ -21,37 +21,37 @@ const validAccount = {
 };
 
 try {
-  const result = Account.parse(validAccount);
+  const result = account.parse(validAccount);
   console.log('✓ Account validation passed');
   console.log('Parsed account:', result);
-} catch (error) {
-  console.error('✗ Account validation failed:', error);
+} catch (err) {
+  console.error('✗ Account validation failed:', err);
 }
 
 // Test with null values
 console.log('\nTesting Account schema with null...');
 try {
-  const nullAccount = Account.parse(null);
+  const nullAccount = account.parse(null);
   console.log('✓ Null account validation passed:', nullAccount);
-} catch (error) {
-  console.error('✗ Null account validation failed:', error);
+} catch (err) {
+  console.error('✗ Null account validation failed:', err);
 }
 
 // Test AccountServiceStatus enum
 console.log('\nTesting AccountServiceStatus enum...');
 try {
-  const status = AccountServiceStatus.parse('SERVING');
+  const status = accountServiceStatus.parse('SERVING');
   console.log('✓ Status validation passed:', status);
-} catch (error) {
-  console.error('✗ Status validation failed:', error);
+} catch (err) {
+  console.error('✗ Status validation failed:', err);
 }
 
 // Test invalid enum value
 console.log('\nTesting invalid enum value...');
 try {
-  const invalidStatus = AccountServiceStatus.parse('INVALID');
+  const invalidStatus = accountServiceStatus.parse('INVALID');
   console.log('✗ Should have failed but passed:', invalidStatus);
-} catch (error) {
+} catch (err) {
   console.log('✓ Correctly rejected invalid enum value');
 }
 
@@ -69,11 +69,11 @@ const validError = {
 };
 
 try {
-  const result = Error.parse(validError);
+  const result = error.parse(validError);
   console.log('✓ Error validation passed');
   console.log('Parsed error:', result);
-} catch (error) {
-  console.error('✗ Error validation failed:', error);
+} catch (err) {
+  console.error('✗ Error validation failed:', err);
 }
 
 console.log('\nAll tests completed!');

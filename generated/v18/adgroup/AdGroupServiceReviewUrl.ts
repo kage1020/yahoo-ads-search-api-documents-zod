@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupServiceCustomParameter } from './AdGroupServiceCustomParameter';
+import { adGroupServiceCustomParameter } from './AdGroupServiceCustomParameter';
 
-export const AdGroupServiceReviewUrl = z.object({
-  parameters: z.array(AdGroupServiceCustomParameter).nullable(),
+export const adGroupServiceReviewUrl = z.object({
+  parameters: z.array(adGroupServiceCustomParameter).nullable(),
   trackingUrl: z.string().nullable()
 }).nullable();
 
-export type AdGroupServiceReviewUrl = z.infer<typeof AdGroupServiceReviewUrl>;
+export type AdGroupServiceReviewUrl = z.infer<typeof adGroupServiceReviewUrl>;

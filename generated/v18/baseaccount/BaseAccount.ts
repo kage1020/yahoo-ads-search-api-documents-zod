@@ -1,23 +1,23 @@
 import { z } from 'zod';
 
-import { BaseAccountServiceAccountStatus } from './BaseAccountServiceAccountStatus';
-import { BaseAccountServiceAuthType } from './BaseAccountServiceAuthType';
-import { BaseAccountServiceHasAdminAuth } from './BaseAccountServiceHasAdminAuth';
-import { BaseAccountServiceIsRootMccAccount } from './BaseAccountServiceIsRootMccAccount';
-import { BaseAccountServiceIsMccAccount } from './BaseAccountServiceIsMccAccount';
-import { BaseAccountServiceIsTestAccount } from './BaseAccountServiceIsTestAccount';
-import { BaseAccountServiceIsSsaAccount } from './BaseAccountServiceIsSsaAccount';
+import { baseAccountServiceAccountStatus } from './BaseAccountServiceAccountStatus';
+import { baseAccountServiceAuthType } from './BaseAccountServiceAuthType';
+import { baseAccountServiceHasAdminAuth } from './BaseAccountServiceHasAdminAuth';
+import { baseAccountServiceIsRootMccAccount } from './BaseAccountServiceIsRootMccAccount';
+import { baseAccountServiceIsMccAccount } from './BaseAccountServiceIsMccAccount';
+import { baseAccountServiceIsTestAccount } from './BaseAccountServiceIsTestAccount';
+import { baseAccountServiceIsSsaAccount } from './BaseAccountServiceIsSsaAccount';
 
-export const BaseAccount = z.object({
+export const baseAccount = z.object({
   accountId: z.number().int().nullable(),
   accountName: z.string().nullable(),
-  accountStatus: BaseAccountServiceAccountStatus,
-  authType: BaseAccountServiceAuthType,
-  hasAdminAuth: BaseAccountServiceHasAdminAuth,
-  isRootMccAccount: BaseAccountServiceIsRootMccAccount,
-  isMccAccount: BaseAccountServiceIsMccAccount,
-  isTestAccount: BaseAccountServiceIsTestAccount,
-  isSsaAccount: BaseAccountServiceIsSsaAccount
+  accountStatus: baseAccountServiceAccountStatus,
+  authType: baseAccountServiceAuthType,
+  hasAdminAuth: baseAccountServiceHasAdminAuth,
+  isRootMccAccount: baseAccountServiceIsRootMccAccount,
+  isMccAccount: baseAccountServiceIsMccAccount,
+  isTestAccount: baseAccountServiceIsTestAccount,
+  isSsaAccount: baseAccountServiceIsSsaAccount
 }).nullable();
 
-export type BaseAccount = z.infer<typeof BaseAccount>;
+export type BaseAccount = z.infer<typeof baseAccount>;

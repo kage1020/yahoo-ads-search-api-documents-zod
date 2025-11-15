@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ConversionTrackerServiceValue } from './ConversionTrackerServiceValue';
+import { conversionTrackerServiceValue } from './ConversionTrackerServiceValue';
 
-export const ConversionTrackerServiceReturnValue = z.object({
-  values: z.array(ConversionTrackerServiceValue).nullable()
+export const conversionTrackerServiceReturnValue = z.object({
+  values: z.array(conversionTrackerServiceValue).nullable()
 }).nullable();
 
-export type ConversionTrackerServiceReturnValue = z.infer<typeof ConversionTrackerServiceReturnValue>;
+export type ConversionTrackerServiceReturnValue = z.infer<typeof conversionTrackerServiceReturnValue>;

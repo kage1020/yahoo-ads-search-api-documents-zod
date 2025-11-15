@@ -1,35 +1,35 @@
 import { z } from 'zod';
 
-import { AdGroupAdServiceAdType } from './AdGroupAdServiceAdType';
-import { AdGroupAdServiceTextAd2 } from './AdGroupAdServiceTextAd2';
-import { AdGroupAdServiceAppAd } from './AdGroupAdServiceAppAd';
-import { AdGroupAdServiceExtendedTextAd } from './AdGroupAdServiceExtendedTextAd';
-import { AdGroupAdServiceDynamicSearchLinkedAd } from './AdGroupAdServiceDynamicSearchLinkedAd';
-import { AdGroupAdServiceResponsiveSearchAd } from './AdGroupAdServiceResponsiveSearchAd';
-import { AdGroupAdServiceIsRemove } from './AdGroupAdServiceIsRemove';
-import { AdGroupAdServiceCustomParameters } from './AdGroupAdServiceCustomParameters';
-import { AdGroupAdServiceDevicePreference } from './AdGroupAdServiceDevicePreference';
+import { adGroupAdServiceAdType } from './AdGroupAdServiceAdType';
+import { adGroupAdServiceTextAd2 } from './AdGroupAdServiceTextAd2';
+import { adGroupAdServiceAppAd } from './AdGroupAdServiceAppAd';
+import { adGroupAdServiceExtendedTextAd } from './AdGroupAdServiceExtendedTextAd';
+import { adGroupAdServiceDynamicSearchLinkedAd } from './AdGroupAdServiceDynamicSearchLinkedAd';
+import { adGroupAdServiceResponsiveSearchAd } from './AdGroupAdServiceResponsiveSearchAd';
+import { adGroupAdServiceIsRemove } from './AdGroupAdServiceIsRemove';
+import { adGroupAdServiceCustomParameters } from './AdGroupAdServiceCustomParameters';
+import { adGroupAdServiceDevicePreference } from './AdGroupAdServiceDevicePreference';
 
-export const AdGroupAdServiceAd = z.object({
-  adType: AdGroupAdServiceAdType,
-  textAd2: AdGroupAdServiceTextAd2,
-  appAd: AdGroupAdServiceAppAd,
-  extendedTextAd: AdGroupAdServiceExtendedTextAd,
-  dynamicSearchLinkedAd: AdGroupAdServiceDynamicSearchLinkedAd,
-  responsiveSearchAd: AdGroupAdServiceResponsiveSearchAd,
+export const adGroupAdServiceAd = z.object({
+  adType: adGroupAdServiceAdType,
+  textAd2: adGroupAdServiceTextAd2,
+  appAd: adGroupAdServiceAppAd,
+  extendedTextAd: adGroupAdServiceExtendedTextAd,
+  dynamicSearchLinkedAd: adGroupAdServiceDynamicSearchLinkedAd,
+  responsiveSearchAd: adGroupAdServiceResponsiveSearchAd,
   finalUrl: z.string().nullable(),
   reviewFinalUrl: z.string().nullable(),
   smartphoneFinalUrl: z.string().nullable(),
   reviewSmartphoneFinalUrl: z.string().nullable(),
-  isRemoveSmartphoneFinalUrl: AdGroupAdServiceIsRemove,
+  isRemoveSmartphoneFinalUrl: adGroupAdServiceIsRemove,
   trackingUrl: z.string().nullable(),
   reviewTrackingUrl: z.string().nullable(),
-  isRemoveTrackingUrl: AdGroupAdServiceIsRemove,
-  customParameters: AdGroupAdServiceCustomParameters,
-  reviewCustomParameters: AdGroupAdServiceCustomParameters,
-  devicePreference: AdGroupAdServiceDevicePreference,
+  isRemoveTrackingUrl: adGroupAdServiceIsRemove,
+  customParameters: adGroupAdServiceCustomParameters,
+  reviewCustomParameters: adGroupAdServiceCustomParameters,
+  devicePreference: adGroupAdServiceDevicePreference,
   displayUrl: z.string().nullable(),
   url: z.string().nullable()
 }).nullable();
 
-export type AdGroupAdServiceAd = z.infer<typeof AdGroupAdServiceAd>;
+export type AdGroupAdServiceAd = z.infer<typeof adGroupAdServiceAd>;

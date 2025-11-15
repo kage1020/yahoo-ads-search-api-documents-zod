@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const BiddingSeasonalityAdjustmentServiceDevices = z.enum(["MOBILE", "TABLET", "DESKTOP", "UNKNOWN"]).nullable();
+export const biddingSeasonalityAdjustmentServiceDevices = z.enum(["MOBILE", "TABLET", "DESKTOP", "UNKNOWN"]).nullable();
 
-export type BiddingSeasonalityAdjustmentServiceDevices = z.infer<typeof BiddingSeasonalityAdjustmentServiceDevices>;
+export type BiddingSeasonalityAdjustmentServiceDevices = z.infer<typeof biddingSeasonalityAdjustmentServiceDevices>;

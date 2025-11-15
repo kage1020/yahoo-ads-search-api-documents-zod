@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { LearningDataExclusion } from './LearningDataExclusion';
+import { learningDataExclusion } from './LearningDataExclusion';
 
-export const LearningDataExclusionServiceOperation = z.object({
+export const learningDataExclusionServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(LearningDataExclusion).nullable()
+  operand: z.array(learningDataExclusion).nullable()
 }).nullable();
 
-export type LearningDataExclusionServiceOperation = z.infer<typeof LearningDataExclusionServiceOperation>;
+export type LearningDataExclusionServiceOperation = z.infer<typeof learningDataExclusionServiceOperation>;

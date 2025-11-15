@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AppLink } from './AppLink';
+import { appLink } from './AppLink';
 
-export const AppLinkServiceOperation = z.object({
+export const appLinkServiceOperation = z.object({
   accountId: z.number().int(),
-  operand: z.array(AppLink).nullable()
+  operand: z.array(appLink).nullable()
 }).nullable();
 
-export type AppLinkServiceOperation = z.infer<typeof AppLinkServiceOperation>;
+export type AppLinkServiceOperation = z.infer<typeof appLinkServiceOperation>;

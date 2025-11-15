@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { CustomizerAttributeServicePage } from './CustomizerAttributeServicePage';
+import { error } from '../../common/Error';
+import { customizerAttributeServicePage } from './CustomizerAttributeServicePage';
 
-export const CustomizerAttributeServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const customizerAttributeServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: CustomizerAttributeServicePage
+  rval: customizerAttributeServicePage
 }).nullable();
 
-export type CustomizerAttributeServiceGetResponse = z.infer<typeof CustomizerAttributeServiceGetResponse>;
+export type CustomizerAttributeServiceGetResponse = z.infer<typeof customizerAttributeServiceGetResponse>;

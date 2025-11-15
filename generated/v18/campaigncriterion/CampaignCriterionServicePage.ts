@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { CampaignCriterionServiceValue } from './CampaignCriterionServiceValue';
+import { campaignCriterionServiceValue } from './CampaignCriterionServiceValue';
 
-export const CampaignCriterionServicePage = z.object({
+export const campaignCriterionServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(CampaignCriterionServiceValue).nullable()
+  values: z.array(campaignCriterionServiceValue).nullable()
 }).nullable();
 
-export type CampaignCriterionServicePage = z.infer<typeof CampaignCriterionServicePage>;
+export type CampaignCriterionServicePage = z.infer<typeof campaignCriterionServicePage>;

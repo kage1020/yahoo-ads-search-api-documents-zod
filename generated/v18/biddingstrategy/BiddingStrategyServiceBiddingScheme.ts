@@ -1,17 +1,17 @@
 import { z } from 'zod';
 
-import { BiddingStrategyServiceTargetCpaBiddingScheme } from './BiddingStrategyServiceTargetCpaBiddingScheme';
-import { BiddingStrategyServiceTargetRoasBiddingScheme } from './BiddingStrategyServiceTargetRoasBiddingScheme';
-import { BiddingStrategyServiceMaximizeClicksBiddingScheme } from './BiddingStrategyServiceMaximizeClicksBiddingScheme';
-import { BiddingStrategyServiceTargetImpressionShareScheme } from './BiddingStrategyServiceTargetImpressionShareScheme';
-import { BiddingStrategyServiceType } from './BiddingStrategyServiceType';
+import { biddingStrategyServiceTargetCpaBiddingScheme } from './BiddingStrategyServiceTargetCpaBiddingScheme';
+import { biddingStrategyServiceTargetRoasBiddingScheme } from './BiddingStrategyServiceTargetRoasBiddingScheme';
+import { biddingStrategyServiceMaximizeClicksBiddingScheme } from './BiddingStrategyServiceMaximizeClicksBiddingScheme';
+import { biddingStrategyServiceTargetImpressionShareScheme } from './BiddingStrategyServiceTargetImpressionShareScheme';
+import { biddingStrategyServiceType } from './BiddingStrategyServiceType';
 
-export const BiddingStrategyServiceBiddingScheme = z.object({
-  targetCpaBiddingScheme: BiddingStrategyServiceTargetCpaBiddingScheme,
-  targetRoasBiddingScheme: BiddingStrategyServiceTargetRoasBiddingScheme,
-  maximizeClicksBiddingScheme: BiddingStrategyServiceMaximizeClicksBiddingScheme,
-  targetImpressionShareScheme: BiddingStrategyServiceTargetImpressionShareScheme,
-  type: BiddingStrategyServiceType
+export const biddingStrategyServiceBiddingScheme = z.object({
+  targetCpaBiddingScheme: biddingStrategyServiceTargetCpaBiddingScheme,
+  targetRoasBiddingScheme: biddingStrategyServiceTargetRoasBiddingScheme,
+  maximizeClicksBiddingScheme: biddingStrategyServiceMaximizeClicksBiddingScheme,
+  targetImpressionShareScheme: biddingStrategyServiceTargetImpressionShareScheme,
+  type: biddingStrategyServiceType
 }).nullable();
 
-export type BiddingStrategyServiceBiddingScheme = z.infer<typeof BiddingStrategyServiceBiddingScheme>;
+export type BiddingStrategyServiceBiddingScheme = z.infer<typeof biddingStrategyServiceBiddingScheme>;

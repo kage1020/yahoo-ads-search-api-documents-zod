@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const SsaReportDefinitionServiceReportFieldAttribute = z.object({
+export const ssaReportDefinitionServiceReportFieldAttribute = z.object({
   filterable: z.boolean().nullable(),
   selectable: z.boolean().nullable(),
   displayFieldNameEn: z.string().nullable(),
@@ -11,4 +11,4 @@ export const SsaReportDefinitionServiceReportFieldAttribute = z.object({
   xmlAttributeName: z.string().nullable()
 }).nullable();
 
-export type SsaReportDefinitionServiceReportFieldAttribute = z.infer<typeof SsaReportDefinitionServiceReportFieldAttribute>;
+export type SsaReportDefinitionServiceReportFieldAttribute = z.infer<typeof ssaReportDefinitionServiceReportFieldAttribute>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AdGroupBidMultiplierServicePage } from './AdGroupBidMultiplierServicePage';
+import { error } from '../../common/Error';
+import { adGroupBidMultiplierServicePage } from './AdGroupBidMultiplierServicePage';
 
-export const AdGroupBidMultiplierServiceGetResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const adGroupBidMultiplierServiceGetResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: AdGroupBidMultiplierServicePage
+  rval: adGroupBidMultiplierServicePage
 }).nullable();
 
-export type AdGroupBidMultiplierServiceGetResponse = z.infer<typeof AdGroupBidMultiplierServiceGetResponse>;
+export type AdGroupBidMultiplierServiceGetResponse = z.infer<typeof adGroupBidMultiplierServiceGetResponse>;

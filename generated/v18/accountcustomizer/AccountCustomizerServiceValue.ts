@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { AccountCustomizer } from './AccountCustomizer';
+import { error } from '../../common/Error';
+import { accountCustomizer } from './AccountCustomizer';
 
-export const AccountCustomizerServiceValue = z.object({
-  errors: z.array(Error).nullable(),
-  accountCustomizer: AccountCustomizer,
+export const accountCustomizerServiceValue = z.object({
+  errors: z.array(error).nullable(),
+  accountCustomizer: accountCustomizer,
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AccountCustomizerServiceValue = z.infer<typeof AccountCustomizerServiceValue>;
+export type AccountCustomizerServiceValue = z.infer<typeof accountCustomizerServiceValue>;

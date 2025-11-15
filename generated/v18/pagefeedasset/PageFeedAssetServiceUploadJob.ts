@@ -1,16 +1,16 @@
 import { z } from 'zod';
 
-import { PageFeedAssetServiceUploadJobStatus } from './PageFeedAssetServiceUploadJobStatus';
+import { pageFeedAssetServiceUploadJobStatus } from './PageFeedAssetServiceUploadJobStatus';
 
-export const PageFeedAssetServiceUploadJob = z.object({
+export const pageFeedAssetServiceUploadJob = z.object({
   accountId: z.number().int().nullable(),
   jobId: z.number().int().nullable(),
   pageFeedAssetSetId: z.number().int().nullable(),
-  uploadJobStatus: PageFeedAssetServiceUploadJobStatus,
+  uploadJobStatus: pageFeedAssetServiceUploadJobStatus,
   progress: z.number().int().nullable(),
   errorCount: z.number().int().nullable(),
   startDate: z.string().nullable(),
   endDate: z.string().nullable()
 }).nullable();
 
-export type PageFeedAssetServiceUploadJob = z.infer<typeof PageFeedAssetServiceUploadJob>;
+export type PageFeedAssetServiceUploadJob = z.infer<typeof pageFeedAssetServiceUploadJob>;

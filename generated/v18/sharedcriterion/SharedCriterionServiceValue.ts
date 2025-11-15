@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { SharedCriterion } from './SharedCriterion';
+import { error } from '../../common/Error';
+import { sharedCriterion } from './SharedCriterion';
 
-export const SharedCriterionServiceValue = z.object({
-  errors: z.array(Error).nullable(),
+export const sharedCriterionServiceValue = z.object({
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable(),
-  sharedCriterion: SharedCriterion
+  sharedCriterion: sharedCriterion
 }).nullable();
 
-export type SharedCriterionServiceValue = z.infer<typeof SharedCriterionServiceValue>;
+export type SharedCriterionServiceValue = z.infer<typeof sharedCriterionServiceValue>;

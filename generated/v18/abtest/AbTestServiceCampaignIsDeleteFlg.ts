@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const AbTestServiceCampaignIsDeleteFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const abTestServiceCampaignIsDeleteFlg = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type AbTestServiceCampaignIsDeleteFlg = z.infer<typeof AbTestServiceCampaignIsDeleteFlg>;
+export type AbTestServiceCampaignIsDeleteFlg = z.infer<typeof abTestServiceCampaignIsDeleteFlg>;

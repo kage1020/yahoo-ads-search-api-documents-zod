@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { LearningDataExclusionServiceReturnValue } from './LearningDataExclusionServiceReturnValue';
+import { error } from '../../common/Error';
+import { learningDataExclusionServiceReturnValue } from './LearningDataExclusionServiceReturnValue';
 
-export const LearningDataExclusionServiceMutateResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const learningDataExclusionServiceMutateResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: LearningDataExclusionServiceReturnValue
+  rval: learningDataExclusionServiceReturnValue
 }).nullable();
 
-export type LearningDataExclusionServiceMutateResponse = z.infer<typeof LearningDataExclusionServiceMutateResponse>;
+export type LearningDataExclusionServiceMutateResponse = z.infer<typeof learningDataExclusionServiceMutateResponse>;

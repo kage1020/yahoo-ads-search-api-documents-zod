@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AccountSharedServiceValue } from './AccountSharedServiceValue';
+import { accountSharedServiceValue } from './AccountSharedServiceValue';
 
-export const AccountSharedServicePage = z.object({
+export const accountSharedServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(AccountSharedServiceValue).nullable()
+  values: z.array(accountSharedServiceValue).nullable()
 }).nullable();
 
-export type AccountSharedServicePage = z.infer<typeof AccountSharedServicePage>;
+export type AccountSharedServicePage = z.infer<typeof accountSharedServicePage>;

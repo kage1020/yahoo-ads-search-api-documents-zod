@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { CampaignServiceValue } from './CampaignServiceValue';
+import { campaignServiceValue } from './CampaignServiceValue';
 
-export const CampaignServiceReturnValue = z.object({
-  values: z.array(CampaignServiceValue).nullable()
+export const campaignServiceReturnValue = z.object({
+  values: z.array(campaignServiceValue).nullable()
 }).nullable();
 
-export type CampaignServiceReturnValue = z.infer<typeof CampaignServiceReturnValue>;
+export type CampaignServiceReturnValue = z.infer<typeof campaignServiceReturnValue>;

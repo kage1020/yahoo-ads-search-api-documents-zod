@@ -59,8 +59,12 @@ npm install zod
 ### 3. スキーマをインポートして使用
 
 ```typescript
-import { Account } from './schemas/v18/account/Account';
-import { AccountServiceStatus } from './schemas/v18/account/AccountServiceStatus';
+// スキーマ変数（小文字始まり）をインポート
+import { account } from './schemas/v18/account/Account';
+import { accountServiceStatus } from './schemas/v18/account/AccountServiceStatus';
+
+// 型が必要な場合は type import
+import type { Account, AccountServiceStatus } from './schemas/v18/account/Account';
 
 // バリデーション
 const accountData = {
@@ -71,30 +75,28 @@ const accountData = {
 };
 
 try {
-  const validatedAccount = Account.parse(accountData);
+  const validatedAccount = account.parse(accountData);
   console.log('Valid account:', validatedAccount);
 } catch (error) {
   console.error('Validation error:', error);
 }
 
-// 型推論
-type AccountType = typeof Account._type;
-// または
-import type { Account as AccountType } from './schemas/v18/account/Account';
+// 型アノテーション
+const myAccount: Account = validatedAccount;
 ```
 
 ### 4. APIレスポンスのバリデーション例
 
 ```typescript
-import { Account } from './schemas/v18/account/Account';
-import { AccountServiceGetResponse } from './schemas/v18/account/AccountServiceGetResponse';
+import { accountServiceGetResponse } from './schemas/v18/account/AccountServiceGetResponse';
+import type { AccountServiceGetResponse } from './schemas/v18/account/AccountServiceGetResponse';
 
-async function fetchAccount(accountId: number) {
+async function fetchAccount(accountId: number): Promise<AccountServiceGetResponse | null> {
   const response = await fetch(`/api/accounts/${accountId}`);
   const data = await response.json();
 
   // レスポンスをバリデーション
-  const validatedResponse = AccountServiceGetResponse.parse(data);
+  const validatedResponse = accountServiceGetResponse.parse(data);
 
   return validatedResponse;
 }

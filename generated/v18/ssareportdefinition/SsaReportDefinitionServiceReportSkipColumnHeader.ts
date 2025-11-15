@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const SsaReportDefinitionServiceReportSkipColumnHeader = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
+export const ssaReportDefinitionServiceReportSkipColumnHeader = z.enum(["TRUE", "FALSE", "UNKNOWN"]).nullable();
 
-export type SsaReportDefinitionServiceReportSkipColumnHeader = z.infer<typeof SsaReportDefinitionServiceReportSkipColumnHeader>;
+export type SsaReportDefinitionServiceReportSkipColumnHeader = z.infer<typeof ssaReportDefinitionServiceReportSkipColumnHeader>;

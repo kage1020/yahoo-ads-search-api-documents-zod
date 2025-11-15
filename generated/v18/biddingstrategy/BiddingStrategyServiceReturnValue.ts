@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { BiddingStrategyServiceValue } from './BiddingStrategyServiceValue';
+import { biddingStrategyServiceValue } from './BiddingStrategyServiceValue';
 
-export const BiddingStrategyServiceReturnValue = z.object({
-  values: z.array(BiddingStrategyServiceValue).nullable()
+export const biddingStrategyServiceReturnValue = z.object({
+  values: z.array(biddingStrategyServiceValue).nullable()
 }).nullable();
 
-export type BiddingStrategyServiceReturnValue = z.infer<typeof BiddingStrategyServiceReturnValue>;
+export type BiddingStrategyServiceReturnValue = z.infer<typeof biddingStrategyServiceReturnValue>;

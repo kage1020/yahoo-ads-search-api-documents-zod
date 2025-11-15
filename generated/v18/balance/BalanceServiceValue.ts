@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Balance } from './Balance';
-import { Error } from './Error';
+import { balance } from './Balance';
+import { error } from '../../common/Error';
 
-export const BalanceServiceValue = z.object({
-  balance: Balance,
-  errors: z.array(Error).nullable(),
+export const balanceServiceValue = z.object({
+  balance: balance,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type BalanceServiceValue = z.infer<typeof BalanceServiceValue>;
+export type BalanceServiceValue = z.infer<typeof balanceServiceValue>;

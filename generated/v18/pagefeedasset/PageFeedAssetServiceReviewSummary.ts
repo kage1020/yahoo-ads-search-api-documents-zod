@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const PageFeedAssetServiceReviewSummary = z.object({
+export const pageFeedAssetServiceReviewSummary = z.object({
   accountId: z.number().int().nullable(),
   approvedCount: z.number().int().nullable(),
   approvedWithReviewCount: z.number().int().nullable(),
@@ -11,4 +11,4 @@ export const PageFeedAssetServiceReviewSummary = z.object({
   reviewCount: z.number().int().nullable()
 }).nullable();
 
-export type PageFeedAssetServiceReviewSummary = z.infer<typeof PageFeedAssetServiceReviewSummary>;
+export type PageFeedAssetServiceReviewSummary = z.infer<typeof pageFeedAssetServiceReviewSummary>;

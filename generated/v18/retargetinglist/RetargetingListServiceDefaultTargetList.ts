@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceTag } from './RetargetingListServiceTag';
+import { retargetingListServiceTag } from './RetargetingListServiceTag';
 
-export const RetargetingListServiceDefaultTargetList = z.object({
-  tag: RetargetingListServiceTag
+export const retargetingListServiceDefaultTargetList = z.object({
+  tag: retargetingListServiceTag
 }).nullable();
 
-export type RetargetingListServiceDefaultTargetList = z.infer<typeof RetargetingListServiceDefaultTargetList>;
+export type RetargetingListServiceDefaultTargetList = z.infer<typeof retargetingListServiceDefaultTargetList>;

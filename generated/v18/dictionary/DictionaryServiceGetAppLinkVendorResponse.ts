@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { DictionaryServiceAppLinkVendorPage } from './DictionaryServiceAppLinkVendorPage';
+import { error } from '../../common/Error';
+import { dictionaryServiceAppLinkVendorPage } from './DictionaryServiceAppLinkVendorPage';
 
-export const DictionaryServiceGetAppLinkVendorResponse = z.object({
-  errors: z.array(Error).nullable(),
+export const dictionaryServiceGetAppLinkVendorResponse = z.object({
+  errors: z.array(error).nullable(),
   rid: z.string(),
-  rval: DictionaryServiceAppLinkVendorPage
+  rval: dictionaryServiceAppLinkVendorPage
 }).nullable();
 
-export type DictionaryServiceGetAppLinkVendorResponse = z.infer<typeof DictionaryServiceGetAppLinkVendorResponse>;
+export type DictionaryServiceGetAppLinkVendorResponse = z.infer<typeof dictionaryServiceGetAppLinkVendorResponse>;

@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { CampaignAsset } from './CampaignAsset';
-import { Error } from './Error';
+import { campaignAsset } from './CampaignAsset';
+import { error } from '../../common/Error';
 
-export const CampaignAssetServiceReplaceValue = z.object({
-  campaignAssets: z.array(CampaignAsset).nullable(),
-  errors: z.array(Error).nullable(),
+export const campaignAssetServiceReplaceValue = z.object({
+  campaignAssets: z.array(campaignAsset).nullable(),
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type CampaignAssetServiceReplaceValue = z.infer<typeof CampaignAssetServiceReplaceValue>;
+export type CampaignAssetServiceReplaceValue = z.infer<typeof campaignAssetServiceReplaceValue>;

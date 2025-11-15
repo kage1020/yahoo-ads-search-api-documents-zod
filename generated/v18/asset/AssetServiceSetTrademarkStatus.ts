@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const AssetServiceSetTrademarkStatus = z.object({
+export const assetServiceSetTrademarkStatus = z.object({
   assetId: z.number().int().nullable()
 }).nullable();
 
-export type AssetServiceSetTrademarkStatus = z.infer<typeof AssetServiceSetTrademarkStatus>;
+export type AssetServiceSetTrademarkStatus = z.infer<typeof assetServiceSetTrademarkStatus>;

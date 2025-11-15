@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceUrlRuleKey } from './RetargetingListServiceUrlRuleKey';
+import { retargetingListServiceUrlRuleKey } from './RetargetingListServiceUrlRuleKey';
 
-export const RetargetingListServiceUrlRuleItem = z.object({
-  urlRuleKey: RetargetingListServiceUrlRuleKey
+export const retargetingListServiceUrlRuleItem = z.object({
+  urlRuleKey: retargetingListServiceUrlRuleKey
 }).nullable();
 
-export type RetargetingListServiceUrlRuleItem = z.infer<typeof RetargetingListServiceUrlRuleItem>;
+export type RetargetingListServiceUrlRuleItem = z.infer<typeof retargetingListServiceUrlRuleItem>;

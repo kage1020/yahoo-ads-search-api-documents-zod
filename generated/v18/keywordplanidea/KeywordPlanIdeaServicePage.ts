@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { KeywordPlanIdeaServiceValue } from './KeywordPlanIdeaServiceValue';
+import { keywordPlanIdeaServiceValue } from './KeywordPlanIdeaServiceValue';
 
-export const KeywordPlanIdeaServicePage = z.object({
+export const keywordPlanIdeaServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(KeywordPlanIdeaServiceValue).nullable()
+  values: z.array(keywordPlanIdeaServiceValue).nullable()
 }).nullable();
 
-export type KeywordPlanIdeaServicePage = z.infer<typeof KeywordPlanIdeaServicePage>;
+export type KeywordPlanIdeaServicePage = z.infer<typeof keywordPlanIdeaServicePage>;

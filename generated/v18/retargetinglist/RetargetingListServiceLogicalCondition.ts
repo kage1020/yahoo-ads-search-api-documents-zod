@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const RetargetingListServiceLogicalCondition = z.enum(["AND", "OR", "NOT", "UNKNOWN"]).nullable();
+export const retargetingListServiceLogicalCondition = z.enum(["AND", "OR", "NOT", "UNKNOWN"]).nullable();
 
-export type RetargetingListServiceLogicalCondition = z.infer<typeof RetargetingListServiceLogicalCondition>;
+export type RetargetingListServiceLogicalCondition = z.infer<typeof retargetingListServiceLogicalCondition>;

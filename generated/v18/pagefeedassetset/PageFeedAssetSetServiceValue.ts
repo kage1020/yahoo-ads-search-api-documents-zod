@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { PageFeedAssetSet } from './PageFeedAssetSet';
+import { error } from '../../common/Error';
+import { pageFeedAssetSet } from './PageFeedAssetSet';
 
-export const PageFeedAssetSetServiceValue = z.object({
-  errors: z.array(Error).nullable(),
-  pageFeedAssetSet: PageFeedAssetSet,
+export const pageFeedAssetSetServiceValue = z.object({
+  errors: z.array(error).nullable(),
+  pageFeedAssetSet: pageFeedAssetSet,
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type PageFeedAssetSetServiceValue = z.infer<typeof PageFeedAssetSetServiceValue>;
+export type PageFeedAssetSetServiceValue = z.infer<typeof pageFeedAssetSetServiceValue>;

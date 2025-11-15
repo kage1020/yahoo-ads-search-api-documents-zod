@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { RetargetingListServiceLogicalGroup } from './RetargetingListServiceLogicalGroup';
+import { retargetingListServiceLogicalGroup } from './RetargetingListServiceLogicalGroup';
 
-export const RetargetingListServiceLogicalTargetList = z.object({
-  logicalGroup: z.array(RetargetingListServiceLogicalGroup).nullable()
+export const retargetingListServiceLogicalTargetList = z.object({
+  logicalGroup: z.array(retargetingListServiceLogicalGroup).nullable()
 }).nullable();
 
-export type RetargetingListServiceLogicalTargetList = z.infer<typeof RetargetingListServiceLogicalTargetList>;
+export type RetargetingListServiceLogicalTargetList = z.infer<typeof retargetingListServiceLogicalTargetList>;

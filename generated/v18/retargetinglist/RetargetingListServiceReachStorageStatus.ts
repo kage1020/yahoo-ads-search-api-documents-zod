@@ -1,5 +1,5 @@
 import { z } from 'zod';
 
-export const RetargetingListServiceReachStorageStatus = z.enum(["OPEN", "CLOSED", "UNKNOWN"]).nullable();
+export const retargetingListServiceReachStorageStatus = z.enum(["OPEN", "CLOSED", "UNKNOWN"]).nullable();
 
-export type RetargetingListServiceReachStorageStatus = z.infer<typeof RetargetingListServiceReachStorageStatus>;
+export type RetargetingListServiceReachStorageStatus = z.infer<typeof retargetingListServiceReachStorageStatus>;

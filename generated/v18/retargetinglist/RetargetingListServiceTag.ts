@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const RetargetingListServiceTag = z.object({
+export const retargetingListServiceTag = z.object({
   advancedSnippet: z.string().nullable()
 }).nullable();
 
-export type RetargetingListServiceTag = z.infer<typeof RetargetingListServiceTag>;
+export type RetargetingListServiceTag = z.infer<typeof retargetingListServiceTag>;

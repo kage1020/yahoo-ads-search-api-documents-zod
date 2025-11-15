@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
-import { AdGroupCriterionCustomizerServiceValue } from './AdGroupCriterionCustomizerServiceValue';
+import { adGroupCriterionCustomizerServiceValue } from './AdGroupCriterionCustomizerServiceValue';
 
-export const AdGroupCriterionCustomizerServicePage = z.object({
+export const adGroupCriterionCustomizerServicePage = z.object({
   totalNumEntries: z.number().int(),
-  values: z.array(AdGroupCriterionCustomizerServiceValue).nullable()
+  values: z.array(adGroupCriterionCustomizerServiceValue).nullable()
 }).nullable();
 
-export type AdGroupCriterionCustomizerServicePage = z.infer<typeof AdGroupCriterionCustomizerServicePage>;
+export type AdGroupCriterionCustomizerServicePage = z.infer<typeof adGroupCriterionCustomizerServicePage>;

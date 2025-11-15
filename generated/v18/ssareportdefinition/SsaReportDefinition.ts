@@ -1,40 +1,40 @@
 import { z } from 'zod';
 
-import { SsaReportDefinitionServiceReportDateRange } from './SsaReportDefinitionServiceReportDateRange';
-import { SsaReportDefinitionServiceReportFilter } from './SsaReportDefinitionServiceReportFilter';
-import { SsaReportDefinitionServiceReportCompressType } from './SsaReportDefinitionServiceReportCompressType';
-import { SsaReportDefinitionServiceReportDateRangeType } from './SsaReportDefinitionServiceReportDateRangeType';
-import { SsaReportDefinitionServiceReportDecimalPartDisplayType } from './SsaReportDefinitionServiceReportDecimalPartDisplayType';
-import { SsaReportDefinitionServiceReportDownloadEncode } from './SsaReportDefinitionServiceReportDownloadEncode';
-import { SsaReportDefinitionServiceReportDownloadFormat } from './SsaReportDefinitionServiceReportDownloadFormat';
-import { SsaReportDefinitionServiceReportJobStatus } from './SsaReportDefinitionServiceReportJobStatus';
-import { SsaReportDefinitionServiceReportLanguage } from './SsaReportDefinitionServiceReportLanguage';
-import { SsaReportDefinitionServiceReportSkipColumnHeader } from './SsaReportDefinitionServiceReportSkipColumnHeader';
-import { SsaReportDefinitionServiceReportSkipReportSummary } from './SsaReportDefinitionServiceReportSkipReportSummary';
-import { SsaReportDefinitionServiceReportType } from './SsaReportDefinitionServiceReportType';
-import { SsaReportDefinitionServiceReportSortField } from './SsaReportDefinitionServiceReportSortField';
+import { ssaReportDefinitionServiceReportDateRange } from './SsaReportDefinitionServiceReportDateRange';
+import { ssaReportDefinitionServiceReportFilter } from './SsaReportDefinitionServiceReportFilter';
+import { ssaReportDefinitionServiceReportCompressType } from './SsaReportDefinitionServiceReportCompressType';
+import { ssaReportDefinitionServiceReportDateRangeType } from './SsaReportDefinitionServiceReportDateRangeType';
+import { ssaReportDefinitionServiceReportDecimalPartDisplayType } from './SsaReportDefinitionServiceReportDecimalPartDisplayType';
+import { ssaReportDefinitionServiceReportDownloadEncode } from './SsaReportDefinitionServiceReportDownloadEncode';
+import { ssaReportDefinitionServiceReportDownloadFormat } from './SsaReportDefinitionServiceReportDownloadFormat';
+import { ssaReportDefinitionServiceReportJobStatus } from './SsaReportDefinitionServiceReportJobStatus';
+import { ssaReportDefinitionServiceReportLanguage } from './SsaReportDefinitionServiceReportLanguage';
+import { ssaReportDefinitionServiceReportSkipColumnHeader } from './SsaReportDefinitionServiceReportSkipColumnHeader';
+import { ssaReportDefinitionServiceReportSkipReportSummary } from './SsaReportDefinitionServiceReportSkipReportSummary';
+import { ssaReportDefinitionServiceReportType } from './SsaReportDefinitionServiceReportType';
+import { ssaReportDefinitionServiceReportSortField } from './SsaReportDefinitionServiceReportSortField';
 
-export const SsaReportDefinition = z.object({
+export const ssaReportDefinition = z.object({
   accountId: z.number().int().nullable(),
   completeTime: z.string().nullable(),
-  dateRange: SsaReportDefinitionServiceReportDateRange,
+  dateRange: ssaReportDefinitionServiceReportDateRange,
   fields: z.array(z.string().nullable()).nullable(),
-  filters: z.array(SsaReportDefinitionServiceReportFilter).nullable(),
-  reportCompressType: SsaReportDefinitionServiceReportCompressType,
-  reportDateRangeType: SsaReportDefinitionServiceReportDateRangeType,
-  reportDecimalPartDisplayType: SsaReportDefinitionServiceReportDecimalPartDisplayType,
-  reportDownloadEncode: SsaReportDefinitionServiceReportDownloadEncode,
-  reportDownloadFormat: SsaReportDefinitionServiceReportDownloadFormat,
+  filters: z.array(ssaReportDefinitionServiceReportFilter).nullable(),
+  reportCompressType: ssaReportDefinitionServiceReportCompressType,
+  reportDateRangeType: ssaReportDefinitionServiceReportDateRangeType,
+  reportDecimalPartDisplayType: ssaReportDefinitionServiceReportDecimalPartDisplayType,
+  reportDownloadEncode: ssaReportDefinitionServiceReportDownloadEncode,
+  reportDownloadFormat: ssaReportDefinitionServiceReportDownloadFormat,
   reportJobErrorDetail: z.string().nullable(),
   reportJobId: z.number().int().nullable(),
-  reportJobStatus: SsaReportDefinitionServiceReportJobStatus,
-  reportLanguage: SsaReportDefinitionServiceReportLanguage,
+  reportJobStatus: ssaReportDefinitionServiceReportJobStatus,
+  reportLanguage: ssaReportDefinitionServiceReportLanguage,
   reportName: z.string().nullable(),
-  reportSkipColumnHeader: SsaReportDefinitionServiceReportSkipColumnHeader,
-  reportSkipReportSummary: SsaReportDefinitionServiceReportSkipReportSummary,
-  reportType: SsaReportDefinitionServiceReportType,
+  reportSkipColumnHeader: ssaReportDefinitionServiceReportSkipColumnHeader,
+  reportSkipReportSummary: ssaReportDefinitionServiceReportSkipReportSummary,
+  reportType: ssaReportDefinitionServiceReportType,
   requestTime: z.string().nullable(),
-  sortFields: z.array(SsaReportDefinitionServiceReportSortField).nullable()
+  sortFields: z.array(ssaReportDefinitionServiceReportSortField).nullable()
 }).nullable();
 
-export type SsaReportDefinition = z.infer<typeof SsaReportDefinition>;
+export type SsaReportDefinition = z.infer<typeof ssaReportDefinition>;

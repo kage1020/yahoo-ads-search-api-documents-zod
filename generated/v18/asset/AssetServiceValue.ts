@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { Error } from './Error';
-import { Asset } from './Asset';
+import { error } from '../../common/Error';
+import { asset } from './Asset';
 
-export const AssetServiceValue = z.object({
-  errors: z.array(Error).nullable(),
-  asset: Asset,
+export const assetServiceValue = z.object({
+  errors: z.array(error).nullable(),
+  asset: asset,
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AssetServiceValue = z.infer<typeof AssetServiceValue>;
+export type AssetServiceValue = z.infer<typeof assetServiceValue>;

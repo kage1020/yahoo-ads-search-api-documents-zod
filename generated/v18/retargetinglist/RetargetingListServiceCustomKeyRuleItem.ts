@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const RetargetingListServiceCustomKeyRuleItem = z.object({
+export const retargetingListServiceCustomKeyRuleItem = z.object({
   textKey: z.string().nullable()
 }).nullable();
 
-export type RetargetingListServiceCustomKeyRuleItem = z.infer<typeof RetargetingListServiceCustomKeyRuleItem>;
+export type RetargetingListServiceCustomKeyRuleItem = z.infer<typeof retargetingListServiceCustomKeyRuleItem>;

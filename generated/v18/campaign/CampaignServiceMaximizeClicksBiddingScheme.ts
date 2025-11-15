@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-export const CampaignServiceMaximizeClicksBiddingScheme = z.object({
+export const campaignServiceMaximizeClicksBiddingScheme = z.object({
   bidCeiling: z.number().int().nullable()
 }).nullable();
 
-export type CampaignServiceMaximizeClicksBiddingScheme = z.infer<typeof CampaignServiceMaximizeClicksBiddingScheme>;
+export type CampaignServiceMaximizeClicksBiddingScheme = z.infer<typeof campaignServiceMaximizeClicksBiddingScheme>;

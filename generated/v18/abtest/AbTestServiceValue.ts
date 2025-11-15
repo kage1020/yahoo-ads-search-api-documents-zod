@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { AbTest } from './AbTest';
-import { Error } from './Error';
+import { abTest } from './AbTest';
+import { error } from '../../common/Error';
 
-export const AbTestServiceValue = z.object({
-  abTest: AbTest,
-  errors: z.array(Error).nullable(),
+export const abTestServiceValue = z.object({
+  abTest: abTest,
+  errors: z.array(error).nullable(),
   operationSucceeded: z.boolean().nullable()
 }).nullable();
 
-export type AbTestServiceValue = z.infer<typeof AbTestServiceValue>;
+export type AbTestServiceValue = z.infer<typeof abTestServiceValue>;
